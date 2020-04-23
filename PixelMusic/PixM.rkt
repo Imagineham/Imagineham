@@ -10,19 +10,10 @@
 
 ;====================================================================== Structs
 
-(define-struct Loc
-  ([x : Int]
-   [y : Int]))
-
-;;(define-struct Pat
-;;  ([shapes : Image]
-;;   [color : Image-Color]
-;;   [loc : Loc]))
-
 (define-struct Style
   ([pattern : (U 'pattern1 'pattern2 'pattern3)]
    [color : Image-Color]
-   [size : Integer]))
+   [size : Real]))
 
 (define-struct PixelWorld
   ([visuals : Style]))
@@ -91,99 +82,19 @@
   (match PixWorld
     [(PixelWorld style)
      (match style
-       [(Style pattern1 img-clr x)
+       [(Style 'pattern1 img-clr x)
         (overlay/align "middle" "middle"
-                       (above
-                        (duplicate-beside 4 (square (/ x 10) 'solid img-clr))
-                        (square 10 'solid 'black)
-                        (duplicate-beside 8 (square (/ x 10) 'solid img-clr))
-                        (square 10 'solid 'black)
-                        (duplicate-beside 12 (square (/ x 10) 'solid img-clr))
-                        (square 10 'solid 'black)
-                        (duplicate-beside 16 (square (/ x 10) 'solid img-clr))
-                        (square 10 'solid 'black)
-                        (duplicate-beside 12 (square (/ x 10) 'solid img-clr))
-                        (square 10 'solid 'black)
-                        (duplicate-beside 8 (square (/ x 10) 'solid img-clr))
-                        (square 10 'solid 'black)
-                        (duplicate-beside 4 (square (/ x 10) 'solid img-clr)))
-                       (above
-                        (duplicate-beside 4 (square (/ x 5) 'solid 'pink))
-                        (square 10 'solid 'black)
-                        (duplicate-beside 8 (square (/ x 5) 'solid 'orange))
-                        (square 10 'solid 'black)
-                        (duplicate-beside 12 (square (/ x 5) 'solid 'yellow))
-                        (square 10 'solid 'black)
-                        (duplicate-beside 16 (square (/ x 5) 'solid 'green))
-                        (square 10 'solid 'black)
-                        (duplicate-beside 12 (square (/ x 5) 'solid 'purple))
-                        (square 10 'solid 'black)
-                        (duplicate-beside 8 (square (/ x 5) 'solid 'teal))
-                        (square 10 'solid 'black)
-                        (duplicate-beside 4 (square (/ x 5) 'solid 'orange)))
+                       (pattern1 x)
+                       (pattern4 x)
                        (square 1000 'solid 'black))]
-       [(Style pattern2 img-clr x)
+       [(Style 'pattern2 img-clr x)
         (overlay/align "middle" "middle"
-                       (above
-                        (vanishing (/ 1 8) (triangle (/ x 10) 'solid img-clr))
-                        (square 10 'solid 'black)
-                        (vanishing (/ 1 8) (triangle (/ x 10) 'solid img-clr))
-                        (square 10 'solid 'black)
-                        (vanishing (/ 1 8) (triangle (/ x 10) 'solid img-clr))
-                        (square 10 'solid 'black)
-                        (vanishing (/ 1 8) (triangle (/ x 10) 'solid img-clr))
-                        (square 10 'solid 'black)
-                        (vanishing (/ 1 8) (triangle (/ x 10) 'solid img-clr))
-                        (square 10 'solid 'black)
-                        (vanishing (/ 1 8) (triangle (/ x 10) 'solid img-clr))
-                        (square 10 'solid 'black)
-                        (vanishing (/ 1 8) (triangle (/ x 10) 'solid img-clr)))
-                       (above
-                        (vanishing (/ 1 3) (triangle (/ x 5) 'solid 'pink))
-                        (square 10 'solid 'black)
-                        (vanishing (/ 1 3) (triangle (/ x 5) 'solid 'orange))
-                        (square 10 'solid 'black)
-                        (vanishing (/ 1 3) (triangle (/ x 5) 'solid 'yellow))
-                        (square 10 'solid 'black)
-                        (vanishing (/ 1 3) (triangle (/ x 5) 'solid 'green))
-                        (square 10 'solid 'black)
-                        (vanishing (/ 1 3) (triangle (/ x 5) 'solid 'purple))
-                        (square 10 'solid 'black)
-                        (vanishing (/ 1 3) (triangle (/ x 5) 'solid 'teal))
-                        (square 10 'solid 'black)
-                        (vanishing (/ 1 3) (triangle (/ x 5) 'solid 'orange)))
-                       (square 1000 'solid 'pink))]
-       [(Style pattern3 img-clr x)
+                       (pattern2 x)
+                       (square 1000 'solid 'black))]
+       [(Style 'pattern3 img-clr x)
         (overlay/align "middle" "middle"
-                       (above
-                        (duplicate-beside 4 (circle (/ x 10) 'solid img-clr))
-                        (square 10 'solid 'black)
-                        (duplicate-beside 8 (circle (/ x 10) 'solid img-clr))
-                        (square 10 'solid 'black)
-                        (duplicate-beside 12 (circle (/ x 10) 'solid img-clr))
-                        (square 10 'solid 'black)
-                        (duplicate-beside 16 (circle (/ x 10) 'solid img-clr))
-                        (square 10 'solid 'black)
-                        (duplicate-beside 12 (circle (/ x 10) 'solid img-clr))
-                        (square 10 'solid 'black)
-                        (duplicate-beside 8 (circle (/ x 10) 'solid img-clr))
-                        (square 10 'solid 'black)
-                        (duplicate-beside 4 (circle (/ x 10) 'solid img-clr)))
-                       (above
-                        (duplicate-beside 4 (circle (/ x 5) 'solid 'pink))
-                        (square 10 'solid 'black)
-                        (duplicate-beside 8 (circle (/ x 5) 'solid 'orange))
-                        (square 10 'solid 'black)
-                        (duplicate-beside 12 (circle (/ x 5) 'solid 'yellow))
-                        (square 10 'solid 'black)
-                        (duplicate-beside 16 (circle (/ x 5) 'solid 'green))
-                        (square 10 'solid 'black)
-                        (duplicate-beside 12 (circle (/ x 5) 'solid 'purple))
-                        (square 10 'solid 'black)
-                        (duplicate-beside 8 (circle (/ x 5) 'solid 'teal))
-                        (square 10 'solid 'black)
-                        (duplicate-beside 4 (circle (/ x 5) 'solid 'orange)))
-                       (square 1000 'solid 'red))])]))
+                       (pattern3 x)
+                       (square 1000 'solid 'black))])]))
 
 (: animation : PixelWorld -> PixelWorld)
 ;; animation will allow box movement.
@@ -201,16 +112,129 @@
 
 ;========================= Pattern1
 
+(: pattern1 : Real -> Image)
+(define (pattern1 x)
+  (overlay/align "middle" "middle"
+                 (above
+                  (duplicate-beside 4 (square (/ x 10) 'solid 'red))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 8 (square (/ x 10) 'solid 'red))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 12 (square (/ x 10) 'solid 'red))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 16 (square (/ x 10) 'solid 'red))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 12 (square (/ x 10) 'solid 'red))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 8 (square (/ x 10) 'solid 'red))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 4 (square (/ x 10) 'solid 'red)))
+                 (above
+                  (duplicate-beside 4 (square (/ x 5) 'solid 'pink))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 8 (square (/ x 5) 'solid 'orange))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 12 (square (/ x 5) 'solid 'yellow))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 16 (square (/ x 5) 'solid 'green))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 12 (square (/ x 5) 'solid 'purple))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 8 (square (/ x 5) 'solid 'teal))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 4 (square (/ x 5) 'solid 'orange)))))
+  
+
 
 ;========================= Pattern2
+
+(: pattern2 : Real -> Image)
+(define (pattern2 x)
+  (overlay/align "middle" "middle"
+                 (above
+                  (duplicate-beside 4 (square (/ x 10) 'solid 'white))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 8 (square (/ x 10) 'solid 'white))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 12 (square (/ x 10) 'solid 'white))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 16 (square (/ x 10) 'solid 'white))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 12 (square (/ x 10) 'solid 'white))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 8 (square (/ x 10) 'solid 'white))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 4 (square (/ x 10) 'solid 'white)))
+                 (rotate 90
+                         (above
+                          (duplicate-beside 4 (square (/ x 5) 'solid 'pink))
+                          (square 10 'solid 'black)
+                          (duplicate-beside 8 (square (/ x 5) 'solid 'orange))
+                          (square 10 'solid 'black)
+                          (duplicate-beside 12 (square (/ x 5) 'solid 'yellow))
+                          (square 10 'solid 'black)
+                          (duplicate-beside 16 (square (/ x 5) 'solid 'green))
+                          (square 10 'solid 'black)
+                          (duplicate-beside 12 (square (/ x 5) 'solid 'purple))
+                          (square 10 'solid 'black)
+                          (duplicate-beside 8 (square (/ x 5) 'solid 'teal))
+                          (square 10 'solid 'black)
+                          (duplicate-beside 4 (square (/ x 5) 'solid 'orange))))))
 
 
 ;========================= Pattern 3
 
+(: pattern3 : Real -> Image)
+(define (pattern3 x)
+  (overlay/align "middle" "middle"
+                 (above
+                  (duplicate-beside 4 (circle (/ x 10) 'solid 'seagreen))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 8 (circle (/ x 10) 'solid 'seagreen))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 12 (circle (/ x 10) 'solid 'seagreen))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 16 (circle (/ x 10) 'solid 'seagreen))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 12 (circle (/ x 10) 'solid 'seagreen))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 8 (circle (/ x 10) 'solid 'seagreen))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 4 (circle (/ x 10) 'solid 'seagreen)))
+                 (above
+                  (duplicate-beside 4 (circle (/ x 5) 'solid 'pink))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 8 (circle (/ x 5) 'solid 'orange))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 12 (circle (/ x 5) 'solid 'yellow))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 16 (circle (/ x 5) 'solid 'green))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 12 (circle (/ x 5) 'solid 'purple))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 8 (circle (/ x 5) 'solid 'teal))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 4 (circle (/ x 5) 'solid 'orange)))))
+
+;======================== Pattern 4
+
+(: pattern4 : Real -> Image)
+(define (pattern4 x)
+  (beside
+   (above
+    (pattern1 (/ x 3))
+    (rectangle 0 400 'solid 'black)
+    (pattern1 (/ x 3)))
+   (rectangle 400 0 'solid 'black)
+   (above
+    (pattern1 (/ x 3))
+    (rectangle 0 400 'solid 'black)
+    (pattern1 (/ x 3)))))
+   
 
 ;================ OSC, Audio Visual Function
 
-(: AV : Int -> Style)
+(: AV : Real -> Style)
 ;; AV will take an a volume level (an integer), and convert it
 ;; into a pattern.
 (define (AV x)
