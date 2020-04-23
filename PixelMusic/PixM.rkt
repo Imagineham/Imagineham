@@ -12,7 +12,6 @@
 
 (define-struct Style
   ([pattern : (U 'pattern1 'pattern2 'pattern3)]
-   [color : Image-Color]
    [size : Real]))
 
 (define-struct PixelWorld
@@ -82,16 +81,16 @@
   (match PixWorld
     [(PixelWorld style)
      (match style
-       [(Style 'pattern1 img-clr x)
+       [(Style 'pattern1 x)
         (overlay/align "middle" "middle"
                        (pattern1 x)
                        (pattern4 x)
                        (square 1000 'solid 'black))]
-       [(Style 'pattern2 img-clr x)
+       [(Style 'pattern2 x)
         (overlay/align "middle" "middle"
                        (pattern2 x)
                        (square 1000 'solid 'black))]
-       [(Style 'pattern3 img-clr x)
+       [(Style 'pattern3 x)
         (overlay/align "middle" "middle"
                        (pattern3 x)
                        (square 1000 'solid 'black))])]))
@@ -102,10 +101,10 @@
   (match PixWorld
     [(PixelWorld style)
      (match style
-       [(Style pat img-clr x)
-        (PixelWorld (Style pat img-clr (if (>= x 100)
-                                           (- x 60)
-                                           (+ x 15))))])]))
+       [(Style pat x)
+        (PixelWorld (Style pat (if (>= x 100)
+                                   (- x 60)
+                                   (+ x 15))))])]))
                                        
 
 ;============================================================ Patterns
@@ -153,7 +152,7 @@
   (overlay/align "middle" "middle"
                  (above
                   (duplicate-beside 4 (square (/ x 10) 'solid 'white))
-                  (square 10 'solid 'black)
+                  (square 10  'solid 'black)
                   (duplicate-beside 8 (square (/ x 10) 'solid 'white))
                   (square 10 'solid 'black)
                   (duplicate-beside 12 (square (/ x 10) 'solid 'white))
@@ -188,19 +187,19 @@
 (define (pattern3 x)
   (overlay/align "middle" "middle"
                  (above
-                  (duplicate-beside 4 (circle (/ x 10) 'solid 'seagreen))
+                  (duplicate-beside 4 (circle (/ x 10) 'solid 'lemonchiffon))
                   (square 10 'solid 'black)
-                  (duplicate-beside 8 (circle (/ x 10) 'solid 'seagreen))
+                  (duplicate-beside 8 (circle (/ x 10) 'solid 'lemonchiffon))
                   (square 10 'solid 'black)
-                  (duplicate-beside 12 (circle (/ x 10) 'solid 'seagreen))
+                  (duplicate-beside 12 (circle (/ x 10) 'solid 'lemonchiffon))
                   (square 10 'solid 'black)
-                  (duplicate-beside 16 (circle (/ x 10) 'solid 'seagreen))
+                  (duplicate-beside 16 (circle (/ x 10) 'solid 'lemonchiffon))
                   (square 10 'solid 'black)
-                  (duplicate-beside 12 (circle (/ x 10) 'solid 'seagreen))
+                  (duplicate-beside 12 (circle (/ x 10) 'solid 'lemonchiffon))
                   (square 10 'solid 'black)
-                  (duplicate-beside 8 (circle (/ x 10) 'solid 'seagreen))
+                  (duplicate-beside 8 (circle (/ x 10) 'solid 'lemonchiffon))
                   (square 10 'solid 'black)
-                  (duplicate-beside 4 (circle (/ x 10) 'solid 'seagreen)))
+                  (duplicate-beside 4 (circle (/ x 10) 'solid 'lemonchiffon)))
                  (above
                   (duplicate-beside 4 (circle (/ x 5) 'solid 'pink))
                   (square 10 'solid 'black)
@@ -240,19 +239,19 @@
 (define (AV x)
   (cond
     [(and
-      (>= x 0) (< x 30)) (Style 'pattern1 'firebrick x)]
+      (>= x 0) (< x 30)) (Style 'pattern1 x)]
     [(and
-      (>= x 30) (< x 60)) (Style 'pattern2 'purple x)]
+      (>= x 30) (< x 60)) (Style 'pattern2 x)]
     [(and
-      (>= x 60) (<= x 100)) (Style 'pattern3 'lightblue x)]
+      (>= x 60) (<= x 100)) (Style 'pattern3 x)]
     [else (error "no")]))
 
-(: run : Int -> PixelWorld)
+(: run : Real -> PixelWorld)
 ;; make quiz go man
 (define (run x)
   (big-bang (PixelWorld (AV x)) : PixelWorld
     [to-draw draw]
-    [on-tick animation 1/20]
+    [on-tick animation 1/30]
     ;;  [port 55557]
     ;;  [register "192.168.1.3"]
     [name "PixelMusic 2020"]))
