@@ -44,6 +44,7 @@
     [(<= num-dup 0) empty-image]
     [else (beside
            Img
+           (rectangle 3 0 'solid 'black) 
            (duplicate-beside (- num-dup 1) Img))]))
 
 ;================== Vanishing
@@ -65,6 +66,7 @@
     [else
      (beside
       Img
+      (rectangle 3 0 'solid 'black) 
       (vanishing Frac (scale Frac Img)))]))
 
 ;=================== Draw
@@ -74,17 +76,21 @@
   (match PixWorld
     [(PixelWorld style)
      (match style
-       [(Style img-clr p w _)
-        (draw-pix p (square w 'solid img-clr))])]))
-
-(: draw-pix : Loc Image -> Image)
-;; draw-box will draw the pixels. It's inputs are a given location
-;; and whatever image. 
-
-(define (draw-pix loc Img)
-  (match loc
-    [(Loc x y)
-     (place-image Img x y (square 1000 'solid 'black))]))
+       [(Style pattern1 img-clr x)
+        (overlay/align "middle"
+                       "middle"
+                       (duplicate-beside 2 (square x 'solid img-clr))
+                       (square 500 'solid 'black))]
+       [(Style pattern2 img-clr x)
+        (overlay/align "middle"
+                       "middle"
+                       (duplicate-beside 3 (square x 'solid img-clr))
+                       (square 500 'solid 'pink))]
+       [(Style pattern3 img-clr x)
+        (overlay/align "middle"
+                       "middle"
+                       (vanishing (/ 3 8) (square x 'solid img-clr))
+                       (square 500 'solid 'red))])]))
 
 (: animation : PixelWorld -> PixelWorld)
 ;; animation will allow box movement.
@@ -92,27 +98,28 @@
   (match PixWorld
     [(PixelWorld style)
      (match style
-       [(Style img-clr p w h)
-        (PixelWorld (Style img-clr p (cond
-                                       [(= w 300) (- w 65)]
-                                       [else (+ 5 w)]) h))])]))
+       [(Style pat img-clr x)
+        (PixelWorld (Style pat img-clr (if (>= x 200)
+                                           (- x 130)
+                                           (+ x 10))))])]))
+                                       
 
 ;============================================================ Patterns
 
 ;========================= Pattern1
 
 (define pattern1
-  (Pat (circle 20 'solid 'firebrick)))
+  (Pat (circle 20 'solid 'firebrick) 'firebrick (Loc 300 300)))
 
 ;========================= Pattern2
 
 (define pattern2
-  (Pat (square 20 'solid 'purple)))
+  (Pat (square 20 'solid 'purple) 'purple (Loc 300 300)))
 
 ;======================== Pattern 3
 
 (define pattern3
-  (Pat (triangle 20 'solid 'lightblue)))
+  (Pat (triangle 20 'solid 'lightblue) 'lightblue (Loc 30 30)))
 
 ;================ OSC, Audio Visual Function
 
@@ -122,11 +129,11 @@
 (define (AV x)
   (cond
     [(and
-      (>= x 0) (< x 30)) (Style pattern1 (Pat-color pattern1) x)]
+      (>= x 0) (< x 30)) (Style pattern1 'firebrick x)]
     [(and
-      (>= x 30) (< x 60)) (Style pattern2 (Pat-color pattern2) x)]
+      (>= x 30) (< x 60)) (Style pattern2 'purple x)]
     [(and
-      (>= x 60) (<= x 100)) (Style pattern3 (Pat-color pattern3) x)]
+      (>= x 60) (<= x 100)) (Style pattern3 'lightblue x)]
     [else (error "no")]))
 
 (: run : Int -> PixelWorld)
@@ -134,7 +141,7 @@
 (define (run x)
 (big-bang (PixelWorld (AV x)) : PixelWorld
   [to-draw draw]
-  [on-tick animation 1/10]
+  [on-tick animation 1/20]
 ;;  [port 55557]
 ;;  [register "192.168.1.3"]
   [name "PixelMusic 2020"]))
