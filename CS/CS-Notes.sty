@@ -1,0 +1,366 @@
+Chapter 1
+	C programming language 1969 1973
+	Stdlib 1989
+	C was made for Unix- practical
+	From program to execution- 4 phases - Compilation
+		Pre-processor -> READ # files so stdio.h or stdlib.h Results in .i
+		Compiler -> translates into assembly Results in .s
+		Assembler -> machine-language instructions, .o files are bits read by machines not us
+		Linker -> links called functions, printf from printf.o, Results in executable
+	
+	Optimization! Good programmers know why some functions work better than others
+	Buses -> (USB = Universal Serial Bus) used to transfer fixed sized bytes, words
+	I/O -> Input/Output like I/O shield for motherboard (connects to external world)
+DRAM => Dynamic Random Access Memory, lines of bytes called arrays unique addresses *(pointers). 
+Register-> storage device
+CPU -> Central Processing Unit (the brain), repeats basic instruction over and over
+	Load -> copy into register
+	Save -> copy from register
+	Update -> copy contents of two registers, ALU adds, copy result in a register
+	I/O Read -> Copy from I/O into register
+Caches -> temporary memory, used to quicken compilation bc info does not need to travel to *main memory. A Cache using a bus to the CPU is faster, a cache in the CPU is fastest. 
+
+Storage Device Hierarchy
+*L0, L1, L2, etc/ Levels. Higher the number, the slower
+*list below L0 = Register, increases down
+Register
+On-chip cache
+Off chip cache
+Main memory (DRAM)
+Local storage
+Remote storage (Web servers) 
+
+Operating System (Windows, Linux, Mac)
+
+Practice Prob 2.1
+	Dec     Binary         Hex
+	0       00000000       00
+	55      00110111       37
+	136     10001000       88
+	243     11110011       F3
+	82      01010010       52
+	172     10101100       AC
+	231     11100111       E7
+	167     10100111       A7
+	62      00111110       3E
+	188     10111100       BC
+
+Practice Prob 2.5
+	a        01101001
+	b        01010101
+	~a       10010110
+	~b       10101010
+	a & b    01000001
+	a | b    01111101
+	a ^ b    00111100
+
+Practice Prob 2.9
+	x = 0x66 = 01100110
+	y = 0x93 = 10010011
+
+	x & y =    00000010 
+	x | y =    11110111
+	~x | ~y =  11111101
+	x & !y =   00000000
+
+	x && y =   00000001
+	x || y =   00000001
+	!x || !y = 00000000
+	x && ~y =  00000001
+
+Practice Prob 2.11	
+	x		x << 3	 	[Log]x >> 2		[Arith]x >> 2
+	0xF0    10000000	00111100		11111100
+			0x80		0x3C			0xFC
+	0x0F	01111000	00000011		00000011
+			0x7C		0x03			0x03
+	0xCC	01100000	00110011		11110011
+			0x60		0x33			0xF3
+	0x55	10101000	00010101		00010101
+			0xA8		0x15			0x15
+
+Practice Prob 2.12
+		B2U		B2T
+	0	0000	0
+	3	0011	3
+	8	1000	-8
+	A	1010	-6
+	F	1111	-1
+
+Practice Prob 2.15
+
+OgHex	TruncHex		OgU		TU 		OgT2		T2 	
+0=0000	0=000			0=0000	0=000	0=0000		0=000				
+3=0011	3=011			3=0011	3=011	3=0011		3=011				
+8=1000	0=000			8=1000	0=000	-8=1000		0=000				
+A=1010	2=010			10=1010	2=010	-6=1010		2=010				
+F=1111	7=111			15=1111	7=111	-1=1111		-1=111				
+
+Practice Prob 2.17
+
+Hex		Decimal		Decimal		Hex
+0=0000	0			0			0
+3=0011	3			13			D=1101
+8=1000	8			8			8=1000
+A=1010	10			6			6=0110
+F=1111	15			1			1=0001			
+
+Practice Prob 2.18
+
+x		y		x + y 		x + 4y		Cache
+10000	10101	100101
+10000	10000	100000
+11000	00111	11111
+11110	00101	11011
+01000	01000	10000
+
+
+Practice Prob 2.19
+
+
+
+
+Chapter 3
+	Assembly
+
+	Pre-processor -> READ # files so stdio.h or stdlib.h Results in .i
+	Compiler -> translates into assembly Results in .s
+	Assembler -> machine-language instructions, .o files are bits read by machines not us
+	Linker -> links called functions, printf from printf.o, Results in executable
+
+	"the assembly programmer's view of the machine differs significantly from that of a C programmer"
+		program counter -> (percent)-eip indicated address in memory
+		integer register -> 8 locations, stores 32 bits; hold pointers for programs/local variables/etc 
+		condition code -> status info, most recent executed arithmetic (ex. if else)
+		floating-point -> 8 locations, floats
+
+		machine instructions -> SIMPLE, add numbers, transfer data (ex. movl, subl, shrl...)
+
+	Assembly HW3 Code example (97 in textbook) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+	SIMPLE.C ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		int simple (int *xp, int y) {
+			int t = *xp + y;
+			*xp = t;
+			return t;
+		}
+	|
+	|
+	|
+	v
+	SIMPLE.S (COMPILER)	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		.globl simple
+		  .type		simple,@function
+		simple:
+			pushl %ebp				Save frame Pointer		these are the instructions	
+			movl %esp, %ebp			Create new pointer		you worked on for homework	
+			movl 8 (%ebp), %eax 	Get xp					see page 100. Helpful to 
+			movl (%eax), %edx		Retrieve *xp			memorize!!!
+			addl 12(%ebp), %edx		Add y to get t		
+			movl %edx, %eax			Store t as *xp				
+			movl %edp, %esp			Set t as return val					
+			movle %edp				reset stack pointer
+			popl %edp				Reset frame pointer
+			ret						%return
+		.Lfel:
+		  .size		simple,.Lfel-simple
+		  .ident	"GCC: (GNU) 2.95.3 20010315 (release)"
+
+	lines that start with  . direct assembler and Linker
+
+
+	DATA TYPES
+		char 					(1 byte) 					(8 bits)
+		char 				8 (string -> 4 bytes) 			(32 bits)
+		int 					4 bytes 					(32 bits)
+		float 			"single precision" (4 bytes) 		(32 bits)
+		double 			"double precision" (8 bytes) 		(64 bits)
+		extended-precision 		(10 bytes) 					(80 bits)
+		long double 			(12 bytes) 					(96 bits)
+
+	ACCESSING INFORMATION
+		SEE PAGE 100 FOR TABLE
+
+			Imediate -> Constant Values -> $-577 $0x1f 
+			Register -> %ebp, %esp, %rdi, %rax, etc -> three letters have 32 bits 
+			Memory -> memory reference, accesses memory at the effective address
+
+			movb vs vs movw vs movl vs movbl
+				movb-> moves a single byte (char, b stands for byte, 8 bit)
+				movw-> moves two bytes (w stands for word, 16 bit)
+				movl-> moves 4 bytes (l stands for double word, 32 bit)
+				movsbl-> from 1 byte to 4, adds 24 leadings 1's 
+				movzbl-> from 1 byte to 4, adds 24 leading 0's
+
+			Load Effective Address (leal) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+				variant of movl
+				function: COPIES EFFECTIVE Address	
+					ex: leal 7, assume %edx = x; 
+								(%edx, %edx, 4). = 7 + %edx + %edx * 4 = 5x + 7;
+					
+			sall, shll, sarl, shrl
+				sall -> LEFT SHIFT, 0'S
+				shll -> LEFT SHIFT, 0'S
+
+				*sarl -> RIGHT SHIFT, ARITHMETIC 
+				*shrl -> RIGHT SHIFT, LOGICAL 
+
+	CONTROL
+
+		Condition Codes
+			CPU maintains single-bit condition code registers describing the most recent operation
+
+			CF: CARRY FLAG -> most recent operation carried most significant bit-> overflow
+			ZF: ZERO FLAG -> most recent operation returned 0
+			SF: SIGN FLAG -> most recent operation returned a negative Values
+			OF: OVERFLOW FLAG -> most recent operation caused Two's complement overflow, either positive or negative
+
+			ex: say t = a + b
+
+			CF = (unsigned t) < (unsigned a);
+			ZF = t == 0;
+			SF = t < 0;
+			OF = (a < 0 == b < 0) && (t < 0 != a < 0)
+
+			Logical Operators such as xorl, CF and OF are set to 0!!!
+
+	ACCESSING CONDITION CODES 
+		"set an integer register" -> sets a single byte to 0 or 1 based on condition Codes
+		consider Condition Codes and Implicit Setting a SIDE EFFECT
+
+			sete; For t = a-b, when a = b, t = 0, ZF is set
+
+		SEE FIGURE 3.9 PAGE 112 FOR SET INSTRUCTIONS 
+			some example:
+				sete D == D <-- ZF (zero flag) == Equal/Zero 
+				sets D == D <-- SF (signed flag) == negative
+				setns D == D <-- ~SF == Nonnegative 
+				setg D == D <-- ~(SF ^ OF) & ~ ZF == Greater than (>)
+				setge D == D <-- ~(SF ^ OF) == Greater than or equal to (>=)
+
+
+
+
+		CONDITION CODE EXAMPLE (let a be in %eax, b be in %edx)
+			cmpl %eax,%edx			compare a:b
+			setl %al				Set low order bytes of %eax to 0 or 1
+			movzbl %al,%eax			set remaining bytes of %eax to 0
+
+			Explicit Setting test
+				testq Src2, Src1 -> destination is condition code
+				testq b, a = a&b without setting destination
+				compq Src2, Src1
+				compq b, a = a-b without settinng destination 
+
+	Practice Problem 3.7
+
+
+
+
+	CONDITIONAL BRANCHES -> JUMP INSTRUCTIONS	
+		jump instruction s== assembly if then else statements
+			Usually instructions follow each other in order, however, jump causes the execution	
+			to switch to a new order as indicated by a label. 
+				labels look like .Li 
+
+			example:
+				xorl %eax,%eax				Set %eax to 0
+				jmp .Li 					%"goto" .Li
+				movl (%eax), %edx			This line is skipped over because jmp
+			.Li 
+				pop1 %edx
+
+		DIRECT VS INDIRECT JUMPING 
+			DIRECT~~~~~~~~
+				jmp label -> takes you directly to a label, the label is always encoded as part of
+				the instructions
+			INDIRECT~~~~~~~~
+				jmp *%eax  -> 		the value in register %eax becomes jump target
+				jmp *(%eax) -> 		the value in memory becomes the jump target
+
+	Practice Problem 3.8
+
+	CONDITIONAL BRANCHES	
+		regular Code in C~~~~~~~~~~~~~~~~~~~
+		int absdiff(int x, int y) {
+			if (x < y) {
+				return y - x; 							%if x < y return y - x to get noneg value
+			} else {
+				return x - y;							%if x is not < y, return x - y to get nonneg value
+			}
+		}
+		Goto Code in C~~~~~~~~~~~~~~~~~~~~~~
+			int gotodiff(int x, int y) {
+				int rval;								%define local variable "return value"						
+
+				if (x < y) {							%if x < y, JUMP TO LESS, skip the code right below where
+					go to less;							%rval = x -y
+				rval = x - y;
+				goto done;								%jump to done so you can return rval
+				}
+				less:									%jmp instruction target  if x < y is true
+					rval = y - x;
+				done:
+					return rval;
+			}
+
+		example from lecture:
+
+		val = Test ? Then_Exp : Else_Expr;
+
+		GoTo Version
+			ntest = !Test;
+			if (ntest) goto Else;				%INVERT NTEST	
+			val = Then_Expr;
+			goto Done;
+		Else:
+			val = Else_Expr;
+		Done:
+			....
+
+
+	Practice Problem 3.9
+
+	DO-WHILE, WHILE, FOR LOOPS WILL BE DONE ON PAPER. PRACTICE PROBLEM ANSWERS HERE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+		
+
+
+
+
+
+			
+
+
+
+			
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
