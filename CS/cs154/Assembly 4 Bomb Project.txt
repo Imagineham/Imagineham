@@ -1,0 +1,91 @@
+Assembly 4 Bomb Project
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Dump of assembler code for function main:
+   0x0000000000400ed6 <+0>:     push   %rbx
+   0x0000000000400ed7 <+1>:     cmp    $0x1,%edi
+   0x0000000000400eda <+4>:     jne    0x400eec <main+22>
+   0x0000000000400edc <+6>:     mov    0x203ccd(%rip),%rax        # 0x604bb0 <stdin@@GLIBC_2.2.5>
+   0x0000000000400ee3 <+13>:    mov    %rax,0x203ce6(%rip)        # 0x604bd0 <infile>
+   0x0000000000400eea <+20>:    jmp    0x400f4f <main+121>
+   0x0000000000400eec <+22>:    mov    %rsi,%rbx
+   0x0000000000400eef <+25>:    cmp    $0x2,%edi
+   0x0000000000400ef2 <+28>:    jne    0x400f2e <main+88>
+   0x0000000000400ef4 <+30>:    mov    0x8(%rsi),%rdi
+   0x0000000000400ef8 <+34>:    mov    $0x402764,%esi
+   0x0000000000400efd <+39>:    callq  0x400d20 <fopen@plt>
+   0x0000000000400f02 <+44>:    mov    %rax,0x203cc7(%rip)        # 0x604bd0 <infile>
+   0x0000000000400f09 <+51>:    test   %rax,%rax
+   0x0000000000400f0c <+54>:    jne    0x400f4f <main+121>
+   0x0000000000400f0e <+56>:    mov    0x8(%rbx),%rcx
+   0x0000000000400f12 <+60>:    mov    (%rbx),%rdx
+   0x0000000000400f15 <+63>:    mov    $0x402766,%esi
+   0x0000000000400f1a <+68>:    mov    $0x1,%edi
+   0x0000000000400f1f <+73>:    callq  0x400d10 <__printf_chk@plt>
+   0x0000000000400f24 <+78>:    mov    $0x8,%edi
+   0x0000000000400f29 <+83>:    callq  0x400d40 <exit@plt>
+   0x0000000000400f2e <+88>:    mov    (%rsi),%rdx
+   0x0000000000400f31 <+91>:    mov    $0x402783,%esi
+   0x0000000000400f36 <+96>:    mov    $0x1,%edi
+   0x0000000000400f3b <+101>:   mov    $0x0,%eax
+   0x0000000000400f40 <+106>:   callq  0x400d10 <__printf_chk@plt>
+   0x0000000000400f45 <+111>:   mov    $0x8,%edi
+   0x0000000000400f4a <+116>:   callq  0x400d40 <exit@plt>
+   0x0000000000400f4f <+121>:   callq  0x401611 <initialize_bomb>
+   0x0000000000400f54 <+126>:   mov    $0x4027d8,%edi
+   0x0000000000400f59 <+131>:   callq  0x400c20 <puts@plt>
+   0x0000000000400f5e <+136>:   mov    $0x402818,%edi
+   0x0000000000400f63 <+141>:   callq  0x400c20 <puts@plt>
+=> 0x0000000000400f68 <+146>:   callq  0x4019a7 <read_line>
+   0x0000000000400f6d <+151>:   mov    %rax,%rdi
+   0x0000000000400f70 <+154>:   callq  0x40100d <phase_1>
+   0x0000000000400f75 <+159>:   callq  0x401acd <phase_defused>
+   0x0000000000400f7a <+164>:   mov    $0x402858,%edi
+   0x0000000000400f7f <+169>:   callq  0x400c20 <puts@plt>
+   0x0000000000400f84 <+174>:   callq  0x4019a7 <read_line>
+   0x0000000000400f89 <+179>:   mov    %rax,%rdi
+   0x0000000000400f8c <+182>:   callq  0x401029 <phase_2>
+   0x0000000000400f91 <+187>:   callq  0x401acd <phase_defused>
+   0x0000000000400f96 <+192>:   mov    $0x40279d,%edi
+   0x0000000000400f9b <+197>:   callq  0x400c20 <puts@plt>
+   0x0000000000400fa0 <+202>:   callq  0x4019a7 <read_line>
+   0x0000000000400fa5 <+207>:   mov    %rax,%rdi
+--Type <RET> for more, q to quit, c to continue without paging--
+   0x0000000000400fa8 <+210>:   callq  0x401092 <phase_3>
+   0x0000000000400fad <+215>:   callq  0x401acd <phase_defused>
+   0x0000000000400fb2 <+220>:   mov    $0x402888,%edi
+   0x0000000000400fb7 <+225>:   callq  0x400c20 <puts@plt>
+   0x0000000000400fbc <+230>:   callq  0x4019a7 <read_line>
+   0x0000000000400fc1 <+235>:   mov    %rax,%rdi
+   0x0000000000400fc4 <+238>:   callq  0x40119e <phase_4>
+   0x0000000000400fc9 <+243>:   callq  0x401acd <phase_defused>
+   0x0000000000400fce <+248>:   mov    $0x4027b7,%edi
+   0x0000000000400fd3 <+253>:   callq  0x400c20 <puts@plt>
+   0x0000000000400fd8 <+258>:   callq  0x4019a7 <read_line>
+   0x0000000000400fdd <+263>:   mov    %rax,%rdi
+   0x0000000000400fe0 <+266>:   callq  0x401211 <phase_5>
+   0x0000000000400fe5 <+271>:   callq  0x401acd <phase_defused>
+   0x0000000000400fea <+276>:   mov    $0x4028a8,%edi
+   0x0000000000400fef <+281>:   callq  0x400c20 <puts@plt>
+   0x0000000000400ff4 <+286>:   callq  0x4019a7 <read_line>
+   0x0000000000400ff9 <+291>:   mov    %rax,%rdi
+   0x0000000000400ffc <+294>:   callq  0x40125b <phase_6>
+   0x0000000000401001 <+299>:   callq  0x401acd <phase_defused>
+   0x0000000000401006 <+304>:   mov    $0x0,%eax
+   0x000000000040100b <+309>:   pop    %rbx
+   0x000000000040100c <+310>:   retq
+End of assembler dump.
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Dump of assembler code for function phase_1:
+=> 0x000000000040100d <+0>:     sub    $0x8,%rsp
+   0x0000000000401011 <+4>:     mov    $0x4028d0,%esi
+   0x0000000000401016 <+9>:     callq  0x40150e <strings_check>
+   0x000000000040101b <+14>:    test   %eax,%eax
+   0x000000000040101d <+16>:    je     0x401024 <phase_1+23>
+   0x000000000040101f <+18>:    callq  0x40193c <explode_bomb>
+   0x0000000000401024 <+23>:    add    $0x8,%rsp
+   0x0000000000401028 <+27>:    retq
+End of assembler dump.

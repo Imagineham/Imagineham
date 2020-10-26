@@ -323,13 +323,270 @@ Chapter 3
 
 	DO-WHILE, WHILE, FOR LOOPS WILL BE DONE ON PAPER. PRACTICE PROBLEM ANSWERS HERE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+	Memory Hierarchy 6.1 --> 6.5~~~~~~~~~~~~~~~~~~~~~~~~
+		Microarchitetcure
+			does not affect software infrastructure
+
+		ISA VS Microarchitecture
+			instruction set architecture -> DOES FUNCTION WORK?
+				--> programmer visible state, does not change when adding caches
+				--> i can see stack, i can see program counter, can see code. 
+						%registers, code, memory addresses, assembly, etc ISA
+			Microarchitecture ->  PERFORMANCE, HOW DOES FUNCTION WORK
+				--> everytime you buy a new processor, microarchitecture is different
+						%cache, valid bits, tags, conflict, hits, misses MICRO
+
+		Elements of Program Performance
+			Memory Operators x Memory Time
+			ALU Ops x ALU Time (bits operations)
+		+	Cond Ops x Cond Time
+		=		Total Time
+		aka "the time of any operation is the time it takes to access instruction memory + the time 
+		it takes to perform the operation (which can be another memory access). 
+
+		the time of memory operation is the time it takes to access data memory + instruction memory. 
+
+		CPU-Memory Gap
+			DRAM (memory) --> does not improve as fast as CPU, could be about 100 times slower than CPU
+			Disk, SSD much slower than DRAM
+
+		MEMORY Hierarchy	
+			L0: Registers (x86-64 == 16 regs, each 8 bytes)   			%SMALLEST FASTEST, MOST EXPENSIVE%
+			L1: Cache (SRAM, holds lines from L2 cache)
+			L2: Cache (SRAM, holds lines from L3 cache)
+			L3: Cache (SRAM, holds lines DRAM)
+			L4: Main Memory (DRAM, 8, 16, GB of memory, much bigger than registers)
+			L5: Local Secondary Storage
+			L6: Remote Secondary Storage (internet)						%lARGEST, SLOWEST, CHEAPEST%
+
+			Each Lk serves as a cache for L(k + 1)!!!
+		Processor <----> Cache <----> DRAM
+
+			CAPACITY === register << cache << DRAM
+			Speed === Register >> cache >> DRAM
+
+			if data is "in fast memory" low latency access
+			if data is "not in fast memory long" latency DRAM
+				
+		Locality *ALL PROGRAMS HAVE LOCALITY*
+			(how much locality you have...)
+			programs use data and instructions with addresses near or equal to those used recently
+
+			Temporal Locality	
+				recently referenced items likely to be referenced again
+
+			Spatial Locality	
+				items with nearby addresses tend to be referenced around the same time
+
+			MAKING CLAIMS ABOUT LOCALITY
+				understanding how differences in code affect locality
+				ex:
+					--->for (j = 0; j < N; j++) {
+					--->	for (i = 0; i < M; i++) {
+							sum += a[i][j]
+							}
+						}
+
+					VS 
+
+					--->for (i = 0; i < M; i++) {
+					--->	for (j = 0; j < N; j++) {
+							sum += a[i][j]
+							}
+						}
+					EXAMPLE 2 has better locality because j is the faster changing array dimension in the multi-d
+					array ex. The C programming language was made with ROW major order so for continuous accesses 
+					in memory. change the rightmost reference always. 
+
+			-->stride-k reference patterns (visiting kth variable) stride-1 ref pattern (continguous) have 
+					good spatial localiity
+			-->loops have good temporal and spatial locality, SMALLER THE BODY AND GREATER NUMBER OF ITERATIONS THE better
+
+			PRACTICE PROBLEM 6.5
+				--->clear1 good temporal locality, good spatial locality. stride-1 ref per struct and row-major ordering 
+				--->clear2 good temporal but poor spatial. Each p[i] iterated over once but within each struct hops around.  
+				--->clear3 poor spatial and temporal locality. --> goes against row-major ordering, and hops around
+
+			LOCALITY AND MEMORY
+				ISA === Processor (Instruction set architecture)
+					*processor, cache relationship controlled by compiler
+				Microarcitecture === L1, L2, L3 caches + DRAM
+
+		CACHE 
+				cache ---> small, fast, expensive 
+				DRAM ---> large, slow, cheap 
+				
+				Data is copied using cache blocks. Cache blocks are 64 bytes in size
+				Data is always copied back and forth using transfer units
+
+				"hit" ---> Processor asks for data in block 14, if data is in cache HIT
+					  ---> looking for d in k + 1, looks for it in k first. if its in k, HIT
+
+				"miss"---> Processor asks for data in block 12, if data is NOT in cache, MISS
+								  IF THERE IS A MISS, MUST MOVE ONTO MEMORY, PUT ONTO CACHE, KICK SOMETHING OUT 
+									  THEN PROCESSOR GETS BLOCK 12. 
+					  --->
 
 
+				cache exploiting locality == #hits/#accesess 
+				cache failing to exploit locaclity == #misses/#accesses
+
+				Memory to Register mov
+					Processor loads request to cache
+					check if request is in cache
+
+						IF IT IS -----> hit, return copy of data
+						IF IT IS NOT -> miss, read from main memory, replace block in cache with new, return copy
+
+PAGE 306 CACHE DESIGN 	
+			S === sets, 2^s (number of bits used, log S) sets. 
+			E === blocks; lines per set think of the rectangles 
+			B === bytes per cache blocks (usually 64); 2^b bytes per cache block
+
+			valid bit (rly small) mustbe valid for hit
+			tag (rly small)
+
+			C (cache size) === S x E x B
+			t (tag bits) === number of address bits - (block offset bits + set index bits)
+			b (block offset bits) === log_2 B (block size in bytes)
+			s (set index bits) === log_2 S (num of sets)
+
+			Types of cache DESIGN
+			--->Direct-mapped cache (E === 1)
+					because  e is 1, one block per set,
+				PRO: each block, there is only one place it can go; SIMPLE
+				CON: restrictive, sometimes conflict 	
+			--->2-way set associative cache (E === 2)
+					there are two blocks per set
+					first -> index set
+							-> compare tag to both blocks
+							-> find tag that matches
+							-> if match, take block offset bits etc etc
+				PRO: now we have a choice over which block to evict on a miss
+				CON: search all blocks per set for tag 
+			---> Direct == more cache misses, Simpler
+				 fully associative == must search all locations for match, less misses, more complex
+
+			***BLOCKS AND WRITES***
+				BLOCK how to replace
+					no choice in direct
+					associative --> random, least recently used, first in first out! (keep track of oldest block)
+
+				WRITE
+					write through --> write to memory, higher traffic simple DESIGN
+					write back --> only update copy in cache; DIRTY COPY (different)
+
+			Miss Rate vs Hit Time vs miss Penalty
+			miss rate --> misses/accesses OR  1 - hit rate; typical numbers = 3-10 percent L1
+			Hit time --> time to deliver a line in cache; typical = 4 clock cycles for L1, 10 clock cycles for L2
+			miss penalty --> time required bc of miss; typical 150-500 for main memory
+
+			THE THREE C'S
+			COMPULSORY/COLD ---> first reference to block (when there's nothing in cache to match anyways)
+									if the cache has been warmed up, compulsor misses won't happen (as much)!
+			CAPACITY ---> cache is too small to hold all data needed at a time (the working set)
+			CONFLICT ---> misses due to collisions 
+							ex: say blocks at level k + 1 must be replaced in block k. block i in k + 1 corresponds to 
+									block (i mod 4) at k. so 0, 4, 8, 12 correspond to block 0, 5, 9, 13 block 1 etc tec.
+							ex: blocks 0 and 8 go in the same place on the cache but if requested while alternating they 
+									will keep missing
+
+						
+
+	CACHE BEHAVIOR
+		memory address, 64 bit
+			the blocks we have been looking at are interpreted ascii
+
+					tag	|	set index |	off set
+
+				Offset == b bits (B = 2^b bytes per block)
+				Set Index == s bits (S = 2^s cache sets; ex: 2 way set, S = 2, so s = 1 (one bit))
+				Tag bits (Address size - b - s, usually the left most leftover)
+
+		1) locate set
+		2) check tag
+		3) if tag matches, and valid is set, HIT, locate data at offset 		
+ 
+
+	6.1 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		RAM --> Random Access Memory
+		SRAM --> Static Random Access Memory	
+						Inverted pendulum, data can be kept indefinitely with stable left and 
+						stable right statuses. FASTEST
+		DRAM --> Dynamic Random Access Memory, uses supercells to organize bits. 
+					d supercells x w cells (bits) ==> d x w = total info
+					supercells organized by rows and columns. r x c == d
+		DDR SDRAM --> fastest DRAM
+
+		READS vs WRITES 
+			read -> transfers data from main memory TO CPU
+			write -> transfers data from CPU TO main memory
+
+			Ex: mov A, %eax
+					1) CPU inititaes read. Address of A on system bus (CPU <--> I/O)
+					2) system bus transfers to I/o which transfers to memory (SYSTEM <--> I/O <--> MEMORY)
+					3) Main memory reads addresson memory bus, fetches data, writes data to bus	
+							(MEMORY BUS <--> DRAM)
+					4) I/O carries signal from memory bus back to system bus. CPU reads from system 
 
 
+		DISKS
+			Disks store a lot of INFORMATION
+PAGE 286 		DISK Capacity = bytes/sector x avg # sectors/track x # tracks/surface x #surfaces/platter x #platter/disk
+				Like a record player, disk with magnetic surface, read/write head on arm 
 
+PAGE 295 
+	LOCALITY 		
+
+	BOMB PROJECT NOTES~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	__gconv_transform_ascii_internal
+			transform_internal_ascii
+					ucs2
+					ucs2reverse
+					ucs4
+					ucs4le
+					utf8
+					ucs2_internal
+					ucs2reverse_internal
+					ucs4_internal
+
+
+		DIRECT MAPPED CACHE IN ACTION
+			--> Let S = 4 ---> s = log_ 2 4 = 2
+			--> Let E = 1 ---> direct mapped, one line per set
+			--> Let B = 2 ---> b = log_2 2 = 1
+			--> Let m = 4 ---> t = m - (b + s) -> t = 1
+
+
+			Set		Valid 		Tag		block[0]		block[1]
+			0		1			0		m[0]			m[1]			%4 bits, 1 byte, from 0 to 1
+			1		0									
+			2		1			1		m[12]			m[13]	
+			3		0										
+
+			1) Address 0, given 0. Compulsory miss
+			2) Address 1, given 1. hit. index matches, valid and tag match. 
+			3) Address 13, given 13. Compulsory miss. 
+			4) Address 8, given 8. Miss, tag doesnt match
+			5) Address 0, given 9. Conflict miss, WE JUST TOOK IT OUT AND WE HAD SPACE -_-
+
+		SET ASSOCIATIVE CACHES
+			1 < E < C/B
+			ex: E = 2 --> 2 way set associative cache
+				E = 4 --> 4 way set associative cache
+
+			Each set has E lines of blocks. Functionally the same, cache just searches 
+					for line with matching tag 
+
+		Practice Problem 6.9
 		
+	CALLER VS CALLEE SAVE REGISTERS 
+		-->Caller : %eax %edx %ecx
+		-->Callee : %ebx %esi % edi
 
+
+	Arrays 
+		-->Remember arrays are contiguous, their size can be determined by L * sizeof (T) bytes
 
 
 
