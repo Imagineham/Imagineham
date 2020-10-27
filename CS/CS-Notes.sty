@@ -538,19 +538,6 @@ PAGE 286 		DISK Capacity = bytes/sector x avg # sectors/track x # tracks/surface
 PAGE 295 
 	LOCALITY 		
 
-	BOMB PROJECT NOTES~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-	__gconv_transform_ascii_internal
-			transform_internal_ascii
-					ucs2
-					ucs2reverse
-					ucs4
-					ucs4le
-					utf8
-					ucs2_internal
-					ucs2reverse_internal
-					ucs4_internal
-
-
 		DIRECT MAPPED CACHE IN ACTION
 			--> Let S = 4 ---> s = log_ 2 4 = 2
 			--> Let E = 1 ---> direct mapped, one line per set
@@ -589,8 +576,26 @@ PAGE 295
 		-->Remember arrays are contiguous, their size can be determined by L * sizeof (T) bytes
 
 
+BOMB PROJECT NOTES~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
+
+
+
+
+
+
+
+Dump of assembler code for function phase_1:
+=> 0x000000000040100d <+0>:     sub    $0x8,%rsp
+   0x0000000000401011 <+4>:     mov    $0x4028d0,%esi
+   0x0000000000401016 <+9>:     callq  0x40150e <strings_check>
+   0x000000000040101b <+14>:    test   %eax,%eax
+   0x000000000040101d <+16>:    je     0x401024 <phase_1+23>
+   0x000000000040101f <+18>:    callq  0x40193c <explode_bomb>
+   0x0000000000401024 <+23>:    add    $0x8,%rsp
+   0x0000000000401028 <+27>:    retq
+End of assembler dump.
 			
 
 
