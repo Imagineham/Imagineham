@@ -578,41 +578,516 @@ PAGE 295
 
 BOMB PROJECT NOTES~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+PHASE_1 STRING INPUT 
+	-> must have 32 char min
+	-> must start with E
+	-> second letter must be x, actually must be the same + 1 letter
+
+ANSWER: Exo-biologists have found evidence of amyno acyds cs154
+
+STRINGS_CHECK -> REGISTER USAGE TABLE
+
+REGISTER 				VARIABLE 				INITIALIZED -> UP TO 0x40151B
+(64x Callee) %r12 								%r12 = 0x400de0	
+(64x Frame) %rbp								%rbp = %rsi => 0x4028d0
+(64x Callee) %rbx								%rbx = %rdi => 0x604be0
+(64x 1st arg) %rdi			x					%rdi = %rsi =>  0x4028d0 
+(64x 2nd arg) %rsi			y					0x4028d0
+(32x return) %eax
+(32x 3rd arg) %edx
+(32x Callee) %r12d
+(byte return) %al
+
+STRINGS CHECK- 0x401518
+
+%rdi 0x4028d0 = "Exo-biologists have found evidence of amyno acyds" 
+%rax 0x604be0 = "\033[A"
+
+ON FIRST CALL TO STRINGS_LENGTH - 0x40151b 
+	(inside strings_length) - 0x401489 - takes in %rdi
+	line 0x40148c -> string does not equal 0
+		 0x40148e -> rax = 0
+		 0x401493 -> "xo-biologists have found evidence of amyno acyds"
+		 0x401497 -> rax is now 1. (the same amount string moved)
+		 0x40149d -> if not equal to 0, go back and add 1 again
+		 0x401493 -> "o-biologists have found evidence of amyno acyds"
+		 0x401497 -> rax is now 2. (COUNTS LETTERS IN STRING)
+		 ...
+		 0x40149f -> %rax = 0x30
+		 0x4014a1 -> 
+
+
+
+RESULTS OF LINE 40151B
+	%rdi = 402901 = "" = string deleted? 
+	%rsi = 4028d0
+	%rbp = 4028d0
+	%r12 = 400de0
+	%rax = 0x31 number of letters in the string
+
+Line 401520
+	%rdi = 0x604be0 (mov rbx, rdi)
+	%r12d = 31 (mov eax %r12d)
+
+LINE 401523 
+	%rdi = 0x604be0 "\033[A"
+
+Line 401526 string length
+	line ...
+		 0x401493 -> "[A"
+		 0x401497 -> rax is now 1
+		 ...
+		 0x401493 -> "A"
+		 0x401497 -> rax is now 2
+		 ...
+		 0x401493 -> ""
+		 0x401497 -> rax is now 3
+
+RESULTS OF LINE 401526
+	%rdi = 0x604be3 = ""
+	%rsi = 4028d0 = "Exo-biologists have found evidence of amyno acyds"
+	%rbp = 4028d0 = ^^
+	%r12 = 31
+	%rax = 0x3 
+	%rbx = "\033[A"
+
+Line 40152b 
+	%eax = 1
+
+Line 0x401530 -> 0x401533
+	if greater than or equal to 0 jump to 0x401591
+	cmp %eax, %r12d == r12d - eax == 31 - 4 == 30
+	%rdx = 1
+	%rax = 4
+
+Line 0x401591
+	%rax = 1
+
+Line 0x401593
+	%rbx = 0
+
+
+When input is "I will have a bagel and cream cheese probably soon"
+
+	%rdi = 0x604c13 = ""
+	%rax = 0x33
+	%r12 = 0x31
+	%rbx = 0x604be0 = "I will have a bagel and cream cheese probably soon"
+	%rsi = 0x4028d0
+	%rbp = 0x4028d0 = ""Exo-biologists have found evidence of amyno acyds"
+	%rdx = 0x1
+
+
+Line 0x401535
+	movzbl 0x0(%rbp) == 45 IN BINARYYYYYYY
+	%rax = 0x45 = %al
+
+Line 0x40153b
+	checks if least sig byte is 0
+	test %al %al, failed so we move on
+
+Line 0x40153d
+	%al - contents of rbx == 0x000045 - 0x604be0
+Line 0x40153f
+	is (0x45 - 0x604be0) equal to 0?
+
+Line 0x401541 
+	absolute jump
+
+Line 40153f
+1: x/i $rdi
+	0x604c12 
+	2: x/s $rdi  0x604c12 <input_strings+50>:       ""
+	3: x/i $rax
+	0x45:        
+	4: x/s $rax  0x45:     
+	5: x/i $r12
+	0x31:       
+	6: x/i $rbx
+	0x604be0 
+	7: x/s $rbx  0x604be0 <input_strings>:  "E will have a bagel with cream cheese probably soo"
+	8: x/i $rsi
+	0x4028d0:    rex.RB js 0x402942
+	9: x/s $rsi  0x4028d0:  "Exo-biologists have found evidence of amyno acyds"
+	10: x/i $rbp
+	0x4028d0:    rex.RB js 0x402942
+	11: x/s $rbp  0x4028d0: "Exo-biologists have found evidence of amyno acyds"
+	12: x/i $rsp
+	0x7fffffffe080:      add    %al,(%rax)
+	13: x/i $rdx
+	0x1: <error: Cannot access memory at address 0x1>
+	14: x/i $al
+	0x45:        <error: Cannot access memory at address 0x45>
+.
+
+
+Line 0x401547
+	%rbp = 0x4028d1 = "xo-biologists have found evidence of amyno acyds"
+
+Line 0x40154b
+	%rbx = 0x604be1 = " will have a bagel with cream cheese probably soo"
+
+Line 0x40154f
+	%eax = 0x78
+
+Line 0x401557
+
+
+
+BOMB PHASE_2~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~			
+
+%r8 = logists have found evidence of amyno acyds cs154\n
+
+Notes for answer:
+	-> must have at least 5 spaces, so 6 values 
+	-> first value must be 1
+	-> second value must be 2
+	-> third value must be 5
+	-> fourth value must be 9
+	-> fifth value must be 16
+	-> sixth value must be 27
+
+ANSWER: 1 2 5 9 16 27
+
+Line 40102a
+	%rdi = 0x604c30
+	%rbp = 0x4026d0
+	%rax = 0x604c30
+	%rbx = 0
+	%rdx = 0x604c30
+	%al = 0x30
+	%rsi = 1
+	%rsp = 0x7fffffffe088
+
+Line 0x40102b
+	%rsp -0x28 == 0x7fffffffe060
+
+Line 0x40102f
+	%rax = 0x84c7091b245b8d00
+	%fs is a register, can now display.
+	%fs == 0x0
+
+Line 0x401038
+	0x18 + (rsp) == 0x7fffffffe078
+
+Line 0x40103f
+	%rsi = 0x7fffffffe060 == ""
+	%rdi = 700700
+
+Line 0x401968
+	rsp - 8 = 0x7fffffffe050
+
+Line 0x40196c
+	%rdx = 0x7fffffffe060
+
+Line 0x40196f
+	%rcx = 0x7fffffffe064: 0 '\000'
+
+Line 0x401973
+	%rax = 0x7fffffffe074
+
+
+	0x401981
+	%r8 = 0L`
+
+	0x401985
+	%rsi = "%d %d %d %d %d %d"
+
+	0x40198a
+	%rax = 0x0
+
+	0x40198f
+	%rax = 0x1
+	%rdi = "700700"
+	%rbx = 0x0
+	%rdx = 0x402c17
+	%rsi = 0x0
+	%rsp = 0x7fffffffe050
+	%r8 = 0x6
+
+	0x401994
+	%rsp = 0x7fffffffe060
+
+	0x401998
+	%rax - 0x5 RAX MUST BE AT LEAST 6 HERE 
+
+	0x4019a2
+	%rsp = 0x7fffffffe068
+	%rax = 0x6
+	%rdi = 0x7fffffffda10 = "6"
+
+	0x401042
+		input is "1 2 3 4 5 6" 
+		%rsp = 0x7fffffffe070
+		%rax = 0x6
+		%rdi = 0x7fffffffda10 = "6"
+		%rbx = 0x0
+		%rdx = 0x7fffffffe084
+		%r8 = 0x0
+		%r12 = 0x400de0
+
+	0x401047
+		4 + rsp must equal 2 or bomb explodes
+
+	0x401053
+		%rbx = 0x7fffffffe070 = 1
+
+	0x401056
+		%rbp = 0x7fffffffe080 = 5 = rsp + 10
+
+	0x40105b
+		%rax = 0x2 = rbx + 4 = 
+
+	0x40105e
+		%rax = 0x3 = 2 + (1 == rbx)
+	
+	0x401060
+		%rax = 0x5 = 2 + 3
+
+	...
+
+	0x40106d
+		%rbx = 2 - ...74
+		%rbp = 4 
+		input 1 2 5 3 4 6
+
+	
+	
+		1       breakpoint     keep y   0x000000000040193c <explode_bomb>
+		2       breakpoint     keep y   0x0000000000401029 <phase_2>
+		3       breakpoint     keep y   0x0000000000401968 <read_six_numbers>
+		4       breakpoint     keep y   0x000000000040198f <read_six_numbers+39>
+		6       breakpoint     keep y   0x0000000000401994 <read_six_numbers+44>
+		11      breakpoint     keep y   0x0000000000401066 <phase_2+61>
+
+		1:   y  /1bs $rdi
+		2:   y  /1bs $rbp
+		3:   y  /1bs $rax
+		4:   y  /1bs $rbx
+		5:   y  /1bs $rdx
+		6:   y  /1bs $rsi
+		7:   y  /1bs $rsp
+		10:   y  /1bi $rdi
+		11:   y  /1bi $rbp
+		12:   y  /1bi $rax
+		13:   y  /1bi $rbx
+		14:   y  /1bi $rdx
+		15:   y  /1bi $rsi
+		16:   y  /1bi $rsp
+		18:   y  /1bs $ecx
+		19:   y  /1bi $ecx
+
+
+BOMB PHASE_3~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	Notes:
+		-> two values 
+		-> first value must be LESS THAN OR EQUAL than 7
+		-> first value must be LESS THAN OR EQUAL TO 4
+
+
+
+
+	0x401092
+		%rdi = 0x604c80 = MY INPUT
+		%rbp = 0x426d0
+		%rax = 0x604c80 = MY INPUT
+		%rdx = 0x604c80 = MY INPUT
+		%rsi = 2
+		%rsp = 0x7fffffffe090
+		%rcx = 0x20
+		%rbp = 4204240
+		%rbx = 0 
+		1: x/s $rdi  0x7fffffffda50:    "5214"
+		2: x/s $rbp  0x4026d0 <__libc_csu_init>:        "AWAVA\211\377AUATL\215%.\027 "
+		3: x/s $rax  0x0:       <error: Cannot access memory at address 0x0>
+		4: x/s $rdx  0x0:       <error: Cannot access memory at address 0x0>
+		5: x/s $rsi  0x0:       <error: Cannot access memory at address 0x0>
+		6: x/s $rsp  0x7fffffffe0b0:    ""
+		7: x/s $rcx  0x20:      <error: Cannot access memory at address 0x20>
+		8: /d $rbp = 4204240
+		9: /d $rbx = 0
+		10: x/s $rbx  0x0:      <error: Cannot access memory at address 0x0>
+	
+
+	BOMB PHASE 4
+
+		Notes:
+			-> two values
+			-> first value must be less than or equal to 14
+			-> MUST BE 12
 
 
 
 
 
+		Rax must equal 43 
+
+		40119e
+			%rsp = 0x7fffffffe090 = ""
+
+		4011a2
+			%rax = 0x509e823e6470a900
+		
+		4011ab
+			%8 + rsp (98) = 0x509e823e6470a900
 
 
+		4011b2
+			%rcx = 4 + rsp = 94 
 
-Dump of assembler code for function phase_1:
-=> 0x000000000040100d <+0>:     sub    $0x8,%rsp
-   0x0000000000401011 <+4>:     mov    $0x4028d0,%esi
-   0x0000000000401016 <+9>:     callq  0x40150e <strings_check>
-   0x000000000040101b <+14>:    test   %eax,%eax
-   0x000000000040101d <+16>:    je     0x401024 <phase_1+23>
-   0x000000000040101f <+18>:    callq  0x40193c <explode_bomb>
-   0x0000000000401024 <+23>:    add    $0x8,%rsp
-   0x0000000000401028 <+27>:    retq
-End of assembler dump.
-			
+		4011b7
+			%rdx = 90
 
+			4011ba -> 4011c7
+			CHECKS IF TWO INPUTS GIVEN 
 
+	CS 154 OPERATING SYSTEMS
 
-			
+	Exceptions
+		-> abrupt change in control flow response to some change in processor state
+		-> Application runs , hits exception, OS directs CPU to exception handler, exception runs, 
+				returns to next instructions
+		
+		State vs Event
+			state == how the processor is now
+			event == CHANGE IN State
 
+		When Exceptions occur, OS directs CPU to exception table which directs CPu to new instruction:
+		exception handler. 
 
+		Exception tables:
+			Entry 		Exception handler
+			0			divvByZero
+			1			TimerInterrupt
+			2			SegFault 
+			3			Etc etc etc ...
 
+		***Exception table entry numbers stored in exception table base register
 
+		EXCEPTION CLASSES
+		Class 			Cause 							Async/Sync 			Return
 
-
-
-
-
-
+		Interrupt 		Signal from I/O					Async				Always to NEXT instruction
+		Trap 			Intentional						Sync				Always to NEXT instruction
+		Fault 			Potentially Recoverable Error 	Sync				MIGHT return to current instruction
+		Abort			Nonrecoverable					Sync				Never returns
 		
 
+		INTERRUPTS	
+			-> signals from I/O
+			-> hardware interrupts are not caused by instructions
+			-> interrupt handlers
+			-> always return to next instruction
+			-> interrupt pin goes "high" == signal
+
+		TRAPS
+			-> Intentional!!! 
+			-> also knows as system calls
+			-> trap handler
+			-> always returns to next instruction
+			-> similar to a function call, you cause a trap exception when you want it. 
+				--> however, functions run in USER MODE (retricted) traps run in OS MODE (special stack)
+
+		FAULTS
+			-> fixable errors!!!
+			-> fault handler runs, if handler can correct error return to current instruction
+				--> if handler cannot correct error, ABORT 
+			-> page fault exception == example
+				--> instruction references address not resident in memory must be retrieved
+				--> fault handler loads page
+				--> problem is fixed and second time instruction is ran, no fault
+
+		ABORTS
+			-> kills instruction
+			-> passes control to abort handler which returns OS abort routine
+			
+		
+		PROCESSES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			-> an instance of a program in execution
+			-> provides the illusion that our program is the only thing CPU + OS are running
+			-> programs run in the CONTEXT	of some processor
+
+			Logical Control flow	
+				-> Each process has its own logical flow (stepping through instructions)
+				-> Processes TAKE TURNS using the processor
+				-> each process executes a portion, then temporarily susepended and other processes take their TruncHex
+				-> logical control flows are independent. DO NOT AFFECT OTHER PROCESSES
+				-> logic flows that overlap in time == concurrent processes
+				-> procceses taking turns == MULTITASKING
+				-> portion of logic flow == TIME SLICE
+
+			Private Address Spaces	
+				-> each program gets its own "private" address space in a process
+				-> private address spaces mean one program cannot read or write data from another program
+
+			USER vs KERNEL MODES
+				-> applications/programs run in user MODE
+				-> ONLY TRANSFERS TO KERNEL WHEN EXCEPTIONS OCCUR 
+				-> control passes to exception handler, processor sets mode bit == Kernel mode
+				-> handler runs in kernel mode
+				-> when handler returns, mode bit is changed. Back to user mode.
+
+				User mode == process not allowed to halt processor, change mode, or initiate I/O operation
+							 cannot reference data in kernel address space
+
+
+		CONTEXTS ~~~~~~~~~~~~~~~~~~~~~~
+			-> state the kernel needs to restart
+				-> all the data of a program as in registers, program counter, stack, pages, processes, files, etc etc
+			-> scheduling == when kernel restarts processes, transfers control to new process using context switches
+			-> context switches == save context of current Instruction, restores saved context, passes control 
+				--> to new process
+
+		PROCESS ID's (PIDs)~~~~~~~~~~~~~~~~~~~~~~
+			-> getpid
+			-> getppid == get parent process id
+			-> ^^^ return integer of type pid_t defined in a .h files
+
+		PROCESSES~~~~~~~~~~~~
+			-> Running == process is executing or waiting to be executed// will be scheduled
+			-> Stopped == suspended, will not be scheduled. Stopped until received continue signal
+			-> Terminated == process stopped permanently
+				--> receiving terminate signal
+				--> returning from main
+				--> calling exit function sets status to exit status
+
+	FORK~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		-> parents and children
+		-> parents and children are identical
+		-> Call once, return twice. Both parent and child return for FORK
+		-> parent and child run concurrently
+		-> separate address spaces, so even if they start with the same variable x they can change and return x differently
+		-> shared files, child can use any files parent was using 
+
+
+		Practice Problem 8.1
+			Output of child => x = 2
+			Output of Parent => x = 0
+
+		Practice 8.2
+			For i - 0, 1, 2 -- 2^3 == 8 lines of hello
+
+		Practice 8.3
+			Fork Fork == 4 + 1 = 5
+
+	SIGNALS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		-> message that notifies a process
+		-> signals correspond to system events
+		-> signals expose/relate OS exceptions to user processes. exceptions would be invisble without signals
+			--> Example: a process that attempts to div by zero, kernel sends SIGFPE to process
+		-> Linux has 30 signal types, must check table
+
+		SENDING
+			--> kernel sends or delivers a signal by updating the context of destination process
+			--> signals are sent when kernel detects system event
+			--> process calls kill function, forces kernel to send signal
+		RECEIVING 
+			--> receiving a signal == process reacting to kernel
+			--> process can either ignore, terminate, or "catch"
+			--> "catching" a signal == signal handler
 
 
 
