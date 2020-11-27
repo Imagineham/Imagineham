@@ -1183,6 +1183,65 @@ Address Translation
 			--> track used memory
 			--> 
 
+Threads~~~~~~~~~~~~~~~~~~~~~~~~~
+	-> unit of execution 
+		--> ID
+		--> stack
+		--> stack pointer
+		--> program counter
+	-> threads are less expensive than processes!!
+
+	Pthreads
+		->posix threads (at least in C programs)
+	
+	Processes vs Threads
+		Processes 
+			-> program context + kernel context
+			-> Program	
+				--> data registers
+				--> condition Codes
+				--> stack pointer
+				--> program counter
+			-> Kernel
+				--> process ID
+				--> VM structures
+				--> open files
+				--> signal handlers
+				-->brk pointer
+			-> uphold parent-child hierarchy
+
+		Threads
+			-> stack
+			-> Program (see above)
+			-> Thread ID
+			-> all are peers of each other (no parent child hierarchy)
+			-> threads share info when joined but can be "detached"! 
+	
+	threads < processes
+	process contains threads that share code, data, kernel info etc. !!!!
+
+	Practice Problem 11.2
+
+				main?		p0?			p1?
+	ptr 		y 			y 			y 
+	cnt 		n 			y 			y 
+	i.m 		y 			n 			n 
+	msgs.m 		y 			y 			y 
+	myid.p0 	n 			y 			n 
+	myid.p1 	n 			n 			y 
+
+
+	Practice Problem 11.3
+
+	A. consistent
+	B. not consistent
+	C. consistent
+	D. not consistent
+
+	Practice Problem 11.4
+
+	SEQUENTIAL CONSISTENCY IS NOT ENOUGH TO GARUANTEE CORRECTNESS
+	PROGRAMS MUST SYCNHRONIZE accesses
 
 
 
