@@ -1,0 +1,13 @@
+So!  You want to be a hacker!
+Just follow these easy steps!
+
+
+
+
+1:  Open I_AM_A_HACKER.rpy in your favorite text editor!
+
+2:  Set I_AM_A_HACKER to True!  (Remember!  Capitalization counts!  'true' won't cut it, it has to be 'True'!)
+
+3:  ???
+
+4:  Profit!

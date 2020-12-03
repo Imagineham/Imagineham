@@ -1,0 +1,314 @@
+Exam Practice and Review
+
+REDO ODD BEFORE EXAM
+Exam2 Practice Questions
+    1 T
+    2 T
+    3 F
+    4 F
+    5 F
+    6 T
+    7 F
+    8 T
+    9 T
+    10 T
+    11 T
+    12 F
+    13 T 
+    14 F
+    15 ???
+    16 T
+    17 T
+    18 T
+    19 F
+    20 
+    21 
+    22 T
+    23 T
+    24 T
+    25 T
+    26 T
+    27 T
+    28 F
+    29 T 
+    30 T 
+    31 F
+    32 
+    33 T
+    34 T
+    35 T
+    36 T
+    37 T
+    38 T
+    39 T
+    40 T
+    41 T
+    42 T
+    43 
+    44 T
+    45 T
+    46 F
+    47 T
+    48 F
+    49 T
+    50 T
+    51 T
+    52 T 
+    53 T 
+    54 T
+    55 F 
+    56 F 
+    57 T 
+    58 T 
+    59 T 
+    60 F 
+    61 F
+    62 F
+    63 T 
+    64 T 
+    65 T 
+    66 T 
+    67 T 
+    68 T 
+    69 T 
+    70 T 
+    71 T 
+    72 
+    73 F 
+    74
+    75
+    76
+    77 T 
+    78 T 
+    79 T 
+    80 T 
+    81 T 
+    82 
+    83 T
+    84 T 
+    85 F 
+    86 F 
+    87 F
+    88 T 
+    89 F 
+    90 F 
+    91 T 
+    92 T 
+    93 T
+    94 T 
+    95 T
+    96 T
+    97 F 
+    98 F 
+    99 T
+    100 F
+    101 T
+    102 F
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+49 T / F Separate processes can share the same data segment.
+
+50 T / F In dynamic relocation (base and bound/BB), the physical address is the sum of the logical address
+and the base address (and the logical address must be within the bound).
+
+51 T / F If the logical address is beyond the bound, MMU will throw a segfault exception. This in turn will
+jump to the OS’ segfault exception handler() which will kill the segfaulting process.
+
+52 T / F With dynamic relocation (single base-bound pair), code segment cannot be shared.
+
+53 T / F With segmentation, the top bits represent the index to the segment table. That is, the top bits tell
+us which segment (code/heap/stack) that the logical address is trying to go to.
+
+54 T / F In segmentation, the width of the logical address is the width of the segment bits plus the width of
+the segment-offset bits.
+
+55 T / F Using top 3 bits as the segment indexing is sufficient for OSes that want to support up to 15
+segments per process.
+
+56 T / F Chop, chop, chop ... I promise I will be careful when chopping the virtual (logical) address. I will
+read the recipe (i.e. specification) carefully because a wrong chop will make the meal tastes bad (i.e. wrong
+answer). This is important because the graders are like Gordon Ramsay – no partial credits!!
+
+57 T / F In this class, even for stack, I will do stackBase+offSet, not stackBase-offSet (as stated in the
+OSTEP book). The reason is that this class tries to make my life simpler.
+
+58 T / F In this class, code is in the lowest segment of the process address space and stack is in the highest.
+This means the most significant bit of logical addresses within the code segment is “1”. This also means the
+most significant bit of logical addresses of your local variables within the stack area is “0”.
+
+59 T / F An instruction that dereferences a bad/dangling pointer does not always lead to a segfault/crash.
+
+60 T / F Segmentation solves external fragmentation.
+
+61 T / F Every thread within a process has its own segment table
+
+62 T / F In a CSIL machine, when many of us run “p4” code simultaneously, CSIL seems slow because
+the memory is overcommitted due to the many instances of “p4” code in the memory.
+
+63 T / F Sometimes processes need to share data or talk with each other. For this, they should use IPC
+mechanisms like shared memory (shmat() syscall), files, pipe, or signals.
+
+64 T / F Today’s OSes basically have solved the internal and external fragmentation problem by forcing
+everyone to use “small, fixed-sized luggages” (i.e. paging).
+
+65 T / F When my Skype is open but I never use it for many days, the moment I click on it, things look slow
+because the Skype’s heap, code, and stack have been “swapped out” to the disk’s swap space area by the
+OS, and they must be “swapped in” back to the memory. This phenomenon is called “page faults” – i.e. the
+data (page) you want to access are not in the memory but in the disk, and must be brought up to the memory
+first before your Skype application can continue to run. The analogy is your luggage has been swapped out
+from the overhead bin (the memory) to the baggage compartment (the disk) and it will take some time for
+the flight attendant (the OS) to bring your luggage from the baggage compartment to the overhead bin (swap
+in).
+
+66 T / F The major fragmentation problem that malloc() library faces is external fragmentation ...
+
+67 T / F ... but mostly mallocing small spaces, e.g. malloc(1), leads to heavy internal fragmentation.
+
+68 T / F I will remember that the “size” value in the block’s header is the total size of the header+footer
+(8 bytes) and the payload (and perhaps some paddings). In other words, the “size” represents the size of the
+block, not just the payload.
+
+69 T / F I will memorize the pros/cons of best/worst/first/next-fit policies.
+
+70 T / F In malloc library, merging is all about knowing where your and left/right neighbor’s heads and
+foots are, given only one information “p”. From there, you will have all the information (e.g. block sizes n,
+m1, m2, and the allocation bits).
+
+71 T / F So, given “p”, do you know the pointer arithmetics to compute where your and left/right neighbor’s
+heads and foots are?
+
+72 T / F Explicit list in malloc library, is list of direct pointers to all the blocks (allocated and free blocks).
+
+73 T / F When malloc library maintains explicit list, it doesn’t need to maintain the implicit list again.
+
+74 T / F In 32-bit explicit list, the smallest block size possible is 16 bytes: header (4 bytes), next (4), prev
+(4) and footer (4).
+
+75 T / F The “next” pointer contains the address of the first byte of the header of the next free block.
+
+76 T / F The “prev” pointer also contains the address of the first byte of the header of the next free block.
+
+77 T / F I have mastered the “C Pointer Primer” example (the “p” and “pp” example with all the *, **, &
+prefixes. This knowledge is important for updating the content of the “next” and “prev” memory lines.
+
+78 T / F When understanding concurrency, it’s good to draw the lattice of the code execution (to see the
+happen-before relationship). From the lattice, I can know which actions are concurrent
+
+79 T / F When drawing the lattice, the basic building blocks are:
+- fork() implies a branch: a→b, a→c
+- a→b and a→c imply that “b” and “c” are concurrent.
+- Concurrent means, a-then-c or c-then-a could happen.
+- Essentially, if there is no chain of single bidirectional edges connecting two actions, then the two actions
+are concurrent
+- pthread create() also implies a branch: a→b, a→c
+- waitpid() implies a join: x→z, y→z
+- pthread join() also implies a join: x→z, y→z
+- pthread exit() only kills the thread calling the function (i.e. end of flow for this thread).
+- exit() implies that all threads will be killed (i.e. the end of the lattice).
+- Any thread can call exit().
+- When a thread executes a-b-c and another thread executes d-e-f, the first three instructions and the second
+three instructions can interleave in all possible ways.
+- Given these building blocks, you can build the complete lattice of a program execution.
+
+80 T / F sleep(N) means sleep for N seconds. In the lattice, it’s good to draw a long N-inch of vertical line
+to represent sleep(N).
+
+81 T / F [True] In this class, adding sleep() is enough to remove non-determinism. (Although in reality,
+please use locks or wait calls for proper synchronization).
+
+82 T / F In concurrent webserver code, the parent process sets up the file descriptors (the FD table) and
+simply calls fork(), which by implication makes the child process has its own FD table that inherits the same
+content (pointers to FD structures) in the parent’s FD table.
+
+83 T / F If you’re lazy to close file descriptors, the OS will clean them up upon exit().
+
+84 T / F In a long/infinitely-running code, it is important to close() files that you no longer use, otherwise
+the corresponding FD entries cannot be reused.
+
+85 T / F Thus, in general, memory leak is dangerous in long-running programs (e.g., server), but not in
+short ones.
+
+86 T / F Race condition/non-determinism will never happen if you don’t use threads.
+
+87 T / F You will get the benefit of parallelism (make your program run faster) by running multiple threads
+on a single CPU core.
+
+88 T / F A bug in one thread can potentially impact other threads of the same process.
+
+89 T / F A variable in a thread’s stack cannot be modified by the peer threads.
+
+90 T / F i++ is a cute one-line C instruction, I bet it is atomic.
+
+91 T / F A critical section implies instructions that read/write shared data, hence must be protected with
+locks.
+
+92 T / F Adding too many locks or simply wrapping critical sections with locks without reorganizing your
+code can cause performance problems (a.k.a. “lock step” performance).
+
+93 T / F When using threads and locks, it’s a good practice to create embarassingly parallel tasks that do
+not need to synchronize too often. (See the “Parallelizing a job” slides).
+
+94 T / F I have practiced the “Which data is shared?” slides. To answer this type of question, the basic
+building blocks are:
+- Draw, draw, draw, i.e. draw the memory layout, e.g. an integer is a box, a pointer is a box that has an edge
+pointing to another box.
+- Understand that a local variable can have multiple instances (more than one boxes), e.g. when the function
+is called recursively or the function is called by multiple threads.
+- When asked if “ptr” is shared, don’t just see who owns “ptr”, but rather go to the data being pointed and
+ask whether the data’s memory line can be accessed by which threads.
+- When asked if “x” (data) is shared, don’t just see who owns “x”, but rather checks all the pointers pointing
+to the x’s memory line and check who can access those pointers.
+
+95 T / F Semaphore’s P()/V() has more functionalities than pthread mutex lock/unlock (i.e. semaphore
+can be non-binary while lock is only a binary function, 0 or 1, hence semaphore can be used for scheduling
+purposes).
+
+96 T / F Have you done the finding-deadlock examples again?
+
+97 T / F Big locks (like a single big bank lock) reduce deadlock probability and deliver better performance
+than small locks.
+
+98 T / F Deadlock cannot happen if you use an odd number of locks.
+
+99 T / F [True] Today, deadlock still happens. The deadlock detection technique we did in class is just
+a simple example that works for 2 locks, but it’s not a general solution. The only solution is to be careful
+when using locks (e.g. acquire locks in the same order if possible).
+
+100 T / F Now, have you memorized all the concepts above? The exam will require you to answer fast, and
+answering fast is possible if you have a firm understanding of the basic OS foundations above.
+
+101 T / F I am happy that I don’t have to memorize:
+- precise definitions (e.g. critical section, atomicity), as long as I understand general concept,
+- lists of system call numbers/functions, signal numbers, exception numbers/functions, etc.,
+- every line of the echo server code, the rioBuffer code, the semaphore code , (as long as I understand what
+the code is trying to achieve),
+- signal number and names,
+- how paging and page table works,
+- every instruction in rio read()
+
+102 T / F Okay, I think I’m ready for the exam now.
+
