@@ -1244,9 +1244,98 @@ Threads~~~~~~~~~~~~~~~~~~~~~~~~~
 	PROGRAMS MUST SYCNHRONIZE accesses
 
 
+PROJECT 4 STUFFS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+		Needs to be done:
+			-> repeatedly prints "mysehll> "
+			-> exit cmd
+			-> cd cmd
+			-> pwd cmd
+			-> ">" cmd (prints to file not stdout)
+				--> if file exists or no file given, error
+			-> ">+" appends to beginning of file
+			-> 0 or more white space can exist between commands
+			-> batch mode...
+				--> no printf, write instead
+				--> exits on exit
+				--> "myshell [batchFile]
+				--> NO PROMPTS prints the input and the Output
+				--> no print blank lines
+			-> must respond to all input! 
+				--> print error messages for anything and everything
+				--> given error message. USE that
+				--> print to stdout
+				--> if a command is too long, print command, print error, do not execute anything! 
+
+		THINGS TO USE:
+			-> Parsing
+				--> fgets == read from input
+				--> fopen == open file
+				--> strtok == parsing with whitespace
+			-> Executing commands
+				--> must use execpv (if return there is an error)
+				--> Fork (PAGE 405, 406)
+				--> wait/waitpid
+			-> testing
+				--> use diff! 
+				--> read the README
 
 
 
 
 
-
+				#include <stdlib.h>
+				#include <unistd.h>
+				#include <stdio.h>
+				#include <string.h>
+				
+				void myPrint(char *msg)
+				{
+					write(STDOUT_FILENO, msg, strlen(msg));
+				}
+				
+				int main(int argc, char *argv[]) 
+				{
+					char cmd_buff[100];
+					char *pinput;
+					char cwd[100];
+					char *ex = "exit";
+					char *cd = "cd";
+					char *pw = "pwd";
+				
+					while (1) {
+						myPrint("myshell> ");
+						pinput = fgets(cmd_buff, 100, stdin);
+						if (!pinput) {
+							exit(0);
+						}
+				
+						//my implementation of exit
+						if (!strncmp(pinput, ex, 4)) {
+							printf("exiting. . .\n");
+							exit(0);
+						}
+				
+						//my implementation of cd
+						if (!strncmp(pinput, cd, 2)) {
+							if (fork() == 0) {
+								//char *tmp = pinput + 3;
+								//printf("%s\n", tmp);
+								chdir(pinput + 3);
+								printf("changing directories. . .\n");
+							}
+						} 
+				
+						//my implementation of pwd
+						if (!strncmp(pinput, pw, 3)) {
+							getcwd(cwd, 100);
+							printf("printing directory. . .\n");
+							myPrint(cwd);
+							printf("\n");
+						}
+				
+				
+						myPrint(cmd_buff);
+					} 
+				}
+				
