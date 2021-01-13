@@ -1,0 +1,48 @@
+Hamlet Fernandez
+Jan 12, 2021
+
+Computer Architecture for Scientists (Winter 2021)
+
+Homework #1
+
+Problems from Chapter 1
+
+1.1 Enumerate five devices in your daily life that have computers inside today, but didn’t
+20 years ago. For each, explain why computing benefits the device. For the user, and for
+the company who sold it.
+
+Nintendo switch
+Lightbulbs (bluetooth lights)
+Google Home(speakers, radios)
+Headphones
+OMNY (apple pay, transportation)
+Debit card
+
+
+1.3 The integration of computing and networking have accelerated many activities in
+society, e-commerce is one example. Analyze the steps to identify and purchase an article
+of clothing in a world without the internet, smartphones, and e-commerce. Analyze the
+steps in today’s modern world. Explain how the latency to receive the desired article has
+changed. Explain how the time investment required of you has changed.
+
+Without internet, smartphones, e-commerce?
+    traveling outside, going to a store, individual, group of individuals, selecting wanted article, purchases with physical currency
+    dollars, coins, greeting/goodbye etc etc.  perhaps can try on clothes! can see quality of clothes!
+
+today's modern world?
+    google item you  want, where's it sold? many options many websites. can be done on phone, laptop, google home/alexa devices (interactive AI)
+    not necessary to meet with people physically, can buy an article of clothing without meeting anyone. but also cannot try on clothes or 
+    see quality of clothes
+
+1.6 Another pervasive communication-use of computing is social media. Describe several features of how 
+you interact with social media, and how computing is used to create posts, decide when they are visible, 
+and even target advertising?
+
+facebook groups, polls, voting systems, comments sections, replying to comments, liking disliking hearting posts
+discord, groups, channels, video calls, phone calls, reactions, import own reactions, create reactions
+using discord you can see what others r listening to if enabled, people themselves send promotive content
+
+
+Problems from Chapter 2
+
+
