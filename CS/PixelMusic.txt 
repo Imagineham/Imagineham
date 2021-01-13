@@ -1,0 +1,291 @@
+#lang typed/racket
+
+(require typed/test-engine/racket-tests)
+
+(require "../includecopy/cs151-core.rkt")
+(require "../includecopy/cs151-image.rkt")
+(require "../includecopy/cs151-universe.rkt")
+(require "../osc/osc/main.rkt")
+
+
+;====================================================================== Structs
+
+(define-struct Style
+  ([pattern : (U 'pattern1 'pattern2 'pattern3)]
+   [size : (U Complex False)]))
+
+(define-struct PixelWorld
+  ([visuals : Style]))
+
+;==================================================================== Functions
+
+
+;==================== Duplicate-Beside
+
+
+(: duplicate-beside : Integer Image -> Image)
+
+;; The duplicate-beside function will duplicate any image however many
+;; times it is asked to be duplicated. The duplicates will appear beside the
+;; original.
+
+(define (duplicate-beside num-dup Img)
+  (cond
+    [(<= num-dup 0) empty-image]
+    [else (beside
+           Img
+           (rectangle 3 0 'solid 'black) 
+           (duplicate-beside (- num-dup 1) Img))]))
+
+
+(: duplicate-above : Integer Image -> Image)
+
+;; The duplicate-beside function will duplicate any image however many
+;; times it is asked to be duplicated. The duplicates will appear beside the
+;; original.
+
+(define (duplicate-above num-dup Img)
+  (cond
+    [(<= num-dup 0) empty-image]
+    [else (above
+           Img
+           (rectangle 3 0 'solid 'black) 
+           (duplicate-above (- num-dup 1) Img))]))
+
+;================== Vanishing
+
+
+(: vanishing : Exact-Rational Image -> Image)
+
+;; The vanishing function will scale the given image by a fraction of its
+;; original size. This scaled image will then be placed beside the original.
+;; This process will repeat, and occur recursively, until the images width
+;; is below a certain threshold, in which the function stops. 
+
+(define (vanishing Frac Img)
+  (cond
+    [(and
+      (<= Frac 0)
+      (> Frac 1)) error]
+    [(< (image-width Img) .1) empty-image]
+    [else
+     (beside
+      Img
+      (rectangle 3 0 'solid 'black) 
+      (vanishing Frac (scale Frac Img)))]))
+
+;=================== Draw
+(: draw : PixelWorld -> Image)
+;; will compile images
+(define (draw PixWorld)
+  (match PixWorld
+    [(PixelWorld visuals)
+     (match visuals
+       [(Style pattern size)
+               (overlay/align "middle" "middle"
+                             (if (> (if (complex? size)
+                                        (magnitude size)
+                                        (error "no")) (random 25))
+                                 (overlay (scale 1.1 pattern4)
+                                          (scale 2 pattern2))
+                                 (scale 1 (overlay pattern4
+                                                   pattern2)))
+                              (square 800 'solid 'black))])]))
+
+(: animation : PixelWorld -> PixelWorld)
+;; animation will allow box movement.
+(define (animation PixWorld)
+  (match PixWorld
+    [(PixelWorld visuals)
+     PixWorld]))
+               
+;============================================================ Patterns
+
+;========================= Pattern1
+
+(define pattern1 
+  (overlay/align "middle" "middle"
+                 (above
+                  (duplicate-beside 4 (square 2 'solid 'red))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 8 (square 2 'solid 'red))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 12 (square 2 'solid 'red))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 16 (square 2 'solid 'red))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 12 (square 2 'solid 'red))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 8 (square 2 'solid 'red))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 4 (square 2 'solid 'red)))
+                 (above
+                  (duplicate-beside 4 (square 5 'solid 'pink))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 8 (square 5 'solid 'orange))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 12 (square 5 'solid 'yellow))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 16 (square 5 'solid 'green))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 12 (square 5 'solid 'purple))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 8 (square 5 'solid 'teal))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 4 (square 5 'solid 'orange)))))
+  
+
+
+;========================= Pattern2
+
+(define pattern2
+  (overlay/align "middle" "middle"
+                 (above
+                  (duplicate-beside 4 (square 5 'solid 'white))
+                  (square 10  'solid 'black)
+                  (duplicate-beside 8 (square 5 'solid 'white))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 12 (square 5 'solid 'white))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 16 (square 5 'solid 'white))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 12 (square 5 'solid 'white))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 8 (square 5 'solid 'white))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 4 (square 5 'solid 'white)))
+                 (rotate 90
+                         (above
+                          (duplicate-beside 4 (square 5 'solid 'pink))
+                          (square 10 'solid 'black)
+                          (duplicate-beside 8 (square 5 'solid 'orange))
+                          (square 10 'solid 'black)
+                          (duplicate-beside 12 (square 5 'solid 'yellow))
+                          (square 10 'solid 'black)
+                          (duplicate-beside 16 (square 5 'solid 'green))
+                          (square 10 'solid 'black)
+                          (duplicate-beside 12 (square 5 'solid 'purple))
+                          (square 10 'solid 'black)
+                          (duplicate-beside 8 (square 5 'solid 'teal))
+                          (square 10 'solid 'black)
+                          (duplicate-beside 4 (square 5 'solid 'orange))))))
+
+
+;========================= Pattern 3
+
+(define pattern3
+  (overlay/align "middle" "middle"
+                 (above
+                  (duplicate-beside 4 (circle 5 'solid 'lemonchiffon))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 8 (circle 5 'solid 'lemonchiffon))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 12 (circle 5 'solid 'lemonchiffon))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 16 (circle 5 'solid 'lemonchiffon))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 12 (circle 5 'solid 'lemonchiffon))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 8 (circle 5 'solid 'lemonchiffon))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 4 (circle 5 'solid 'lemonchiffon)))
+                 (above
+                  (duplicate-beside 4 (circle 5 'solid 'pink))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 8 (circle 5 'solid 'orange))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 12 (circle 5 'solid 'yellow))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 16 (circle 5 'solid 'green))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 12 (circle 5 'solid 'purple))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 8 (circle 5 'solid 'teal))
+                  (square 10 'solid 'black)
+                  (duplicate-beside 4 (circle 5 'solid 'orange)))))
+
+;======================== Pattern 4
+
+(define pattern4
+  (beside
+   (above
+    pattern1
+    (rectangle 0 400 'solid 'black)
+    pattern1)
+   (rectangle 400 0 'solid 'black)
+   (above
+    pattern1 
+    (rectangle 0 400 'solid 'black)
+    pattern1)))
+   
+
+;================ OSC, Audio Visual Function
+
+; (: AV : (U Complex False) -> Style)
+; ;; AV will take an a volume level (an integer), and convert it
+; ;; into a pattern.
+; (define (AV x)
+;   (cond
+;     [(and
+;       (>= x 0) (< x 30)) (Style 'pattern1 x)]
+;     [(and
+;       (>= x 30) (< x 60)) (Style 'pattern2 x)]
+;     [(and
+;       (>= x 60) (<= x 100)) (Style 'pattern3 x)]
+;     [else (error "no")]))
+; 
+
+
+;================== Take-Data
+
+(: take-data : String -> (U Number False))
+;; take-data will grab the information from a given file
+;; and convert into into an integer
+(define (take-data string)
+  (string->number string))
+
+(check-expect (take-data "73") 73)
+(check-expect (take-data "55") 55)
+(check-expect (take-data "12") 12)
+(check-expect (take-data "-12") -12)
+(check-expect (take-data "-99") -99)
+(check-expect (take-data "0") 0)
+
+
+;================= file->lines
+
+(: audio->PixWorld : String -> PixelWorld)
+;; this function will grab data from a file
+;; and convert it into something pixelworld can use
+(define (audio->PixWorld filename)
+  (local
+    {(define file-contents
+       (file->lines filename))
+     (: lp : (Listof String) -> (U Complex False))
+     (define (lp lines)
+       (match lines
+         ['() 0]
+         [(cons head tail)
+          (take-data head)]))
+     (define X (lp file-contents))}
+     (PixelWorld (Style 'pattern1 X))))
+
+
+
+
+(: run : String -> PixelWorld)
+;; takes in a filename and converts that into audio data
+;; this audio data is then translated into visual responses
+(define (run string)
+  (big-bang (audio->PixWorld string) : PixelWorld
+    [to-draw draw]
+    [on-tick animation 1/20]
+    ;;  [port 55557]
+    ;;  [register "0.0.0.0"]
+    [name "PixelMusic 2020"]))
+     
+
+
+
+
+(test)
