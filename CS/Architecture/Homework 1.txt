@@ -45,4 +45,138 @@ using discord you can see what others r listening to if enabled, people themselv
 
 Problems from Chapter 2
 
+2.1
+
+    Part A: Set the value to 0 for registers X18-X25
+            add x18, x18, x2
+            add x19, x18, x0
+            add x20, x18, x0
+            add x21, x18, x0
+            add x22, x18, x0
+            add x23, x18, x0
+            add x24, x18, x0
+            add x25, x18, x0
+
+    Part B: Put the first 8 prime numbers (1, 2, 3, 5, 7, 11, 13, 17) into registers X18-X25
+            addi x18, x18, 1
+            addi x19, x19, 2
+            addi x20, x20, 3
+            addi x21, x21, 5
+            addi x22, x22, 7
+            addi x23, x23, 11
+            addi x24, x24, 13
+            addi x25, x25, 17
+
+    Part F: 
+
+    64-bit version: Put the value 0x0 0123 4567 89AB into X18
+        addi x12, x0, 0x012
+        slli x12, x12, 36
+        addi x13,x0, 0x345
+        slli x13, x13, 24
+        addi x14, x0, 0x678
+        slli x14, x14, 12
+        add x13, x12, x13
+        add x14, x13, x14
+        addi x14, x14, 0x7FF
+        addi, x14, x14, 0x1AC
+        add x18, x18, x14
+
+    32-bit version: Put the value 0x0 4567 89AB into x18
+        addi x12, x0, 0x045
+        slli x12, x12, 24
+        addi x13, x0, 0x678
+        slli x13, x13, 12
+        add x13, x12, x13
+        addi x13, x13, 0x7FF
+        addi x13, x13, 0x1AC
+        add x18, x18, x13
+
+2.2
+
+    Part A:
+    
+        64-bit version: Load the value from address 0x0 0FFF FFFF FFFF into X20
+            addi x12, x0, -1
+            srli x12, x12, 20 //get rid of the 20 most significant bits
+            addi x13, x0, 7 //test value
+            sd x13, 0(x12)
+            ld x20, 0(x12)
+
+
+        32-bit version: Load the value from address 0x0 FFFF FFFF into X20
+            addi x12, x0, -1 
+            addi x13, x0, 7 //test value
+            sw x13, 0(x12) 
+            lw x20, 0(x12) 
+
+    Part G: 
+    
+        64-bit version: Store the value 127 as 64-bit value into address 0x0 0101 0101 0101
+            addi x12, x0, 1
+            slli x13, x12, 40
+            slli x14, x12, 32
+            slli x15, x12, 24
+            slli x16, x12, 16
+            slli, x17, x12, 8
+            add x18, x12, x13
+            add x18, x18, x14
+            add x18, x18, x15
+            add x18, x18, x16
+            add x18, x18, x17 //adress 0x010101010101 in x18
+            addi x19, x0, 127 //desired value
+            sd x19, 0(x18)
+
+        32-bit version: Store the value 127 as a 32-bit value into address 0x0 0101 0101
+            addi x12, x0, 1
+            slli x13, x12, 24
+            slli x14, x12, 16
+            slli x15, x12, 8
+            add x16, x12, x13
+            add x16, x16, x14
+            add x16, x16, x15 //address 0x01010101 in x16
+            addi x17, x0, 127 //desired value
+            sw x17, 0(x16)
+
+    Part I:
+    
+        64-bit version: Store the value 27 as 8-bit value (byte) into address 0x0 0123 4567 89AB
+            addi x12, x0, 0x012
+            slli x12, x12, 36
+            addi x13,x0, 0x345
+            slli x13, x13, 24
+            addi x14, x0, 0x678
+            slli x14, x14, 12
+            add x13, x12, x13
+            add x14, x13, x14
+            addi x14, x14, 0x7FF
+            addi, x14, x14, 0x1AC
+            add x18, x18, x14
+            addi x19, x0, 27
+            sd x19, 0(x18)
+
+        32-bit version: Store the value 27 as an 8-bit value (byte) into address 0x0 1234 5678
+            addi x12, x0, 0x012
+            slli x12, x12, 24
+            addi x13, x0, 0x345
+            slli x13, x13, 12
+            add x13, x12, x13
+            addi x13, x13, 0x678
+            addi x14, x0, 27
+            sw x14 0(x13)
+
+2.5 
+
+
+2.9 
+
+
+2.21 
+
+
+
+
+
+
+
 
