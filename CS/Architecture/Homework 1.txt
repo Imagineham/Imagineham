@@ -167,6 +167,14 @@ Problems from Chapter 2
 
 2.5 
 
+    addi x12, x0, 0xAA          //register x12 stores j == "int j" 
+    slli x12, x12, 8            //limited by size of imm, using add + shift to move 0xAAAA into x12
+    addi x12, x12, 0xAA         //j = 0xAAAA
+doWhile:                        //we will be jumping BACK to here. do-while must run at least once
+    slli x12, x12, 1            //j = j << 1
+    blt x0, x12, doWhile        //j > 0 is the same as j < 0, if true jump back to doWhile. else continue to next inst
+done:                           //j results in 0 
+    
 
 2.9 
 
