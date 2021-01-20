@@ -12,10 +12,20 @@ Problems from Chapter 1
 the company who sold it.
 
 Nintendo switch
-Lightbulbs (bluetooth lights)
-Google Home(speakers, radios)
-Headphones
-OMNY (apple pay, transportation)
+    --> entertainment, wireless controllers, ease of use, targeted playstyles (removing controllers allows for movement games) USER
+    --> allows for more diversity in games, games sold, game developers COMPANY
+Lightbulbs (bluetooth lights) 
+    --> convenience. not having to get up to turn off lights, control light levels, 
+Google Home(speakers, radios) 
+    --> scheduling, accessibility, convenience USER 
+    --> personalizing products, acquriing data baout people's homes/lifestyles for future products COMPANY
+Headphones 
+    --> accessibility, USER
+    --> COMPANY
+
+OMNY (apple pay, transportation) (metrocard)
+    --> faster, easier, more convenient. time efficient, less confusing, the object it replaces USER
+    --> data, track use, 
 Debit card
 
 
@@ -38,9 +48,9 @@ today's modern world?
 you interact with social media, and how computing is used to create posts, decide when they are visible, 
 and even target advertising?
 
-facebook groups, polls, voting systems, comments sections, replying to comments, liking disliking hearting posts
-discord, groups, channels, video calls, phone calls, reactions, import own reactions, create reactions
-using discord you can see what others r listening to if enabled, people themselves send promotive content
+    facebook groups, polls, voting systems, comments sections, replying to comments, liking disliking hearting posts
+    discord, groups, channels, video calls, phone calls, reactions, import own reactions, create reactions
+    using discord you can see what others r listening to if enabled, people themselves send promotive content
 
 
 Problems from Chapter 2
