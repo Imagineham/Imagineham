@@ -104,58 +104,83 @@
 
 \solution{
 
-Part A:
+Part A:\\
 
-  \begin{enumerate}
+  \begin{tabular}{c|c|c}
 
-  \item[]  OFFER               |   ACCEPT?    |      COMMENTS \\
-  \item[]  $a_1$ to $b_1$      |   Yes        ||||   $a_1$, $b_1$ ENGAGED
-  \item[]  $a_2$ to $b_4$      |   Yes        ||||   $a_2$, $b_4$ ENGAGED
-  \item[]  $a_3$ to $b_1$      |   Yes        ||||   $a_3$, $b_1$ ENGAGED, $a_1$ is now FREE
-  \item[]  $a_1$ to $b_4$      |   Yes        ||||   $a_1$, $b_4$ ENGAGED, $a_2$ is now FREE
-  \item[]  $a_2$ to $b_3$      |   Yes        ||||   $a_2$, $b_3$ ENGAGED
-  \item[]  $a_4$ to $b_3$      |   Yes        ||||   $a_4$, $b_3$ ENGAGED, $a_2$ is now FREE 
-  \item[]  $a_2$ to $b_1$      |   Yes        ||||   $a_2$, $b_1$ ENGAGED, $a_3$ is now FREE
-  \item[]  $a_3$ to $b_2$      |   Yes        ||||   $a_3$, $b_2$ ENGAGED \\ %at this point everyone is ENGAGED and in stable matchings    
-
-
-  \end{enumerate}
-
+  OFFER       &         ACCEPT?   &COMMENTS \\ 
+  $a_1$ to $b_1$      &   Yes        &$a_1$, $b_1$ ENGAGED \\
+  $a_2$ to $b_4$      &   Yes        &$a_2$, $b_4$ ENGAGED\\
+  $a_3$ to $b_1$      &   Yes        &$a_3$, $b_1$ ENGAGED, $a_1$ is now FREE\\
+  $a_1$ to $b_4$      &   Yes        &$a_1$, $b_4$ ENGAGED, $a_2$ is now FREE\\
+  $a_2$ to $b_3$     &   Yes        &$a_2$, $b_3$ ENGAGED\\
+  $a_4$ to $b_3$      &   Yes        &$a_4$, $b_3$ ENGAGED, $a_2$ is now FREE \\
+   $a_2$ to $b_1$      &   Yes       &$a_2$, $b_1$ ENGAGED, $a_3$ is now FREE\\
+  $a_3$ to $b_2$      &   Yes       &$a_3$, $b_2$ ENGAGED  %at this point everyone is ENGAGED and in stable matchings    
+  \end{tabular}
+  \\
+  \\
   FINAL PAIRINGS:
   ($a_1$, $b_4$)
   ($a_2$, $b_1$)
   ($a_3$, $b_2$)
   ($a_4$, $b_3$)
 
+
 \newpage
 
-Part B:
+Part B:\\
 
-  \begin{enumerate}
+  \begin{tabular}{c|c|c}
 
-  \item[]  OFFER               |   ACCEPT?    |      COMMENTS \\
-  \item[]  $b_1$ to $a_4$      |   Yes        ||||   $b_1$, $a_4$ ENGAGED
-  \item[]  $b_2$ to $a_1$      |   Yes        ||||   $b_2$, $a_1$ ENGAGED
-  \item[]  $b_3$ to $a_3$      |   Yes        ||||   $b_3$, $a_3$ ENGAGED
-  \item[]  $b_4$ to $a_4$      |   No         ||||   $b_4$ is still FREE
-  \item[]  $b_4$ to $a_3$      |   Yes        ||||   $b_4$, $a_3$ ENGAGED, $b_3$ is now FREE
-  \item[]  $b_3$ to $a_1$      |   Yes        ||||   $b_3$, $a_1$ ENGAGED, $b_2$ is now FREE 
-  \item[]  $b_2$ to $a_4$      |   No         ||||   $b_2$ is still FREE
-  \item[]  $b_2$ to $a_2$      |   Yes        ||||   $b_2$, $a_2$ ENGAGED \\ %at this point everyone is ENGAGED and in stable matchings    
+ OFFER               &   ACCEPT?    &      COMMENTS \\
+ $b_1$ to $a_4$      &   Yes        &   $b_1$, $a_4$ ENGAGED \\
+ $b_2$ to $a_1$      &   Yes        &   $b_2$, $a_1$ ENGAGED\\
+  $b_3$ to $a_3$      &   Yes       &   $b_3$, $a_3$ ENGAGED\\
+ $b_4$ to $a_4$      &   No         &   $b_4$ is still FREE\\
+ $b_4$ to $a_3$      &   Yes        &   $b_4$, $a_3$ ENGAGED, $b_3$ is now FREE\\
+ $b_3$ to $a_1$      &   Yes       &   $b_3$, $a_1$ ENGAGED, $b_2$ is now FREE \\
+ $b_2$ to $a_4$      &   No         &   $b_2$ is still FREE\\
+  $b_2$ to $a_2$      &   Yes       &   $b_2$, $a_2$ ENGAGED  %at this point everyone is ENGAGED and in stable matchings    
 
-
-  \end{enumerate}
-
+ \end{tabular}
+  \\
+  \\
   FINAL PAIRINGS:
-  ($b_1$, $b_4$)
-  ($b_2$, $b_2$)
-  ($b_3$, $b_1$)
-  ($b_4$, $b_3$) \\
+  ($b_1$, $a_4$)
+  ($b_2$, $a_2$)
+  ($b_3$, $a_1$)
+  ($b_4$, $a_3$) 
+  \\
 
-  Happier: $b_1$, $b_2$, $b_3$, $b_4$ (they were able to choose). \\
+  HAPPIER: $b_1$, $b_2$, $b_3$, $b_4$ (they were able to choose). \\
 
 Part C:
+  The pairings found in A and the pairings found in B are all the stable pairings. This can be proved using the fact 
+  that the G-S algorithm finds proposer's best valid partner and proposee's worse possible partner. Thus when looking 
+  at any (a,b) all the stable matching that can be found lie in between the overlap. Let's use $a_1$ as an example. 
+  In the answer to Part A we found that since a did the proposing, the best valid partner is $b_4$, which was second on $a_1$'s ranking.
+  In the answer to Part B, we found that when a was ebing proposed to, the worst valid partner is $b_3$, which was third on $a_1$'s list. 
+  Since $b_4$ was the best, and $b_3$ was the worst then any rankings in between would be possible stable macthings. However, since 
+  there existed no b's ranked in between $b_4$ and $b_3$, ($a_1$, $b_4$) and ($a_1$, $b_3$) are the only stable matching for $a_1$. 
+  This proof holds for all a's and b's, where the stable matchings already found are in fact all the stable matchings that exist for this 
+  set of preferences.  
 
+  \begin{enumerate}
+    \item[] Group $A$'s preference lists (best and worst):
+    \item[$a_1$:] [$b_4$ BEST, $b_3$ WORST]
+    \item[$a_2$:] [$b_1$ BEST, $b_2$ WORST]
+    \item[$a_3$:] [$b_2$ BEST, $b_4$ WORST]
+    \item[$a_4$:] [$b_3$ BEST, $b_1$ WORST]
+  \end{enumerate}
+   
+  \begin{enumerate}
+    \item[]  Group $B$'s preference lists (best and worst):
+    \item[$b_1$:] [$a_4$ BEST, $a_2$ WORST]
+    \item[$b_2$:] [$a_2$ BEST, $a_3$ WORST]
+    \item[$b_3$:] [$a_1$ BEST, $a_4$ WORST]
+    \item[$b_4$:] [$a_3$ BEST, $a_1$ WORST]
+  \end{enumerate}
 
 }
 
@@ -248,7 +273,10 @@ Complete the following review exercises about big-O notation.
     $O(n^2)$, $O(2^n)$, $O(1)$, $O(\log_2(n))$, $O(n\log_2(n))$, $O(\sqrt{n})$, $O(n^{\log_2(n)})$, $O(n)$, $O(n^{\sqrt{n}})$, $O((\log_2(n))^{10})$. [{\bf Hint:} Use part (b)]
     \end{enumerate}
  
-    
+
+
+
+
 \end{problem}
 
 

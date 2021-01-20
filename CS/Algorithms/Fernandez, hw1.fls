@@ -1,7 +1,7 @@
-PWD c:\Users\hamle\Downloads\Algorithms, Winter 2021
+PWD c:\Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms
 INPUT C:\Users\hamle\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\hamle\Downloads\Algorithms, Winter 2021\Fernandez, hw1.tex
-OUTPUT c:\Users\hamle\Downloads\Algorithms, Winter 2021\Fernandez, hw1.log
+INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw1.tex
+OUTPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw1.log
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
@@ -521,10 +521,10 @@ INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
-INPUT c:\Users\hamle\Downloads\Algorithms, Winter 2021\Fernandez, hw1.aux
-INPUT c:\Users\hamle\Downloads\Algorithms, Winter 2021\Fernandez, hw1.aux
-INPUT c:\Users\hamle\Downloads\Algorithms, Winter 2021\Fernandez, hw1.aux
-OUTPUT c:\Users\hamle\Downloads\Algorithms, Winter 2021\Fernandez, hw1.aux
+INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw1.aux
+INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw1.aux
+INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw1.aux
+OUTPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw1.aux
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\nameref.sty
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\nameref.sty
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\nameref.sty
@@ -555,18 +555,18 @@ INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\generic\gettitlestring\ge
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\generic\gettitlestring\gettitlestring.sty
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\generic\gettitlestring\gettitlestring.sty
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\generic\gettitlestring\gettitlestring.sty
-INPUT c:\Users\hamle\Downloads\Algorithms, Winter 2021\Fernandez, hw1.out
-INPUT c:\Users\hamle\Downloads\Algorithms, Winter 2021\Fernandez, hw1.out
-INPUT c:\Users\hamle\Downloads\Algorithms, Winter 2021\Fernandez, hw1.out
-INPUT c:\Users\hamle\Downloads\Algorithms, Winter 2021\Fernandez, hw1.out
-INPUT c:\Users\hamle\Downloads\Algorithms, Winter 2021\Fernandez, hw1.out
-INPUT c:\Users\hamle\Downloads\Algorithms, Winter 2021\Fernandez, hw1.out
-INPUT c:\Users\hamle\Downloads\Algorithms, Winter 2021\Fernandez, hw1.out
-INPUT c:\Users\hamle\Downloads\Algorithms, Winter 2021\Fernandez, hw1.out
-INPUT c:\Users\hamle\Downloads\Algorithms, Winter 2021\Fernandez, hw1.out
-INPUT c:\Users\hamle\Downloads\Algorithms, Winter 2021\Fernandez, hw1.out
-OUTPUT c:\Users\hamle\Downloads\Algorithms, Winter 2021\Fernandez, hw1.out
-OUTPUT c:\Users\hamle\Downloads\Algorithms, Winter 2021\Fernandez, hw1.pdf
+INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw1.out
+INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw1.out
+INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw1.out
+INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw1.out
+INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw1.out
+INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw1.out
+INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw1.out
+INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw1.out
+INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw1.out
+INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw1.out
+OUTPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw1.out
+OUTPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw1.pdf
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
@@ -684,9 +684,9 @@ INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi10.tf
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplri8r.tfm
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\palatino\pplr7t.vf
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplr8r.tfm
-INPUT c:\Users\hamle\Downloads\Algorithms, Winter 2021\Fernandez, hw1.aux
-INPUT c:\Users\hamle\Downloads\Algorithms, Winter 2021\Fernandez, hw1.out
-INPUT c:\Users\hamle\Downloads\Algorithms, Winter 2021\Fernandez, hw1.out
+INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw1.aux
+INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw1.out
+INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw1.out
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\base\8r.enc
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb

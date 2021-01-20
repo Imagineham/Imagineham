@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2021.1.13)  16 JAN 2021 21:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2021.1.13)  19 JAN 2021 22:31
 entering extended mode
-**"c:/Users/hamle/Downloads/Algorithms, Winter 2021/Fernandez, hw1.tex"
-("c:/Users/hamle/Downloads/Algorithms, Winter 2021/Fernandez, hw1.tex"
+**"c:/Users/hamle/Documents/GitHub/Imagineham/CS/Algorithms/Fernandez, hw1.tex"
+("c:/Users/hamle/Documents/GitHub/Imagineham/CS/Algorithms/Fernandez, hw1.tex"
 LaTeX2e <2020-10-01> patch level 2
 L3 programming layer <2020-10-27> xparse <2020-03-03> (C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
@@ -321,7 +321,7 @@ File: ot1pplj.fd 2004/09/06 font definitions for OT1/pplj.
 File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
 \l__kernel_color_stack_int=\count304
 \l__pdf_internal_box=\box54
-) ("c:/Users\hamle\Downloads\Algorithms, Winter 2021\Fernandez, hw1.aux")
+) ("c:/Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw1.aux")
 \openout1 = `"Fernandez, hw1.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
@@ -353,7 +353,7 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 60.
 LaTeX Info: Redefining \pageref on input line 60.
 LaTeX Info: Redefining \nameref on input line 60.
- ("c:/Users\hamle\Downloads\Algorithms, Winter 2021\Fernandez, hw1.out") ("c:/Users\hamle\Downloads\Algorithms, Winter 2021\Fernandez, hw1.out")
+ ("c:/Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw1.out") ("c:/Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw1.out")
 \@outlinefile=\write3
 \openout3 = `"Fernandez, hw1.out"'.
 
@@ -422,53 +422,53 @@ LaTeX Font Info:    Trying to load font information for U+lasy on input line 83.
  (C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex/latex/base\ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-Underfull \hbox (badness 10000) in paragraph at lines 160--160
+Underfull \hbox (badness 10000) in paragraph at lines 185--185
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--160
+Underfull \hbox (badness 10000) in paragraph at lines 185--185
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 160--160
+Underfull \hbox (badness 10000) in paragraph at lines 185--185
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--160
+Underfull \hbox (badness 10000) in paragraph at lines 185--185
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--160
+Underfull \hbox (badness 10000) in paragraph at lines 185--185
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--160
+Underfull \hbox (badness 10000) in paragraph at lines 185--185
 
  []
 
 [3] [4] [5] [6] [7] [8]
-LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 236.
+LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 261.
  (C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
-) [9] [10] ("c:/Users\hamle\Downloads\Algorithms, Winter 2021\Fernandez, hw1.aux")
+) [9] [10] ("c:/Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw1.aux")
 Package rerunfilecheck Info: File `"Fernandez, hw1".out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
  9797 strings out of 479832
- 155434 string characters out of 2871058
+ 155542 string characters out of 2871058
  454951 words of memory out of 3000000
  26539 multiletter control sequences out of 15000+200000
  556410 words of font info for 85 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 66i,5n,76p,586b,350s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 66i,7n,76p,594b,344s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/public/fpl/fplbj8a.pfb><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmbb.pfb><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmr.pfb><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/public/fpl/fplrc8a.pfb><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/public/fpl/fplrij8a.pfb><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on "c:/Users\hamle\Downloads\Algorithms, Winter 2021\Fernandez, hw1.pdf" (10 pages, 149741 bytes).
+Output written on "c:/Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw1.pdf" (10 pages, 151900 bytes).
 PDF statistics:
  110 PDF objects out of 1000 (max. 8388607)
  21 named destinations out of 1000 (max. 500000)
