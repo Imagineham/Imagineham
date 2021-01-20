@@ -48,7 +48,7 @@ Problems from Chapter 2
 2.1
 
     Part A: Set the value to 0 for registers X18-X25
-            add x18, x18, x2
+            add x18, x18, x0
             add x19, x18, x0
             add x20, x18, x0
             add x21, x18, x0
@@ -177,6 +177,38 @@ done:                           //j results in 0
     
 
 2.9 
+needhelp:
+    add x10, x0, x0 //n
+    add x11, x0, x0 //j = 0
+    add x12, x0, x0 //i = 0
+loopBody:
+    addi x14, x0, 8
+    rem x13, x10, x14
+    blt x0, x13, increment
+
+    addi sp, sp -8 //making space on stack
+    sd ra, 0(sp) //caller saves
+    jal ra, helper //callee
+    ld t0, 0(sp)
+    addi sp, sp, 8 //restore caller saved
+    add ra, ra, ra //else statement
+    slti x15, x12, 64
+    bne x15, x0, loopBody
+return:
+    jr ra
+
+increment: 
+    addi x12, x12, 1
+    slti x15, x12, 64
+    bne x15, x0, loopBody
+
+helper:
+    addi sp, sp, -8 //making space on stack
+    add t0, a0, a0 //helper body
+    sd t0, 0(sp) //save callee saved
+    ld a0, 0(sp) //restore callee saved
+    addi sp, sp, 8 //deallocate space on stack
+    jr ra
 
 
 2.21 
