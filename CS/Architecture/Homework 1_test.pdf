@@ -50,8 +50,7 @@ and even target advertising?
     I'd like to use Discord as my example. Discord is an application that has become one of most popular platforms for gamers to socialize and build community. Started in 2015, 
     Discord placed emphasis on video and audio communication which greatly enticed gamers who wanted an application to play an dtalk with their friend at the same time. Alongside 
     video and audio call, Discord has features where conversations can be grouped into channels, each with rules/facilities that can be controlled. Discord users can control many levels of 
-    their experience and this is a result of computing. Primarily, Discord's servers work as an abstraction of the company's databases. When a user creates a server, or a channel, they do not actually create a 
-    new server, but instead sign into already existing servers established through Discord's Internet Relay Chat infrastructure. 
+    their experience and this is a result of computing. Primarily, Discord's channels work as an abstraction of the company's databases. When a user creates a channel, 
     
     
     
@@ -206,7 +205,7 @@ loopBody:
     addi sp, sp -8 //making space on stack
     sd ra, 0(sp) //caller saves
     jal ra, helper //callee
-    ld ra, 0(sp)
+    ld t0, 0(sp)
     addi sp, sp, 8 //restore caller saved
     add ra, ra, ra //else statement
     slti x15, x12, 64
@@ -229,38 +228,6 @@ helper:
 
 
 2.21 
-
-A: Deprecated means that the instruction is still supported, but executes with lower performance. What are the consequences of this for software that uses the instructions?
-
-The use of deprecated instructions adds a level of obscurity to the programmer that may ultimately cause efficiency and performance issues. Because an instruction is still supported, the programmer would 
-not see any immediate errors stopping their code from running. However, the programmer may expect their programs to have certain runtimes which deprecated instructions may increase. Longer runtimes may cause 
-software to be less efficient and if various instructions are deprecated efficiency could be affected on orders of magnitude. Considering the fact that instructions sets bridge software and hardware, 
-if the latency of instruction sets increase, the length of 1 clock cycle increases, and all of the software is then slowed down. 
-
-
-B: After several years of being depracated, instructions can be removed (the bits cause
-some other newly defined instruction to execute). What are the consequences of this
-for software that uses the instructions?
-
-Old computers with outdated instruction set architectures are barred from using new software and technology. Outdated software can then on only be used to perform tasks it allows, but as computers become faster
-and more efficient, neweer computers become better at performing the same tasks as older computers. Thus, software that cannot be flexible or adaptable enough to accept changes in ISA development will become outdated much quicker than
-software that can accept a wider range of ISA's.  
-
-
-C: Imagine a situation where a computer processor designer deprecated a set of instructions for 6 years, and then removed it in future products after this period. What is
-the consequence for machines that were sold and continue to operate in the world?
-What is the consequence for a software developer who is distributing program binaries (executables) as a product? the customers who bought either the processors or the
-software?
-
-Firstly, machines running with deprecated instruction set architecture will experience much slower performance speeds than newer products with updated ISA's. These products overtime will fail to catch up to newer and newer models, 
-ultimately leading companies to discontinue old models completely. In reference to Figure 1.3, these computer's failed to ride "the wave" and crash. Secondly, for machines that were sold and continue to operate they effectively are bound by the instructions they can use and are barred from running programs that can normally be run on the newer processors.
-Normally, even with depcracated instructions an old computer running programs from a new computer would act unpredictably but in the case where the new computer functions entirely without some instructions, programs
-become incapable of backwards-compatibility. This forces programmers and companies to specify models and ISA versions that clarify compatibility issues between software and hardware families. ISA models, processor models, 
-hardware models become valuable pieces of information that software developers must pay attention to when creating and distributing program binaries. While at the same time, upon each development of the ISA in computers software
-developers are given a set environment to work with which although can be limiting can also allow development to be specific and detailed. Lastly, customers also are required to stay up to date with their instruction set architecture 
-model and development. Customers and developers alike benefit from tracking development changes, however, it is much more difficult to explain changes in ISA, for example, to the everyday customer. 
-
-
 
 
 
