@@ -12,20 +12,39 @@ Problems from Chapter 1
 the company who sold it.
 
 Nintendo switch
-    --> entertainment, wireless controllers, ease of use, targeted playstyles (removing controllers allows for movement games) USER
-    --> allows for more diversity in games, games sold, game developers COMPANY
+    It was pretty easy to write a recent game console onto this list, however, I want to use the switch as an example. Game consoles make 
+    explaining computing and its impacts fairly easy, considering gaming is all about inputs and outputs which most of the times are visible and tangible.
+    Consoles with controllers in which movement is directly mapped onto arrow keys or a joystick are good examples. However, as time has gone on, controllers
+    have evolved to require less abstraction. Sensors in controllers or TV systems that compute movement and translate them into dancing games like Just Dance 2020 
+    or swordfighting like in 1, 2, Switch! Computing has evolved from the simple "Press Start" which allows companies to create a variety of experiences, games that
+    sell because some require you to move as input. To the user, they are afforded richer experiences that bring entertainment to more aspects of a gaming experience. 
+
 Lightbulbs (bluetooth lights) 
-    --> convenience. not having to get up to turn off lights, control light levels, 
+    Computing has majorly impacted lighting in spaces by transforming them into systems that can be customized, and made more convenient. Bluetooth lightbulbs 
+    are replacing classic lightbulbs because of color changing capabailities, being able to turn them off or on while in bed, can be dimmed or brightened, and can even 
+    be scheduled to perform certain actions. Personally, I enjoy changing my lights' color for movie nights or for pictures. For companies, adding bluetooth into lightbulbs 
+    adds convenience and accessiability which targets a much greater audience, increasing demand. 
+    
 Google Home(speakers, radios) 
-    --> scheduling, accessibility, convenience USER 
-    --> personalizing products, acquriing data baout people's homes/lifestyles for future products COMPANY
+    Computing in speakers and radios has created systems where many functions can exist in the same product and greatly increase accessability and convenienbce for users. 
+    A google home that can set alarms, create reminders, control the lights, play music at various volumes, becomes something with more than just one purpose and 
+    effectively becomes technology used several times a day. Users benefit from the how quickly they can add items to a shopping cart by voice, or how they can announce plans for the day 
+    to their entire family, all in different rooms. Companies appreciate the use of their home assistants because it gives them alook at the private lives of individuals. Companies use computingin
+    home assistants to make informed decisions about individuals that use their products and what future products they would like to buy.
+
 Headphones 
-    --> accessibility, USER
-    --> COMPANY
+    Thinking about wireless headphones, computing has increased sound quality, enabled noise cancellation, and allowed for touch capabailities that can be customized. Users benefit from 
+    the better quality of life granted by headphones that can pick up and end calls, pause and play music, and barely take up space in one's pocket. Companies benefit from new information they gleam 
+    from headphone usage that helps them better their products. 
+
+
 OMNY (apple pay, transportation) (metrocard)
-    --> faster, easier, more convenient. time efficient, less confusing, the object it replaces USER
-    --> data, track use, 
-Debit card
+    This is an even more recent change but serves as a useful example for the use of computing in transportation. OMNY is New York City's new metrocard, a service that allows 
+    New Yorkers to tap their phones to access buses, trains, and shuttles. It is much, much faster than the usual swiping procedure and I would say experiences less errors than what
+    normally would occur at a turnstile when New Yorkers would have to swipe their cards at slower or faster speeds. OMNY users are saving several seconds in tapping their phone at 
+    a turnstile, saving minutes from not having to purchase a metrocard at a vending machine, and saving money. Alternatively, the GPS systems, the e-banking, in OMNY allows New York to 
+    better track bus and train usage, and track the flow of money into MTA. 
+
 
 
 1.3 The integration of computing and networking have accelerated many activities in
@@ -35,13 +54,14 @@ steps in today’s modern world. Explain how the latency to receive the desired 
 changed. Explain how the time investment required of you has changed.
 
 Without internet, smartphones, e-commerce?
-    traveling outside, going to a store, individual, group of individuals, selecting wanted article, purchases with physical currency
-    dollars, coins, greeting/goodbye etc etc.  perhaps can try on clothes! can see quality of clothes!
+    Logically, I can imagine the latency includes thinking of where to purchase the desired article, traveling outside, taking transportation, 
+    going to either a store, individual, or group of individuals, selecting the wanted article, and purchasing the article with physical currency.
+    The process can involve and/or require a lot of physical movement, social interaction, and math. Today, a consumer can simply google the item they want, filter through several websites offering the same or similar versions of the item, 
+    purchase the item by inputting their debit/credit card's information and track it's arrival. While today we can still go out and shop, the process no longer 
+    requires the same amount of physical activity or social interaction. Computers can now order purchases and because computers can be found everywhere, from 
+    home assistants to game consoles to phones, purchases can be made from one's couch. The latency is much, much smaller and "going out shopping" has become more of 
+    a social activity than a need. 
 
-today's modern world?
-    google item you  want, where's it sold? many options many websites. can be done on phone, laptop, google home/alexa devices (interactive AI)
-    not necessary to meet with people physically, can buy an article of clothing without meeting anyone. but also cannot try on clothes or 
-    see quality of clothes
 
 1.6 Another pervasive communication-use of computing is social media. Describe several features of how 
 you interact with social media, and how computing is used to create posts, decide when they are visible, 
@@ -53,11 +73,6 @@ and even target advertising?
     their experience and this is a result of computing. Primarily, Discord's servers work as an abstraction of the company's databases. When a user creates a server, or a channel, they do not actually create a 
     new server, but instead sign into already existing servers established through Discord's Internet Relay Chat infrastructure. 
     
-    
-    
-    facebook groups, polls, voting systems, comments sections, replying to comments, liking disliking hearting posts
-    discord, groups, channels, video calls, phone calls, reactions, import own reactions, create reactions
-    using discord you can see what others r listening to if enabled, people themselves send promotive content
 
 
 Problems from Chapter 2
@@ -232,19 +247,20 @@ helper:
 
 A: Deprecated means that the instruction is still supported, but executes with lower performance. What are the consequences of this for software that uses the instructions?
 
-The use of deprecated instructions adds a level of obscurity to the programmer that may ultimately cause efficiency and performance issues. Because an instruction is still supported, the programmer would 
-not see any immediate errors stopping their code from running. However, the programmer may expect their programs to have certain runtimes which deprecated instructions may increase. Longer runtimes may cause 
-software to be less efficient and if various instructions are deprecated efficiency could be affected on orders of magnitude. Considering the fact that instructions sets bridge software and hardware, 
-if the latency of instruction sets increase, the length of 1 clock cycle increases, and all of the software is then slowed down. 
+    The use of deprecated instructions adds a level of obscurity to the programmer that may ultimately cause efficiency and performance issues. Since an instruction is still 
+    supported, the programmer would not see any immediate errors stopping their code from running. However, the programmer may expect their code to have certain runtimes which 
+    deprecated instructions will certainly increase. Longer runtimes may cause software to be less efficient and if various instructions are deprecated efficiency could be affected 
+    on several orders of magnitude. Considering the fact that instructions sets bridge software and hardware, if the latency of instruction sets increase, the length of 1 clock cycle 
+    increases, and all of the software is then slowed down. 
 
 
 B: After several years of being depracated, instructions can be removed (the bits cause
 some other newly defined instruction to execute). What are the consequences of this
 for software that uses the instructions?
 
-Old computers with outdated instruction set architectures are barred from using new software and technology. Outdated software can then on only be used to perform tasks it allows, but as computers become faster
-and more efficient, neweer computers become better at performing the same tasks as older computers. Thus, software that cannot be flexible or adaptable enough to accept changes in ISA development will become outdated much quicker than
-software that can accept a wider range of ISA's.  
+    Old computers with outdated instruction set architectures are barred from using new software and technology. Outdated software can then on only be used to perform tasks it allows, 
+    but as computers become faster and more efficient, newer computers become better at performing the same tasks as older computers. Thus, software that cannot be flexible or adaptable 
+    enough to accept changes in ISA development will become outdated much quicker than software that can accept a wider range of ISA's.  
 
 
 C: Imagine a situation where a computer processor designer deprecated a set of instructions for 6 years, and then removed it in future products after this period. What is
@@ -252,20 +268,31 @@ the consequence for machines that were sold and continue to operate in the world
 What is the consequence for a software developer who is distributing program binaries (executables) as a product? the customers who bought either the processors or the
 software?
 
-Firstly, machines running with deprecated instruction set architecture will experience much slower performance speeds than newer products with updated ISA's. These products overtime will fail to catch up to newer and newer models, 
-ultimately leading companies to discontinue old models completely. In reference to Figure 1.3, these computer's failed to ride "the wave" and crash. Secondly, for machines that were sold and continue to operate they effectively are bound by the instructions they can use and are barred from running programs that can normally be run on the newer processors.
-Normally, even with depcracated instructions an old computer running programs from a new computer would act unpredictably but in the case where the new computer functions entirely without some instructions, programs
-become incapable of backwards-compatibility. This forces programmers and companies to specify models and ISA versions that clarify compatibility issues between software and hardware families. ISA models, processor models, 
-hardware models become valuable pieces of information that software developers must pay attention to when creating and distributing program binaries. While at the same time, upon each development of the ISA in computers software
-developers are given a set environment to work with which although can be limiting can also allow development to be specific and detailed. Lastly, customers also are required to stay up to date with their instruction set architecture 
-model and development. Customers and developers alike benefit from tracking development changes, however, it is much more difficult to explain changes in ISA, for example, to the everyday customer. 
+    Firstly, machines running with deprecated instruction set architecture will experience much slower performance speeds than newer products with updated ISA's. 
+    These products overtime will fail to catch up to newer and newer models, ultimately leading companies to discontinue old models completely. In reference to Figure 1.3, 
+    these computer's failed to ride "the wave" and crash. Secondly, for machines that were sold and continue to operate they effectively are bound by the instructions they
+    can use and are unable to run modernized programs. Normally, even with depcrecated instructions an old computer can run at least unpredictably but in the case where the new 
+    computer functions entirely without some instructions, these computers become incapable of backwards-compatibility. This forces programmers and companies to specify models and 
+    ISA versions that clarify compatibility issues between software and hardware families. ISA models, processor models, hardware models, etc., become valuable pieces of information that 
+    software developers must pay attention to when creating and distributing program binaries. While at the same time, upon each development of the ISA, software developers 
+    are given a set environment to work with which can be both limiting and enabling. Lastly, customers are now also required to stay up to 
+    date with their instruction set architecture model and development. Customers and developers alike benefit from tracking development changes, however, it is much more difficult to 
+    explain changes in ISA to the everyday customer. This open up new challenges for companies to strategize on how to market and sell their "smaller, and faster" products. 
 
 
+Extra Credit: 
 
+Quick fixes:
+    Page 21 "The most common size moved is a machine word which is typically 64-bits (8 bytes) and matches the size of a register."
+        This might not be cause for concern, but when I remember first learning about words and doublewords in 154 it made it easy for me to understand the difference 
+        because I thought words were only at max 32-bits and doublewords were always 64-bits. The explanation written in the book in which words match the 
+        size of the register makes a lot of sense, however, given much of the historical references already present in the book, I was curious about the history behind "word" and "doubleword". 
 
-
-
-
-
-
-
+    Page 23 "We have several examples using the Account structs. The first example simply accesses the theID field"
+        Here, I was a bit confused because theID and UniqueId are similar but the paragraph describing the example came in between the struct and the
+        code. I understand why it might be better to explain first and then show the example, perhaps spacing and organization, however, I think keeping the 
+        struct with the code might be more cohesive. Lastly, I believe "theID field" is a little unclear. In the example, "theID" is the name of the variable but 
+        the field being accessed is "UniqueID". 
+    
+    Page 26  "slli x14 , x13 , #16 / / 16384∗112" 
+        A shift of 16 means 2^16, however, 2^16 does not equal 16384 but 2^14 does. As such, I believe the change should be "slli x14, x13, 14 // 16384*12". 
