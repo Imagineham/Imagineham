@@ -68,11 +68,13 @@ you interact with social media, and how computing is used to create posts, decid
 and even target advertising?
 
     I'd like to use Discord as my example. Discord is an application that has become one of most popular platforms for gamers to socialize and build community. Started in 2015, 
-    Discord placed emphasis on video and audio communication which greatly enticed gamers who wanted an application to play an dtalk with their friend at the same time. Alongside 
+    Discord placed emphasis on video and audio communication which greatly enticed gamers who wanted an application to play and talk with their friend at the same time. Alongside 
     video and audio call, Discord has features where conversations can be grouped into channels, each with rules/facilities that can be controlled. Discord users can control many levels of 
     their experience and this is a result of computing. Primarily, Discord's servers work as an abstraction of the company's databases. When a user creates a server, or a channel, they do not actually create a 
-    new server, but instead sign into already existing servers established through Discord's Internet Relay Chat infrastructure. 
-    
+    new server, but instead sign into already existing servers established through Discord's Internet Relay Chat infrastructure. As such, Discord can ultimately monitor any channels or chats created which 
+    allows them to delete conversations, ban people, and control usage. Users also have the ability of connecting their discord with other apps like Facebook or twitter. In particular, discord users can connect
+    their Spotify Account which allows them to display the music they are listening to their friends. Computers bridge the apps and from spotify to discord gather data like song, time-stamp, artist, and album and 
+    copies that data over to discord which it can then present with its user interface. 
 
 
 Problems from Chapter 2
@@ -100,6 +102,8 @@ Problems from Chapter 2
             addi x25, x25, 17
 
     Part F: 
+    //because the RISCV simulator accepts immediates up to 0x800, I broke up the given value
+    //into 3 byte immediates. I shifted the values and added them together to get the desired result. \
 
     64-bit version: Put the value 0x0 0123 4567 89AB into X18
         addi x12, x0, 0x012
@@ -129,8 +133,8 @@ Problems from Chapter 2
     Part A:
     
         64-bit version: Load the value from address 0x0 0FFF FFFF FFFF into X20
-            addi x12, x0, -1
-            srli x12, x12, 20 //get rid of the 20 most significant bits
+            addi x12, x0, -1 //-1 = 0xFFFFFFFFFFFF
+            srli x12, x12, 20 //get rid of the 20 most significant bits to get 0x0FFFFFFFFFFF
             addi x13, x0, 7 //test value
             sd x13, 0(x12)
             ld x20, 0(x12)
@@ -143,7 +147,7 @@ Problems from Chapter 2
             lw x20, 0(x12) 
 
     Part G: 
-    
+        //we build the given value. Place "1" where we want them to be. 
         64-bit version: Store the value 127 as 64-bit value into address 0x0 0101 0101 0101
             addi x12, x0, 1
             slli x13, x12, 40
@@ -281,8 +285,6 @@ software?
 
 
 Extra Credit: 
-
-Quick fixes:
     Page 21 "The most common size moved is a machine word which is typically 64-bits (8 bytes) and matches the size of a register."
         This might not be cause for concern, but when I remember first learning about words and doublewords in 154 it made it easy for me to understand the difference 
         because I thought words were only at max 32-bits and doublewords were always 64-bits. The explanation written in the book in which words match the 
