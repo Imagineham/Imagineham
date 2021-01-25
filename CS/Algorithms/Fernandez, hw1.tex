@@ -103,6 +103,7 @@
 \end{problem}
 
 \solution{
+Collaborators: Yael Sulkin \\
 
 Part A:\\
 
@@ -195,6 +196,7 @@ Part C:
 Solve exercise 8 in Chapter 1 in the Kleinberg-Tardos textbook.
 \end{problem}
 \solution{
+Collaborators: Yael Sulkin \\
 
 \textit{Give a proof that, for any set of preference lists, switching the
 order of a pair on the list cannot improve a woman’s partner in the GaleShapley algorithm} 
@@ -206,13 +208,29 @@ lesser preferences does not benefit the person. We will work backwards.
 
 \paragraph{}For $w$ to be engaged with $m''$ there are two scenarios: either both are free and $m''$ proposes to $w$ or $w$ is already engaged, $m''$ is free, and 
 $m''$ has not already proposed to w. In the first scenario, the order of lesser preferences for $w$ does not impact her happiness because $w$ would be 
-engaged to her top choice and according to statement 1.1 of the KT textbook, a woman's partner will never get worse. In fact, in any case where $m''$ propsoes $w$ will be happiest.
+engaged to her top choice and according to statement 1.1 of the KT textbook, a woman's partner will never get worse. In fact, in any case where $m''$ proposes $w$ will be happiest.
 Whether they are engaged to $m$ or $m'$, a proposal from $m''$ will result in ($m''$,$w$). In the case $m''$ never porposes, if $w$ is engaged to $m$ and $m'$ proposes
 according to the G-S algorithm, $w$ will leave and pair with $m'$. To the algorithm this is $w$ getting a better matching but according to their true preferences $w$ is getting a worse pairing. 
 In fact, because the G-S algorithm enables women to have better and better matchings, any $w$ for any set of preferences would be best off staying true to their rankings. 
 Switching lesser preferences does not impact the chances of getting their first choice but it runs the risk of $w$ pairing with her worse option rather than a better one as long as 
 the worse option is ranked higher. 
 
+\paragraph{} For a switch in a pair of preferences to be a direct cause of improvement in their matching, we will have to run the G-S Algroithm twice, once before the switch $w: m'' > m > m'$ and once
+after the switch $w: m'' > m' > m$. To be considered an improvement, the result of the algorithm with $w$'s true preferences must be ($m'$, $w$) and the result with $w$'s false preferences must be ($m$, $w$). 
+With two runs of the G-S algorithm and two proposers, we have 4 ways the G-S algorithm could run: $m$ proposes to $w$ first and $m'$ second, or $m'$ proposes to $w$ first or $m$ second. Below is a table of each possible scenario:
+
+
+\begin{tabular}{c|c|c|c|c|c}
+  RUN & WORKING PEFERENCE LIST & PROPOSER 1 & RESULT & PROPOSER 2 & FINAL RESULT \\
+1 & $w: m'' > m > m'$ (TRUE)  & $m$ & ($w$, $m$) & $m'$ & ($w$, $m$) \\
+& $w: m'' > m' > m$ (FALSE) & $m$ & ($w$, $m$) & $m'$ & ($w$, $m'$) \\
+
+2 & $w: m'' > m > m'$ (TRUE)  & $m'$ & ($w$, $m'$) & $m$ & ($w$, $m$) \\
+& $w: m'' > m' > m$ (FALSE) & $m'$ & ($w$, $m'$) & $m$ & ($w$, $m'$) \\
+
+\end{tabular}
+
+\paragraph{} There is no improvement. In all cases in which $w$ switches a pair of her preferences, it does not directly cause $w$ to be matched with someone they prefer. 
 }
 
 
@@ -278,6 +296,30 @@ Complete the following review exercises about big-O notation.
 
 
 \end{problem}
+
+\solution{
+Collaborators: Yael Sulkin \\
+
+\paragraph{Part A:} 
+
+\begin{enumerate}
+  \item[1.] $T(n) = 5n \log_2(n)+ 2n + 3 \Rightarrow T(n) = O(nlog(n))$
+  \item[2.] $T(n) = 20n + n^2 \Rightarrow T(n) = O(n^2)$
+  \item[3.] $T(n) = 100 + 2\sqrt{n} + 7 \log_2(n) \Rightarrow T(n) = O(\sqrt{n})$
+  \item[5.] $T(n) = 10{n^2}\cdot {4^n} \Rightarrow T(n) = O(4^n)$
+\end{enumerate}
+
+\paragraph{Part B:}
+\paragraph{Proof} if $f$, $g$ : $\mathbb{N} \rightarrow \mathbb{R}^+$, $f(n) = O(g(n))$ then we know there exists some constant $c$ such that
+$f(n) \leq g(n) * c$. If we take the logarithm of both sides we get $log(f(n)) \leq log(g(n) * c) \Rightarrow log(f(n)) \leq log(g(n) + log(c))$. Since c is a constant, log(c) is also a 
+constant value which we can denote with C. Therefore, $log(f(n)) \leq log(g(n)) + C$. 
+
+
+\paragraph{Part C:}
+$O(1) < O(log (n)) < O(\sqrt{n}) < O (n) < O(n log (n)) < O((log (n))^{10}) < O(n^{log(n)}) < O(n^2) < O(n^{\sqrt{n}}) < O(2^n)$
+
+
+}
 
 
 

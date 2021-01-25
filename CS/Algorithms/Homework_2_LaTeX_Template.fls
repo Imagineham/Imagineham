@@ -1,7 +1,7 @@
-PWD c:\Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms
+PWD c:\Users\hamle\Downloads
 INPUT C:\Users\hamle\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw1.tex
-OUTPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw1.log
+INPUT c:\Users\hamle\Downloads\Homework_2_LaTeX_Template.tex
+OUTPUT c:\Users\hamle\Downloads\Homework_2_LaTeX_Template.log
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
@@ -404,46 +404,6 @@ INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption3.st
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption3.sty
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption3.sty
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption3.sty
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\algorithmicx\algpseudocode.sty
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\algorithmicx\algpseudocode.sty
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\algorithmicx\algpseudocode.sty
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\algorithmicx\algpseudocode.sty
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\algorithmicx\algpseudocode.sty
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\algorithmicx\algpseudocode.sty
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\algorithmicx\algpseudocode.sty
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\algorithmicx\algpseudocode.sty
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\algorithmicx\algpseudocode.sty
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\algorithmicx\algpseudocode.sty
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\base\ifthen.sty
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\base\ifthen.sty
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\base\ifthen.sty
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\base\ifthen.sty
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\base\ifthen.sty
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\base\ifthen.sty
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\base\ifthen.sty
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\base\ifthen.sty
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\base\ifthen.sty
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\base\ifthen.sty
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\algorithmicx\algorithmicx.sty
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\algorithmicx\algorithmicx.sty
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\algorithmicx\algorithmicx.sty
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\algorithmicx\algorithmicx.sty
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\algorithmicx\algorithmicx.sty
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\algorithmicx\algorithmicx.sty
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\algorithmicx\algorithmicx.sty
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\algorithmicx\algorithmicx.sty
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\algorithmicx\algorithmicx.sty
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\algorithmicx\algorithmicx.sty
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\enumitem\enumitem.sty
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\enumitem\enumitem.sty
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\enumitem\enumitem.sty
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\enumitem\enumitem.sty
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\enumitem\enumitem.sty
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\enumitem\enumitem.sty
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\enumitem\enumitem.sty
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\enumitem\enumitem.sty
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\enumitem\enumitem.sty
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\enumitem\enumitem.sty
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\algorithms\algorithm.sty
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\algorithms\algorithm.sty
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\algorithms\algorithm.sty
@@ -464,6 +424,16 @@ INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\float\float.sty
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\float\float.sty
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\float\float.sty
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\float\float.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\base\ifthen.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\base\ifthen.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\base\ifthen.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\base\ifthen.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\base\ifthen.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\base\ifthen.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\base\ifthen.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\base\ifthen.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\base\ifthen.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\base\ifthen.sty
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\listings\listings.sty
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\listings\listings.sty
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\listings\listings.sty
@@ -521,10 +491,10 @@ INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
-INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw1.aux
-INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw1.aux
-INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw1.aux
-OUTPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw1.aux
+INPUT c:\Users\hamle\Downloads\Homework_2_LaTeX_Template.aux
+INPUT c:\Users\hamle\Downloads\Homework_2_LaTeX_Template.aux
+INPUT c:\Users\hamle\Downloads\Homework_2_LaTeX_Template.aux
+OUTPUT c:\Users\hamle\Downloads\Homework_2_LaTeX_Template.aux
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\nameref.sty
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\nameref.sty
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\nameref.sty
@@ -555,18 +525,18 @@ INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\generic\gettitlestring\ge
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\generic\gettitlestring\gettitlestring.sty
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\generic\gettitlestring\gettitlestring.sty
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\generic\gettitlestring\gettitlestring.sty
-INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw1.out
-INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw1.out
-INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw1.out
-INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw1.out
-INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw1.out
-INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw1.out
-INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw1.out
-INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw1.out
-INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw1.out
-INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw1.out
-OUTPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw1.out
-OUTPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw1.pdf
+INPUT c:\Users\hamle\Downloads\Homework_2_LaTeX_Template.out
+INPUT c:\Users\hamle\Downloads\Homework_2_LaTeX_Template.out
+INPUT c:\Users\hamle\Downloads\Homework_2_LaTeX_Template.out
+INPUT c:\Users\hamle\Downloads\Homework_2_LaTeX_Template.out
+INPUT c:\Users\hamle\Downloads\Homework_2_LaTeX_Template.out
+INPUT c:\Users\hamle\Downloads\Homework_2_LaTeX_Template.out
+INPUT c:\Users\hamle\Downloads\Homework_2_LaTeX_Template.out
+INPUT c:\Users\hamle\Downloads\Homework_2_LaTeX_Template.out
+INPUT c:\Users\hamle\Downloads\Homework_2_LaTeX_Template.out
+INPUT c:\Users\hamle\Downloads\Homework_2_LaTeX_Template.out
+OUTPUT c:\Users\hamle\Downloads\Homework_2_LaTeX_Template.out
+OUTPUT c:\Users\hamle\Downloads\Homework_2_LaTeX_Template.pdf
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
@@ -605,6 +575,11 @@ INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mathpazo\fpl
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplri8r.tfm
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplrij8r.tfm
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplb9o.tfm
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\palatino\pplb9o.vf
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mathpazo\fplmb.tfm
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplb8r.tfm
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplbj8r.tfm
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplbi9o.tfm
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\ot1ppl.fd
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\ot1ppl.fd
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\ot1ppl.fd
@@ -653,51 +628,38 @@ INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\base\ulasy.fd
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\public\latex-fonts\lasy10.tfm
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\public\latex-fonts\lasy8.tfm
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\public\latex-fonts\lasy6.tfm
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\palatino\pplbi9o.vf
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mathpazo\fplmbi.tfm
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplbi8r.tfm
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplbij8r.tfm
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\vf\public\mathpazo\zplmr7t.vf
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\vf\public\mathpazo\zplmr7m.vf
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\palatino\pplr7t.vf
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplr8r.tfm
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\palatino\pplb9o.vf
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mathpazo\fplmb.tfm
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplb8r.tfm
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplbj8r.tfm
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\vf\public\mathpazo\zplmr7y.vf
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mathpazo\fplmr.tfm
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\vf\public\mathpazo\zplmr7t.vf
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\palatino\pplr7t.vf
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\ufplmbb.fd
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\ufplmbb.fd
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\ufplmbb.fd
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\ufplmbb.fd
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mathpazo\fplmbb.tfm
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mathpazo\fplmbb.tfm
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mathpazo\fplmbb.tfm
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\vf\public\mathpazo\zplmr7y.vf
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\vf\public\mathpazo\zplmr7t.vf
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\vf\public\mathpazo\zplmr7m.vf
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mathpazo\fplmri.tfm
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplri8r.tfm
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\palatino\pplr7t.vf
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplr8r.tfm
-INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw1.aux
-INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw1.out
-INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw1.out
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\vf\public\mathpazo\zplmr7v.vf
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mathpazo\fplmr.tfm
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\vf\public\mathpazo\zplmr7y.vf
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mathpazo\fplmr.tfm
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\vf\public\mathpazo\zplmr7y.vf
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
+INPUT c:\Users\hamle\Downloads\Homework_2_LaTeX_Template.aux
+INPUT c:\Users\hamle\Downloads\Homework_2_LaTeX_Template.out
+INPUT c:\Users\hamle\Downloads\Homework_2_LaTeX_Template.out
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\base\8r.enc
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\type1\public\fpl\fplbj8a.pfb
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\type1\public\fpl\fplbj8a.pfb
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\type1\public\mathpazo\fplmbb.pfb
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\type1\public\mathpazo\fplmbb.pfb
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\type1\public\mathpazo\fplmr.pfb
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\type1\public\mathpazo\fplmr.pfb
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\type1\public\fpl\fplrc8a.pfb
@@ -706,6 +668,8 @@ INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\type1\public\fpl\fplrij
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\type1\public\fpl\fplrij8a.pfb
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\type1\urw\palatino\uplb8a.pfb
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\type1\urw\palatino\uplb8a.pfb
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\type1\urw\palatino\uplbi8a.pfb
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\type1\urw\palatino\uplbi8a.pfb
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\type1\urw\palatino\uplr8a.pfb
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\type1\urw\palatino\uplr8a.pfb
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\type1\urw\palatino\uplri8a.pfb
