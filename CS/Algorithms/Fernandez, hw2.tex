@@ -89,7 +89,7 @@ Solve exercise 3 in Chapter 4 in the Kleinberg-Tardos textbook.  (trucking)
       \State Let all trucks have maximum weight, $W$ 
       \State Let the number of trucks sent to Boston, $numTrucks$. 
       \State Let the truckweight at $k$th iteration be $truckWeight$. 
-      \State Let $i$ be the package that most recently arrived, woth weight of i be $w_i$ 
+      \State Let $i$ be the package that most recently arrived, woth weight of i be $w_i$ \\
 
       \While {packages arrive}  
         \If {$truckWeight + w_i < W$} 
@@ -115,37 +115,50 @@ Solve exercise 3 in Chapter 4 in the Kleinberg-Tardos textbook.  (trucking)
 \begin{problem}[25 points]
 Solve exercise 5 in Chapter 4 in the Kleinberg-Tardos textbook.  (cell phone towers)
 
-Please note!  Here and elsewhere, when the authors (or your instructors) say ``give an algorithm'' without further instructions, they mean ``give an algorithm AND prove that it is correct and runs in polynomial time''.  This should be assumed henceforth.
+Please note!  Here and elsewhere, when the authors (or your instructors) say ``give an algorithm'' without further instructions, they mean 
+``give an algorithm AND prove that it is correct and runs in polynomial time''.  This should be assumed henceforth.
 \end{problem}
 \solution{
-  Collaborated with: Yael Sulkin\\
+  Collaborated with: Yael Sulkin, Bryan Lee\\
 
   \begin{algorithmic}
-    \State Starting at west-most point $R = 0$, let's assume we travel such that when we stop R = easternmost point. 
-    \While {R} 
-       \If {house is found} 
-         \State move 4 meters and place a cell tower 
-         \State move 4 meters forward again such that $R = R + 8$ 
-       \EndIf 
-     \EndWhile
-  \end{algorithmic}
+    \State Let $h$ be in set $H$ of all houses along the road.
+    \State Let $x_h$ be the locatin of house $h$ where $x_h$ = 0 if at westernmost point and the easternmostpoint is at $x_h$ max. 
+    \State Let $B$ represent the set of base towers placed
+
+    \While {$h \in H$}
+      \If {$x_h + 4 \geq$ easternmost point}
+        \State place base on easternmost point
+        \State add base to set B
+        \State delete all houses in $H$ s.t. $x_4 + 4 \geq$ easternmost point
+      \Else 
+        \State place a base in $x_h + 4$
+        \State add base to set B
+        \State delete all houses in H s.t. $x_h' \leq x_h + 8 miles$
+      \EndIf
+    \EndWhile
+
+  \end{algorithmic} 
  
+  \paragraph{}We know our algorithm runs on polynomial time because our loop iterates over the set of houses once, returning the set of bases after reaching the last house. 
+  Our algorithm runs on $O(n)$ time by definition. 
 
-  \paragraph{Proof} Let set A be the set of bases placed by our algorithm and set O be the set of bases placed 
-  by the optimal algorithm. If our set A is not optimal and we are looking for the minimal amount of bases then 
+  \paragraph{Proof} Let set $A$ be the set of bases placed by our algorithm and set $O$ be the set of bases placed 
+  by the optimal algorithm. If our set $A$ is not optimal and we are looking for the minimal amount of bases then 
   we know that if $|A| = n$ and $|O| = m$ then $m < n$. If $m < n$ then we know there exists some base, $b$ in $A$ such that
-  it either covers 0 houses or there also exists some $b'$ such that $b'$ can be moved to cover the houses within $b$. We will continue this 
-  proof using case analysis. 
+  it either covers $0$ houses or there also exists some $b'$ such that $b'$ can be moved to cover the houses within $b$. We will continue this 
+  proof using case analysis and proof by contradiction. 
 
-  \paragraph{} In the case where $b$ in $A$ covers 0 houses, this, in fact, contradicts the algorithm for $A$ which states 
-  "if a house is found, move 4 meters and place a cell tower". This case is impossible for our proposed greedy algorithm. 
+  \paragraph{} In the case where $b$ in $A$ covers $0$ houses, this, in fact, contradicts the algorithm for $A$ which states 
+  "while there exists house $h \in H$". This case is impossible for our proposed greedy algorithm. 
 
   \paragraph{} In the case where $b'$ exists in $A$ such that $b'$ can be moved, let $b$ be located at distance $x$ and $b'$ be located at distance $x'$ 
   such that $x \neq x'$ and $x, x' \geq 0$. According to our case statement, there exists $h$ in ${x - 4, x + 4}$ such that $b'$ can be moved to cover 
-  ${x - 4, x + 4} \cup {x' - 4, x' + 4}$ or ${x - 4, x + 4, x' - 4, x' + 4}$. This is in fact impossible because $b'$ will have to at most cover 
-  $|(x - 4) - (x' + 4)| = |x - x' - 8|$. Since $x$ and $x'$ cannot both be 0, the distance $b'$ has to cover will always be greater than 8 unless 
-  $x$ and $x'$ are exactly 8 meters apart. If |x - x' - 8| is greater than 8, then the distance b must cover contradicts our givens. If |x - x' - 8| is exactly 0
-  then $x$ and $x'$ must be exactly 8 meters apart which satisfies our greedy algorithm. 
+  ${x - 4, x + 4} \cup {x' - 4, x' + 4}$ or ${x - 4, x + 4, x' - 4, x' + 4}$. $b'$ will have to at most cover 
+  $|(x - 4) - (x' + 4)| = |x - x' - 8|$.
+  If the distance $b'$ has to cover is greater than 8 this contradicts our givens. If $|x - x' - 8| = 0$ this means base $b$ and base $b'$ are exactly 8 meters apart. Let $b$ be west of $b'$. 
+  This implies there exists some $h$ such that $x_h$ is exactly halfway between $b$ and $b'$. However, this is impossible because according to our algorithm $b'$ was placed 4 miles east of house $h \in H$ yet
+  $h$ was not in $H$ at that iteration because $x_h$ was covered by base $b$ and therefore deleted from available input. 
 }
 
 
@@ -178,7 +191,30 @@ Give an algorithm for this problem that, for full credit, should run in $O(n)$ s
 
 \end{problem}
 \solution{
-  Your solution goes here.
+Collaborated with: Yael Sulkin and Bryan Lee
+
+\begin{algorithmic}
+  \State Let $b$ start off as $0$
+  \State Let $J$ represent the running sum of $a_i$ and $b_i$
+  \State Let $B$ represent the running sum of $b_i$ 
+
+  \While {$a_i$ in $a_1 \ldots a_n$}
+    \If {$J > 0$}
+      \State $b_i$ remains $0$
+      \State Update $J$ and add $a_i$ and $b_i$ 
+      \State Keep $B$ the same
+    \Else 
+      \State $b_i$ can be derived by the equation $b_i = \frac{a_i}{2} + \frac{1}{2}$
+      \State Update $J$ by add $a_i$ and $b_i$
+      \State Update $B$ by adding $b_i$
+    \EndIf
+  \EndWhile
+
+\end{algorithmic}
+
+\paragraph{} This algorithm runs 
+\paragraph{Proof} 
+
 }
 
 \newpage
@@ -193,6 +229,44 @@ In the Hopping Game, there is a sequence of $n$ spaces.  You begin at space 0 an
 
 Give a greedy algorithm which, given an array $A[1, \ldots, n-1]$ of Boolean values with $A[i]$ indicating the presence/absence of obstacle at position $i \in [1, n-1]$, find the minimum number of hops needed to reach space $n$ without losing, if it is possible to do so.  (We assume spaces 0 and $n$ are obstacle-free, and are not part of the input.)  Prove that your algorithm is correct. For full credit, your algorithm should run in time $O(n)$.
 \end{problem}
+
+\solution{ 
+  Collaborated with: Yael Sulkin
+
+\begin{algorithmic}
+  \While {for every input $a_i$ in $A$}
+    \If {$a_{i + 4}$ is $0$}
+      \State add to hops counter
+      \State change location to $a_{i + 4}$
+    \Else 
+      \If {$a_{i + 3}$ is $0$}
+        \State add to hops counter
+        \State change location to $a_{i + 3}$
+      \Else 
+        \If {$a_{i + 2}$ is $0$}
+          \State add to hops counter
+          \State change location to $a_{i + 2}$
+        \Else 
+          \If {$a_{i + 1}$ is $0$}
+            \State add to hops counter
+            \State change location to $a_{i + 1}$
+          \Else 
+            \State Return hops counter, Terminate loop. Reaching N is not possible
+          \EndIf
+        \EndIf
+      \EndIf
+    \EndIf
+  \EndWhile 
+
+
+\end{algorithmic}
+
+\paragraph{} This algorithm has runtime O(n) since we work our way through array $A$ from left to right once
+and never loop over any square multiple times. Our algorithm's runtime is proportional to the size of $A$ which by definition is 
+O(n). 
+
+\paragraph{Proof}
+}
 
 
 \newpage

@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1611628943 "c:/Users/hamle/Documents/GitHub/Imagineham/CS/Algorithms/Fernandez, hw2.tex" "c:/Users/hamle/Documents/GitHub/Imagineham/CS/Algorithms/Fernandez, hw2.pdf" "Fernandez, hw2" 1611628946
+["pdflatex"] 1611646103 "c:/Users/hamle/Documents/GitHub/Imagineham/CS/Algorithms/Fernandez, hw2.tex" "c:/Users/hamle/Documents/GitHub/Imagineham/CS/Algorithms/Fernandez, hw2.pdf" "Fernandez, hw2" 1611646105
   "C:/Users/hamle/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1610576106 10292433 e78e7afdbe158ee96d638c03aaf43e1e ""
   "C:/Users/hamle/AppData/Local/MiKTeX/pdftex/config/pdftex.map" 1610576610 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458470287 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -125,15 +125,15 @@
   "C:/Users/hamle/AppData/Local/Programs/MiKTeX/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1575571282 9715 b051d5b493d9fe5f4bc251462d039e5f ""
   "C:/Users/hamle/AppData/Local/Programs/MiKTeX/tex/latex/subfig/subfig.sty" 1121302610 22049 9ef165ca6df8815c92e693146a376c92 ""
   "C:/Users/hamle/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
-  "Fernandez, hw2.aux" 1611628945 1145 e1f82ddde8acd1ba5208e06c966b9fe1 "pdflatex"
-  "Fernandez, hw2.out" 1611628945 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "Fernandez, hw2.tex" 1611628941 8331 94719d0122c55cffbb9344f8966f3d7f ""
-  "c:/Users/hamle/Documents/GitHub/Imagineham/CS/Algorithms/Fernandez, hw2.aux" 1611628945 1145 e1f82ddde8acd1ba5208e06c966b9fe1 ""
-  "c:/Users/hamle/Documents/GitHub/Imagineham/CS/Algorithms/Fernandez, hw2.tex" 1611628941 8331 94719d0122c55cffbb9344f8966f3d7f ""
+  "Fernandez, hw2.aux" 1611646105 1409 54dfe4149fca1a2ceaccf9efe042d785 "pdflatex"
+  "Fernandez, hw2.out" 1611646105 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "Fernandez, hw2.tex" 1611646100 10767 a4f7898c26132e26808df511b015823c ""
+  "c:/Users/hamle/Documents/GitHub/Imagineham/CS/Algorithms/Fernandez, hw2.aux" 1611646105 1409 54dfe4149fca1a2ceaccf9efe042d785 ""
+  "c:/Users/hamle/Documents/GitHub/Imagineham/CS/Algorithms/Fernandez, hw2.tex" 1611646100 10767 a4f7898c26132e26808df511b015823c ""
   (generated)
   "Fernandez, hw2.log"
-  "Fernandez, hw2.out"
+  "Fernandez, hw2.pdf"
   "Fernandez, hw2.aux"
   "c:/Users/hamle/Documents/GitHub/Imagineham/CS/Algorithms/Fernandez, hw2.log"
   "c:/Users/hamle/Documents/GitHub/Imagineham/CS/Algorithms/Fernandez, hw2.pdf"
-  "Fernandez, hw2.pdf"
+  "Fernandez, hw2.out"
