@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2021.1.13)  24 JAN 2021 19:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2021.1.13)  25 JAN 2021 20:42
 entering extended mode
-**c:/Users/hamle/Downloads/Homework_2_LaTeX_Template.tex
-(c:/Users/hamle/Downloads/Homework_2_LaTeX_Template.tex
+**"c:/Users/hamle/Documents/GitHub/Imagineham/CS/Algorithms/Fernandez, hw2.tex"
+("c:/Users/hamle/Documents/GitHub/Imagineham/CS/Algorithms/Fernandez, hw2.tex"
 LaTeX2e <2020-10-01> patch level 2
 L3 programming layer <2020-10-27> xparse <2020-03-03> (C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
@@ -237,37 +237,55 @@ Package caption Info: hyperref package is loaded.
 \c@lotdepth=\count279
 \sf@top=\skip56
 \sf@bottom=\skip57
+) (C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex/latex/algorithmicx\algpseudocode.sty
+Package: algpseudocode 
+ (C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+) (C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex/latex/algorithmicx\algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count280
+\c@ALG@rem=\count281
+\c@ALG@nested=\count282
+\ALG@tlm=\skip58
+\ALG@thistlm=\skip59
+\c@ALG@Lnr=\count283
+\c@ALG@blocknr=\count284
+\c@ALG@storecount=\count285
+\c@ALG@tmpcounter=\count286
+\ALG@tmplength=\skip60
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
 ) (C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex/latex/algorithms\algorithm.sty
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
  (C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count280
+\c@float@type=\count287
 \float@exts=\toks21
 \float@box=\box49
 \@float@everytoks=\toks22
 \@floatcapt=\box50
-) (C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
-Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \@float@every@algorithm=\toks23
-\c@algorithm=\count281
+\c@algorithm=\count288
 ) (C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
-\lst@mode=\count282
+\lst@mode=\count289
 \lst@gtempboxa=\box51
 \lst@token=\toks24
-\lst@length=\count283
+\lst@length=\count290
 \lst@currlwidth=\dimen162
-\lst@column=\count284
-\lst@pos=\count285
+\lst@column=\count291
+\lst@pos=\count292
 \lst@lostspace=\dimen163
 \lst@width=\dimen164
-\lst@newlines=\count286
-\lst@lineno=\count287
+\lst@newlines=\count293
+\lst@lineno=\count294
 \lst@maxwidth=\dimen165
  (C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-\c@lstnumber=\count288
-\lst@skipnumbers=\count289
+\c@lstnumber=\count295
+\lst@skipnumbers=\count296
 \lst@framebox=\box52
 ) (C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
@@ -275,7 +293,7 @@ File: listings.cfg 2020/03/24 1.8d listings configuration
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
  (C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex/latex/preprint\fullpage.sty
 Package: fullpage 1999/02/23 1.1 (PWD)
-\FP@margin=\skip58
+\FP@margin=\skip61
 ) (C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex/latex/graphics\color.sty
 Package: color 2020/02/24 v1.2b Standard LaTeX Color (DPC)
  (C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
@@ -283,20 +301,20 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 147.
 )
-\c@problem=\count290
-\c@lemma=\count291
-\c@theorem=\count292
-\c@definition=\count293
-\c@claim=\count294
+\c@problem=\count297
+\c@lemma=\count298
+\c@theorem=\count299
+\c@definition=\count300
+\c@claim=\count301
 LaTeX Font Info:    Trying to load font information for OT1+pplj on input line 60.
  (C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1pplj.fd
 File: ot1pplj.fd 2004/09/06 font definitions for OT1/pplj.
 ) (C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
-\l__kernel_color_stack_int=\count295
+\l__kernel_color_stack_int=\count302
 \l__pdf_internal_box=\box53
-) (c:/Users\hamle\Downloads\Homework_2_LaTeX_Template.aux)
-\openout1 = `Homework_2_LaTeX_Template.aux'.
+) ("c:/Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw2.aux")
+\openout1 = `"Fernandez, hw2.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
 LaTeX Font Info:    ... okay on input line 60.
@@ -322,27 +340,27 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count296
+\c@section@level=\count303
 )
 LaTeX Info: Redefining \ref on input line 60.
 LaTeX Info: Redefining \pageref on input line 60.
 LaTeX Info: Redefining \nameref on input line 60.
- (c:/Users\hamle\Downloads\Homework_2_LaTeX_Template.out) (c:/Users\hamle\Downloads\Homework_2_LaTeX_Template.out)
+ ("c:/Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw2.out") ("c:/Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw2.out")
 \@outlinefile=\write3
-\openout3 = `Homework_2_LaTeX_Template.out'.
+\openout3 = `"Fernandez, hw2.out"'.
 
  (C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count297
+\scratchcounter=\count304
 \scratchdimen=\dimen166
 \scratchbox=\box54
-\nofMPsegments=\count298
-\nofMParguments=\count299
+\nofMPsegments=\count305
+\nofMParguments=\count306
 \everyMPshowfont=\toks25
-\MPscratchCnt=\count300
+\MPscratchCnt=\count307
 \MPscratchDim=\dimen167
-\MPnumerator=\count301
-\makeMPintoPDFobject=\count302
+\MPnumerator=\count308
+\makeMPintoPDFobject=\count309
 \everyMPtoPDFconversion=\toks26
 ) (C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -353,64 +371,73 @@ Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count303
+\c@lstlisting=\count310
 LaTeX Font Info:    Trying to load font information for TS1+pplj on input line 63.
  (C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1pplj.fd
 File: ts1pplj.fd 2004/09/06 font definitions for TS1/pplj.
 ) [1
 
-{C:/Users/hamle/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [2] [3] [4] [5]
-LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 118.
- (C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ppl.fd
+{C:/Users/hamle/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 105--105
+
+ []
+
+LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 105.
+(C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
-LaTeX Font Info:    Trying to load font information for OML+zplm on input line 118.
+LaTeX Font Info:    Trying to load font information for OML+zplm on input line 105.
  (C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
-LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 118.
+LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 105.
  (C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
-LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 118.
+LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 105.
  (C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
-LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 118.
+LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 105.
  (C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 118.
+(Font)              scaled to size 10.42007pt on input line 105.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 118.
+(Font)              scaled to size 7.91925pt on input line 105.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 118.
+(Font)              scaled to size 6.25204pt on input line 105.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 118.
+(Font)              scaled to size 10.42007pt on input line 105.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 118.
+(Font)              scaled to size 7.91925pt on input line 105.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 118.
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 118.
+(Font)              scaled to size 6.25204pt on input line 105.
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 105.
  (C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex/latex/base\ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-) [6] [7] [8] [9] (c:/Users\hamle\Downloads\Homework_2_LaTeX_Template.aux)
-Package rerunfilecheck Info: File `Homework_2_LaTeX_Template.out' has not changed.
+) [2] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 149--149
+
+ []
+
+[4] [5] [6] [7] [8] [9] ("c:/Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw2.aux")
+Package rerunfilecheck Info: File `"Fernandez, hw2".out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 8998 strings out of 479832
- 142643 string characters out of 2871058
- 430807 words of memory out of 3000000
- 25757 multiletter control sequences out of 15000+200000
+ 9491 strings out of 479832
+ 150241 string characters out of 2871058
+ 444446 words of memory out of 3000000
+ 26238 multiletter control sequences out of 15000+200000
  557863 words of font info for 87 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 66i,5n,76p,507b,323s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmr.pfb><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/public/fpl/fplrc8a.pfb><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/public/fpl/fplrij8a.pfb><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplbi8a.pfb><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on c:/Users\hamle\Downloads\Homework_2_LaTeX_Template.pdf (9 pages, 125372 bytes).
+ 66i,5n,76p,530b,323s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmr.pfb><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/public/fpl/fplrc8a.pfb><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/public/fpl/fplrij8a.pfb><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplbi8a.pfb><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on "c:/Users\hamle\Documents\GitHub\Imagineham\CS\Algorithms\Fernandez, hw2.pdf" (9 pages, 141641 bytes).
 PDF statistics:
- 91 PDF objects out of 1000 (max. 8388607)
- 14 named destinations out of 1000 (max. 500000)
+ 101 PDF objects out of 1000 (max. 8388607)
+ 19 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

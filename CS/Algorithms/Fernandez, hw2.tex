@@ -16,7 +16,7 @@
 \usepackage{amsmath,amsfonts,graphicx}
 \usepackage{latexsym}
 \usepackage{subfig}
-%\usepackage{algpseudocode}
+\usepackage{algpseudocode}
 %\usepackage{enumitem}
 \usepackage{algorithm}
 \usepackage{listings}
@@ -81,7 +81,27 @@ Solve exercise 3 in Chapter 4 in the Kleinberg-Tardos textbook.  (trucking)
 \end{problem}
 
 \solution{
-  Your solution goes here.
+  Collaborated with: Yael Sulkin, Bryan Lee \\
+
+\paragraph{Algorithm} The greedy algorithm this proof will be proving is the following:
+      
+\begin{algorithmic}
+      \State Let all trucks have maximum weight, $W$ 
+      \State Let the number of trucks sent to Boston, $numTrucks$. 
+      \State Let the truckweight at $k$th iteration be $truckWeight$. 
+      \State Let $i$ be the package that most recently arrived, woth weight of i be $w_i$ 
+
+      \While {packages arrive}  
+        \If {$truckWeight + w_i < W$} 
+          \State update $truckweight = truckweight + w_i$
+        \Else 
+          \State increase $numTrucks$ by 1
+          \State reset $truckWeight$ to $0$
+        \EndIf
+      \EndWhile
+\end{algorithmic}
+
+\paragraph{Proof} We will prove this algorithm inductively 
 }
 
 
@@ -98,7 +118,34 @@ Solve exercise 5 in Chapter 4 in the Kleinberg-Tardos textbook.  (cell phone tow
 Please note!  Here and elsewhere, when the authors (or your instructors) say ``give an algorithm'' without further instructions, they mean ``give an algorithm AND prove that it is correct and runs in polynomial time''.  This should be assumed henceforth.
 \end{problem}
 \solution{
-  Your solution goes here.
+  Collaborated with: Yael Sulkin\\
+
+  \begin{algorithmic}
+    \State Starting at west-most point $R = 0$, let's assume we travel such that when we stop R = easternmost point. 
+    \While {R} 
+       \If {house is found} 
+         \State move 4 meters and place a cell tower 
+         \State move 4 meters forward again such that $R = R + 8$ 
+       \EndIf 
+     \EndWhile
+  \end{algorithmic}
+ 
+
+  \paragraph{Proof} Let set A be the set of bases placed by our algorithm and set O be the set of bases placed 
+  by the optimal algorithm. If our set A is not optimal and we are looking for the minimal amount of bases then 
+  we know that if $|A| = n$ and $|O| = m$ then $m < n$. If $m < n$ then we know there exists some base, $b$ in $A$ such that
+  it either covers 0 houses or there also exists some $b'$ such that $b'$ can be moved to cover the houses within $b$. We will continue this 
+  proof using case analysis. 
+
+  \paragraph{} In the case where $b$ in $A$ covers 0 houses, this, in fact, contradicts the algorithm for $A$ which states 
+  "if a house is found, move 4 meters and place a cell tower". This case is impossible for our proposed greedy algorithm. 
+
+  \paragraph{} In the case where $b'$ exists in $A$ such that $b'$ can be moved, let $b$ be located at distance $x$ and $b'$ be located at distance $x'$ 
+  such that $x \neq x'$ and $x, x' \geq 0$. According to our case statement, there exists $h$ in ${x - 4, x + 4}$ such that $b'$ can be moved to cover 
+  ${x - 4, x + 4} \cup {x' - 4, x' + 4}$ or ${x - 4, x + 4, x' - 4, x' + 4}$. This is in fact impossible because $b'$ will have to at most cover 
+  $|(x - 4) - (x' + 4)| = |x - x' - 8|$. Since $x$ and $x'$ cannot both be 0, the distance $b'$ has to cover will always be greater than 8 unless 
+  $x$ and $x'$ are exactly 8 meters apart. If |x - x' - 8| is greater than 8, then the distance b must cover contradicts our givens. If |x - x' - 8| is exactly 0
+  then $x$ and $x'$ must be exactly 8 meters apart which satisfies our greedy algorithm. 
 }
 
 
