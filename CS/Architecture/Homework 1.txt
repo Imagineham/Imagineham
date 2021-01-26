@@ -53,8 +53,7 @@ of clothing in a world without the internet, smartphones, and e-commerce. Analyz
 steps in today’s modern world. Explain how the latency to receive the desired article has
 changed. Explain how the time investment required of you has changed.
 
-Without internet, smartphones, e-commerce?
-    Logically, I can imagine the latency includes thinking of where to purchase the desired article, traveling outside, taking transportation, 
+    Logically, I can imagine the latency without computing includes thinking of where to purchase the desired article, traveling outside, taking transportation, 
     going to either a store, individual, or group of individuals, selecting the wanted article, and purchasing the article with physical currency.
     The process can involve and/or require a lot of physical movement, social interaction, and math. Today, a consumer can simply google the item they want, filter through several websites offering the same or similar versions of the item, 
     purchase the item by inputting their debit/credit card's information and track it's arrival. While today we can still go out and shop, the process no longer 
@@ -223,11 +222,11 @@ loopBody:
     blt x0, x13, increment
 
     addi sp, sp -8 //making space on stack
-    sd ra, 0(sp) //caller saves
-    jal ra, helper //callee
-    ld ra, 0(sp)
+    sd x1, 0(sp) //caller saves
+    jal x1, helper //transfer control to callee
+    ld x1, 0(sp)
     addi sp, sp, 8 //restore caller saved
-    add ra, ra, ra //else statement
+    add x11, x11, x11 //else statement
     slti x15, x12, 64
     bne x15, x0, loopBody
 return:
@@ -237,14 +236,15 @@ increment:
     addi x12, x12, 1
     slti x15, x12, 64
     bne x15, x0, loopBody
+    jr ra
 
 helper:
-    addi sp, sp, -8 //making space on stack
-    add t0, a0, a0 //helper body
-    sd t0, 0(sp) //save callee saved
-    ld a0, 0(sp) //restore callee saved
+    addi sp, sp, -8 //making space on stack for callee
+    sd x5, 0(sp) //save callee saves
+    add x10, x10, x10 //helper body
+    ld x5, 0(sp) //restore callee saved
     addi sp, sp, 8 //deallocate space on stack
-    jr ra
+    jr x1 //jump to return addresss
 
 
 2.21 
