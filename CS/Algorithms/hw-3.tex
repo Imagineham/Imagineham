@@ -3,13 +3,12 @@
 \def\yourname{Hamlet}
 % -----------------------------------------------------
 \def\homework{1} % 0 for solution, 1 for problem-set only
-\def\duedate{6 hours after first access}
+\def\duedate{Tuesday, February 2 at 12 noon}
 \def\duelocation{via \href{https://www.gradescope.com/courses/80616/}{gradescope}}
-\def\hnumber{1}
+\def\hnumber{3}
 \def\prof{Andrew Drucker, Lorenzo Orecchia}
 \def\course{\href{https://canvas.uchicago.edu/courses/25977}{CMSC 27200 - Winter 2021}}
 %-------------------------------------
-
 \documentclass[10pt]{article}
 \usepackage[colorlinks,urlcolor=blue]{hyperref}
 \usepackage[osf]{mathpazo}
@@ -40,7 +39,7 @@
       \vbox{
     \hbox to \columnwidth {\sc{\course} --- \prof \hfill}
     \vspace{-2mm}
-    \hbox to \columnwidth {\sc due \MakeLowercase{\duedate} \duelocation\hfill {\Huge\color{mdb}M\hnumber.\yourname}}
+    \hbox to \columnwidth {\sc due \MakeLowercase{\duedate} \duelocation\hfill {\Huge\color{mdb}H\hnumber.\yourname}}
       }
    \end{center}
    \vspace*{2mm}
@@ -60,37 +59,80 @@
 \begin{document}
 \handout
 \begin{itemize}
-\item Submit on Gradescope within 6 hours of your first access. Please note down the time of your access
-now on the top of this page, above the M1 heading.
-\item Accesses are logged by the system. Your timeliness is expected.
-\item Timestamps in the form of carefully, completely-photographed work sent by email are admissible in
-a technical emergency.
-\item Do not share or make the exam accessible to anyone other than yourself. Any suspected violation of
-this policy will constitute a breach of the University’s academic integrity policy and will be reported.
-\item You can either type your solutions using LaTeX or scan your handwritten work. You will find a
-LaTeX template in the midterm folder. If you are writing by hand, please fill in the solutions in this
-template, inserting additional sheets as necessary. This will facilitate the grading.
-\item No collaboration and no use of external resources are allowed for this midterm. Any suspected
-violation will be investigated and reported. You may consult the textbook, the material and videos
-linked from the Canvas Modules page and any notes that you took for the course.
-\item If you absolutely need to contact the teaching team, please use a private message on Ed.
+\item The assignment is due at Gradescope on \duedate.
+
+\item You can either type your homework using LaTex or scan your handwritten work. We will provide a LaTex template for each homework. If you writing by hand, please fill in the solutions in this template, inserting additional sheets as necessary. This will facilitate the grading.
+
+\item You are permitted to discuss the problems with up to 2 other students in the class (per problem); however, {\em you must write up your own solutions, in your own words}. Do not submit anything you cannot explain. If you do collaborate with any of the other students on any problem, please do list all your collaborators in your submission for each problem. 
+
+\item Similarly, please list any other source you have used for each problem, including other textbooks or websites.
 
 
+\item {\em Show your work.} Answers without justification will be given little credit.
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
-\begin{problem}
+\begin{problem}[25 points]
+ Give a polynomial-time algorithm that solves the following problem.  Give a clear proof that your algorithm is correct and runs in polynomial time.  
 
+\vspace{1 em}
+
+\textbf{Input:} a simple (no repeated edges or self-loops), connected, undirected graph $G = (V, E)$ with a positive edge-weight function $w: E \rightarrow \mathbb{N}^+$, with all edge weights distinct;
+
+\vspace{1 em}
+
+\textbf{Output:} a spanning tree $T \subseteq E$ of $G$, of \underline{second-smallest total weight}.
+
+\vspace{1 em}
+
+More precisely: $T$ should have minimum weight among all spanning trees of $G$ that are \emph{not} Minimum Spanning Trees for $(G, w)$.  If there are two or more such trees, you are free to output any one of them, and you don't need to decide whether such a tie can or does occur.
+ 
+ 
+ 
  \end{problem}
 
 \solution{
-  
+
+\begin{algorithmic}
+  \State Let $K = \emptyset$
+  \State Assume $w(e_1) < w(e_2) < \ldots < w(e_m)$
+  \State Assume $i \geq 2$.
+
+  \If {$K \cup e_i$ is cycle-free} 
+    \State $K \leftarrow K \cup e_i$
+  \EndIf
+  \State return $T \leftarrow K$ 
+\end{algorithmic}
+Kruskal's Algorithm is as Follows
+
+\paragraph{Proof of polynomial time} The algorithm for this proof is Kruskal's algorithm which
+runs on polynomial time. 
+
+\paragraph{Proof of correctness} This proof we will use proof by contradiction. For this proof we want to show that our algorithm always outputs
+a tree of second-smallest total weight by proving our output is the smallest spanning tree not equal to the Minimum Spanning Tree (MST). We will 
+work with our input and also assume that our input has at least two spanning trees where at most one in the MST. For any given $G = (V,E)$ where 
+$V$ is a set of vertices and $E$ is a set of edges, let $e_i$ be the current iteration of edges added to the partial solution of Kruskal's algorithm.
+First we want to show that our output does not equal the MST. Let $E$ be the set of edges in the MST. Since all the edges have distinct weights, then
+$E$ is a unique set of edges such that for any spanning tree, $E'$, $E' = E$ if for all $e' \in E', e' = e$. Let $E'$ be the result of our algorithm, and  
+Let $w(e)$ be the edge with the smallest weight in $E$ then we know $w(e) = w(e_1)$ according to Kruskal's algorithm. However, our algorithm assumes 
+$i \geq 2$ s.t. $w(e_1)$ never enters the loop nor is included in the final $E'$. Thus $e \notin E'$ contradicts our assuption that $E' = E$.
+
+Secondly we want to show that $E'$ has the second smallest total weight. We will prove this using the same principles of the squeeze theorem. 
+
+Let $X$ be the set of edges that make up the MST and $Y$ be the set of edges output by our algorithm, and let $Z$ be some set of edges such that the 
+the total weight of $Z$ is greater than the total weight of $X$ and smaller than the total weight of $Y$. We want to show that the total weight of $Y$ is 
+at most the total weight of $Z$, $w(Y) \leq w(Z)$. We will prove this using contradiction. Let $x \in X, y \in Y$ and $z \in Z$. 
+
+The difference between $e_i$ and $e_{i+1}$ in Kruskal's algorithm is minimal because if $e_i$ and $e_{i+1}$ are both minimal since Kruskal's assumes
+$w(e_i) < w(e_{i+1}) < ... w(e_n)$ We know $e_i$ and $e_{i+1}$ are edges with weights closest to each other such that $e_{i+1} - e_i$ is minimal with every 
+new edge added. If $\exists e' \in E$ such that $w(e') - w(e_i) < w(e_{i+1}) - w(e_i)$ then $w(e') < w(e_{i+1})$. But thmeans $e = e_{i + 1}$. 
 
 
 
+  Your solution goes here.
 }
 
 \newpage
@@ -103,8 +145,8 @@ linked from the Canvas Modules page and any notes that you took for the course.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
-\begin{problem}
-
+\begin{problem}[25 points]
+Solve exercise 19 in Chapter 4 (bottleneck rates) in the Kleinberg-Tardos textbook.
 \end{problem}
 \solution{
   Your solution goes here.
@@ -118,9 +160,13 @@ linked from the Canvas Modules page and any notes that you took for the course.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
-\begin{problem}
+\begin{problem}[25 points]
+Let $G(V,E)$ be an undirected and \textbf{unweighted} graph with $n$ nodes. Let $T_1, T_2, \ldots, T_k$ be $k = n-1$ distinct spanning trees of $G$. Devise a polynomial-time algorithm that finds a spanning tree $T = (V,E_T)$ in $G$ that contains at least one edge from each $T_i$.  (Prove correctness and polynomial runtime.)
+
  
 
+\emph{Definition: two trees (or for that matter any graphs) on a set of nodes are \textbf{distinct}, if they differ in at least one edge.}
+
 
 
 
@@ -138,13 +184,9 @@ linked from the Canvas Modules page and any notes that you took for the course.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
-\begin{problem}
+\begin{problem}[25 points]
+Let $G=(V,E,\{w_e\}_{e \in E})$ be an undirected graph with positive edge weights $w_e$ indicating the lengths of the edges. Devise a polynomial-time algorithm that, given a vertex $i \in V,$ computes the length of the shortest cycle containing vertex $i$ in $G.$ Give a proof of correctness and a running-time analysis for your algorithm. For full credit, your algorithm should run in time $O(|V|^2$).
 \end{problem}
-\solution{
-
-
-
-}
 
 
 \newpage
