@@ -101,7 +101,14 @@ Solve exercise 3 in Chapter 4 in the Kleinberg-Tardos textbook.  (trucking)
       \EndWhile
 \end{algorithmic}
 
-\paragraph{Proof} We will prove this algorithm inductively 
+\paragraph{Proof} We will prove this algorithm inductively. For our greedy algorithm we want to show that it "stays ahead" or any other solution
+such that at the $k$th iteration our algorithm is at most the same as the optimal solution. Let $A$ represent the number of trucks used by our greedy algorithm, 
+$O$ represent the number of trucks used by the optimal solution, and let $A_k$, $O_k$ represent the respective quanity of trucks used at any given iteration $k$. 
+Four our base case, we set $k = 1$. When our first package arrives to the station it is loaded on to the first truck in both algorithms. We know that for packagae
+$i$, $w_i \leq W$ which means the number of trucks used is at most $1$. This solved our base case. Now, let $k > 1$ and assume our greedy algorithm stays ahead for 
+$j < k$ iterations. We want to show that when $A_k \leq O_k$ at any given iteration then $A_{k+1} \leq O_{k+1}$. That is our inductive hypothesis and we can prove it 
+using case analysis. We can break the cases down to $A_{k} = A_{k+1}$ and $A_{k} < A_{k+1}$. First if we know that $A_k \leq O_k \leq O_{k+1}$ and $A_{k} = A_{k+1}$
+then we know $A_{k+1} \leq O_{k+1}$ which proves our inductive hypothesis for this case. Secondly, if $A_k < A_{k+1}$ ... not finished
 }
 
 
@@ -212,9 +219,15 @@ Collaborated with: Yael Sulkin and Bryan Lee
 
 \end{algorithmic}
 
-\paragraph{} This algorithm runs 
-\paragraph{Proof} 
+\paragraph{} This algorithm runs on O(n) time as it loops through sequence a once while building towards b at every step. 
 
+\paragraph{Proof} An optimal algorithm increases $b$ minimally at each step and we know $b$ can either be 0 or 1 so our greedy algorithm's goal is to maximize the number 
+of $0$'s in b and limit the number of 1's in b. As such, we want more cases where b should be $0$ and less otherwise. Thus, we will prove our greedy algorithm with contradiction. Let 
+$A$ represent the sum of $b$'s of my algorithm and $O$ represent the sum of $b'$ of the optimal solution. We want to show $A \leq O$ at any given iteration k. Let $A_k$, $O_k$ 
+represent the respective sum of b at kth iteration. We will treat each k iteration using case analysis, particularly looking at why b would ever want to be 1. The only scenario would be if 
+$a_i = -1$ and the current running sum at kth iteration of $a_i + b_i = 0$. In this scenario, $b$ can not be 0 or our running sums constraint would be broken. However, let $O \leq A$ then we know 
+there exists at least one b in which at some kth iteration, given some $a_k$, $b$ should be 0 and not 1, such that $O_{k+1} increases by 0$. Well if $a_i + b_i = 0$ and $O_{k+1} = 0$ then we know 
+$a_i was 1$ which for our algorithm always produces a value of $0$. -not finished
 }
 
 \newpage
@@ -265,7 +278,18 @@ Give a greedy algorithm which, given an array $A[1, \ldots, n-1]$ of Boolean val
 and never loop over any square multiple times. Our algorithm's runtime is proportional to the size of $A$ which by definition is 
 O(n). 
 
-\paragraph{Proof}
+\paragraph{Proof} Let the number of hops made by our algorithm be denoted by $H$ and by the most optimal algorithm be denoted by $O$. 
+We will prove our algorithm provides at most the same amount of hops as the optimal solution using proof by induction. We will denote 
+the number of hops at iteration, $k$, made by our greedy algorithm as $H_k$ and those by the optimal algorithm as $O_k$. Our base case
+is when $k = 1$. When $k = 1$, both algorithms are starting from space $0$. The optimal algorithm will jump once if there is indeed a 
+path to space $n$, thus, $O_1 = 1$. Similarly, our greedy algorithm will jump at least some distance if there is an avaialable square 
+within the next 4 tiles thus $H_1 = 1$. Our base case is proved. We must show that for the $k+1$st case our greedy algorithm stays ahead
+and at each iteration $H \leq O$. Well, for each hop in the optimal algorithm, the player gets closest to $n$ such that the distance between
+the player and space $n$ is minimal after each hop. We want to show our greedy algorithm minimizes the distance to space $n$ with each hop. 
+For the optimal algorithm we know 1 hop = n - (hop distance + $a_i$) where $n - (hop distance + a_i)$ is minimized. Since, $n$ is a constant and 
+$a_i$ is also a constant representing current location, we know that our greedy algorithm must maximize hop distance at each iteration. Our greedy 
+algorithm does, in fact, by assuming maximum hop distance and working our way to smaller distances only if greater ones aren't available.
+
 }
 
 
