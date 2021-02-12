@@ -1,0 +1,220 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{siunitx}
+\usepackage{hyperref}
+\DeclareUnicodeCharacter{2212}{-}
+
+\title{Assignment 2}
+\author{Hamlet Fernandez}
+\date{February 2, 2021}
+
+
+\begin{document}
+
+\maketitle{}
+
+\section{3.1}
+
+\textit{Consider a few examples of hose and buckets that might be considered as part of
+improving a computer switching technology. Starting from our baseline of a hose capable
+of 40 liters / minute, and a bucket size of 4 liters, consider several different scenarios for
+an “improved” technology, and their impact on the speed that bits can be switched on and
+off.}
+
+\begin{itemize}
+
+    \item[A:] Consider smaller, 1 liter buckets. How fast can bits be switched?
+    \item[] $\frac{40 liters}{1 minute} = \frac{1 liter}{x minute} \Rightarrow \frac{1}{40} * 60 seconds = 1.5$ seconds
+    \item[B:] Consider smaller hoses, 10 liters/minute. How fast can bits be switched?
+    \item[] $\frac{10 liters}{1 minute} = \frac{4 liter}{x minute} \Rightarrow \frac{4}{10} * 60 seconds = 24$ seconds
+    \item[C:] Consider smaller, 1 liter buckets, and smaller hoses, 10 liters/minute. How fast can
+    bits be switched? 
+    \item[] $\frac{10 liters}{1 minute} = \frac{1 liter}{x minute} \Rightarrow \frac{1}{10} * 60 seconds = 6$ seconds
+    \item[D:] Consider smaller, 1 liter buckets, and faster hoses, 80 liters/minute. How fast can bits
+    be switched?
+    \item[] $\frac{80 liters}{1 minute} = \frac{1 liter}{x minute} \Rightarrow \frac{1}{80} * 60 seconds = .75$ seconds
+    
+\end{itemize}
+
+
+\section{3.3}
+
+\textit{3.3 Let’s take our example of a hose and buckets to an extreme. Suppose we take the
+metric example of a hose (40 liters / minute), and shrink the bucket.}
+
+\begin{itemize}
+
+    \item[A:] How fast can we switch between “1” and “0” (called toggle) a bucket of 1 liter? 100
+    millliters? 10 milliliters?
+
+    \item[] 1 liter: $\frac{40 liters}{1 minute} * \frac{1 liter}{x min} \Rightarrow x = \frac{1}{40}= 0.025 minutes * 60 = 1.5$ seconds
+    \item[] 100 milliliters: $ \frac{100 mililiters}{x liters} = \frac{1000 mililiters}{1 liter} \Rightarrow x = \frac{1}{10} \Rightarrow x = 
+    (\frac{\frac{1}{10}}{40} = \frac{1}{400} = .0025 => .0025 * 60 = .15$ sec
+    \item[] 10 mililiters: $ \frac{10 mililiters}{x liters} = \frac{1000 mililiters}{1 liter} \Rightarrow x = \frac{1}{100} \Rightarrow x = 
+    (\frac{\frac{1}{100}}{40} = \frac{1}{4000} = .00025 => .00025 * 60 = .015$ sec
+
+
+    \item[B:] How about if we increased the hose’s pumping rate; how fast can we toggle a 4 liter
+    bucket if the hose is 80 liters / minute? 160 liters/minute?
+
+    \item[]  80 liters: $ \frac{1 bucket}{4 liters} = \frac{80 liters}{1 minute} = \frac{1}{20} * 60 seconds = 3$ seconds
+    \item[] 160 liters: $ \frac{1 bucket}{4 liters} = \frac{160 liters}{1 minute} = \frac{1}{40} * 60 seconds = 1.5$ seconds
+    
+\end{itemize}
+
+
+\section{3.4}
+
+\textit{3.4 Consider using the 4 liter volume of water that was used in a bucket to communicate
+a bit across a schoolyard. We want to transmit the signal as a rise in the water level across
+a distance of 50 meters.}
+
+\begin{itemize}
+
+    \item[A:] How much water is available per meter to communicate the information?
+    \item[] $\frac{4 liters}{50 meters} = \frac{x liters}{1 meter} \Rightarrow 4/50 = 2/25 = .08$ liters 
+    \item[B:] If we use a trough that is 1 centimeter wide, how tall would it be? (this is the water
+    level rise that would be read as a “1” at the other end.
+    \item[]  4 liters = H * W * L == 4 liters = H * .01m * 50 m $\Rightarrow \frac{1 m}{1000 liters} * \frac{4 liters}{.01 * 50} = .008$m
+    \item[C:] Now, using the hose rate of 40 liters / minute, how fast can this trough be used to
+    communicate a toggle “1 to 0 to 1” across the schoolyard?    
+    \item[] $\frac{4 liters}{\frac{40 liters}{1 min}} = 1/10$ liter per min = 6 seconds from "1 to 0" so \textbf{12 seconds} from "1 to 0 to 1"
+    
+\end{itemize}
+
+
+\section{3.5}
+
+\textit{3.5 Using your answer from Problem 3.3, and your common sense, how much faster can
+this switching be done by increasing the pumping power of the hose? What is going to
+limit the performance?}
+
+\paragraph{}
+
+    Increasing pumping power proportionately decreases switching time, that is, a 2x increase in pumping power
+    halves the switching time. The volume of the trough limits performace. It would be best if the trough was smaller
+    in volume. 
+
+
+\section{3.7}
+\textit{
+3.7 The model of a hose and bucket is pretty good analogy for how dynamic random access memory (DRAM) works. As we will see in Chapter 5, DRAM has been the main
+type of computer memory used since 1975 (approaching 50 years). However, real DRAM
+has several complications – it leaks and the filling and reading of buckets is noisy. Consider a DRAM cell with a capacitance of 1 picofarad $(10^{−12})$, and a charge pump that can
+pump 100 microcoulombs/second (0.1 milli amp), allowing the cell to be charged in 10
+nanoseconds $\num{10e-9}$ to 1 volt.}
+
+\begin{itemize}
+    \item[A:] The DRAM cells are called “dynamic” because they leak charge, so a “1” will eventually lose enough charge to be considered a “0”. If the cells leak at a rate of 0.01
+    microcoulombs / second, how long will it take a full cell to leak all of its charge?
+    \item[] $\frac{100mC}{1 sec} * \num{10e-9} = \num{1e-6}$ mC 
+    $\frac{.01mC}{1 sec} = \frac{\num{1e-6}mC}{x} = \num{1e-4}$ sec
+
+    \item[B:] In practice, DRAM values have to be refreshed (rewritten to ensure they are not lost)
+    frequently. And, they must be rewritten long before their values have decayed to “0”s.
+    Suppose we can allow the cells to lose 25\% of their charge, how long can a DRAM
+    cell hold the value before it needs to be refreshed?
+    \item[]  $.25 * \num{1e-6} = \num{2.5e-7} \Rightarrow \frac{.01 mC}{1 sec} = \frac{\num{2.5e-7}}{x} = \num{2.5e-5}$ seconds 
+
+    \item[C:] As DRAM cells are scaled to smaller size (producing higher bit density per chip),
+    balancing these properties is a challenge. If cells are reduced in size by 50\%, and their
+    capacitance decreases by the same factor, what is the problem that arises?
+    \item[] Since capacitance is proportional to power, and inherently voltage, a decrease in the capacitance requires a decrease in the amount of power. 
+    If we follow the equation presented on page 56 of the textbook, $P = \frac{1}{2}*C*V^2*F$ we see that a decrease in capacitance by 50\% demands a decrease in 
+    either power by 50\%, frequency by 50\%, or voltage by $\frac{1}{\sqrt{2}}$. If voltage of power, in particular, were to remain constant as capcitance decreases, 
+    the heat density of the transistors in the chip would grow proportionally and risk heat damage. Aside from heat damage, considering the fact that capacitance is 
+    proportional to voltage, with a decrease in capacitance requires either a decrease in charge or increase in voltage to balance. However, an increase in voltage 
+    results in longer periods before a cell can be fully charged to 1 volt and to fully decharge from 1 volt to 0. This also means it will take longer to 
+    leak 25\% of charge from a transistor. Considering DRAM already slows the processor down upon access (relative to using registers), increasing the amount of time it takes to 
+    store or load data from DRAM drastically worsens performance. 
+
+    \item[D:]Given the problem you’ve just outlined (above), what new capabilities do DRAM technologists need to solve to allow DRAM scaling to higher density? (and lower cost per
+    bit!)
+
+    \item[] DRAM technologists need to solve the issue of energy consumption. DRAM technologists need to be able to increase the amount of transistors on a chip while also increasing 
+    increasing capacitance and decreasing leak speeds. The faster transistors can switch from 0 volts to 1 volts the better. For data that needs to be rewritten, decreasing leak 
+    speeds is better, however, increasing leak speeds might be better for DRAM memories that is used only once without repetition. Controlling how DRAM leaks data seems like 
+    the logical next step. 
+
+\end{itemize}
+
+\section{3.14}
+\textit{3.14 The End of Dennard scaling is widely dated to around 2005. Since that time, we
+have had to settle for limited versions of the scaling, with lower increases in speed and
+decreases in power. Despite that, there have been significant increases in performance (and
+increases in performance per power). Pick a line of processors such as the Qualcomm
+Snapdragon, Intel Core, or the Apple Ax (A9, A10, A11, A12, A13, A14). Find the processor data sheets or internet information that describes the performance these processors
+from 2010 to 2020.}
+
+\begin{itemize}
+
+    \item[A:] How have performance and power scaled of these processors scaled over time?
+    \item[] For the Intel Core line, there are data point that represent clock cycles stagnating during the 2010s.
+    FOr example, according to Stanford's data visualization on clock frequency, Intel had processors in 2010 running at about 1860 mhz,
+    in 2012, 3100 mhz, in 2014 at 2600 mhz, and in 2016 running at 3600 mhz. Today, in 2020, there are processors that are running at about 5000 mhz. 
+    This compared to 3x difference of 500 mhz to 1500 mhz between 1999 and 2000 showed the impact of the end of Dennard's scaling. 
+    \item[B:] Estimate how performance and power would have changed if Dennard scaling had
+    continued, and compare. How much have we lost with the end of Dennard?
+    \item[] In the years since 2005, I would estimate we are working with a 20-fold decrease in performance and power since the end of Dennard's scaling. For example, in 2011, the now discontinued 
+    Intel Core i7 - 2700K functioned at max turbo frequency with 3.9ghz. In 2020 the Intel Core i7-10700K functioned at 5.10 ghz. The ratio of these processors between these 9 years is about a 1.3 time increase.
+    However, Take a processor running at 3.8 ghz in 2005 and a processor runnning at .15 ghz 9 years earlier in 1996. The increase is about 25 fold. And so a 2500\% increase compared to 130\% increase between 
+    9 years is a drastic decrease. The stagnation of processors is apparant and can be felt since the end of Dennard's scaling. 
+    \item[C:] How much will we lose the next decade if these trends continue at the same rate?
+    \item[] I would estimate we would continue to lose at the same rate if not a worse rate considering the amount of time since 2005.  Let's use the example of a 25-fold increase every 9 years during Dennard's scaling. 
+    In approximately 2030, with a 25 time increase every 9 years starting from 3.8 ghz in 2005 we would be be at about 60k ghz of frequency. However, if we continued a 1.3 time increase starting at the 5 ghz of today, we'd be at roughly 6.5 ghz at around 2030. 
+    The difference is deeply incredible: in 10 years we couldv've been 10 times as fast.  
+ 
+\end{itemize}
+
+\paragraph{Sources} 
+\href{http://cpudb.stanford.edu/visualize/clock_frequency}{Clock Frequency} \\
+\href{https://ark.intel.com/content/www/us/en/ark/products/199316/intel-core-i7-10700-processor-16m-cache-up-to-4-80-ghz.html}{i7-10700K} \\
+\href{https://ark.intel.com/content/www/us/en/ark/products/61275/intel-core-i7-2700k-processor-8m-cache-up-to-3-90-ghz.htmls}{i7-2700k}
+
+
+\section{3.18}
+\textit{Just for fun (and to emphasize how exceptional the improvement of computers has
+been), consider what would have happened if the same level of size scaling and resulting
+benefit worked for internal combustion engines. Consider the 1959 Chevy Corvette, which
+had a 290 horsepower engine with a displacement of 283 cubic inches (4.64 liters) and
+achieved a 0 to 60 mph time of 6.9 seconds.}
+
+\begin{itemize}
+
+    \item[A:] Suppose we decide to build a smaller engine (1/1,000 in volume or 10x smaller in each
+dimension) suitable for a bicycle or small scooter, what power could it produce? and
+how fast could it accelerate the scooter from 0 to 60?
+    \item[] Power: $\frac{290hp}{1000} = .29$ hp
+    \item[] Acceleration Time: $\frac{290hp}{6.9 secs} = \frac{x}{.29 hp} \Rightarrow x = 144.92$ seconds
+    
+    \item[B:] Estimate the fuel efficiency of the resulting scaled Corvette? How does it compare to
+todays internal combustion engine cars?
+    \item[] Considering the scaled Corvette is 1000 times lighter, it needs way less power to do the same amount of work which could 
+    could demand less rotations per minute in regardes to displacement. In other words, one push of a piston can probably
+    take the scaled corvette a decent distant so much so it is more fuel efficient than a regular sized corvette doing more work to do the same distance. 
+    Todays internal combustion engine cars can go upwards of 90 miles per gallon (2015 BMW) but could imagine more cars incorporating
+    fuel-efficient engines for the sake of the environment, at the least.   
+
+\end{itemize}
+
+\section{Extra Credit}
+
+\paragraph{Comments on Section 3.5 \textit{Size in Other Technologies}} 
+This section felt a little bit confusing in terms of how I could use the information given, and I say this admitting I referenced this section often to solve
+problem 3.18 of the pset. The use of cars, wind turbines, airplane engines, and batteries were really helpful and put things into perspective. I appreciate the table a lot, however, I feel like 
+it might be better for my understanding if we take a specific example and really break down the whys and hows of down-sizing. Problem 3.18 of the pset was a little bit challenging for me
+because I didn't understand what exactly horsepower and displacement were. Thus it could be helpful to use the 1959 Chevrolet as an example and breakdown how horsepower relates to the displacement of pistons, 
+how the pistons produce torque, and how this moves the car. Visualizing why exactly downsizing a car's engine isn't helpful would really enhance a reader's understanding of what it means to not be as size-less as information. 
+
+\paragraph{Comments on Section 3.6 \textit{Tiny Computers Enable an Explosion of Applications}}
+I appreciated the addition of this section as it really tied into the topics of Chapter one and resurfaced the importance and relevance of why things can and should be small. However, 
+I think it was still a bit similar to Chapter 1 and I personally felt as if it did not add much more to the conversation of Smaller being better and faster. Upon reading section 3.6 
+I was curious if things like credit cards will become smaller in the future? Are things that we know to be "small" now large relative to what they could be? Are credit cards slow, and what does a 
+faster transaction look and feel like? I think bringing in ideas that were brought up with cars and airplane engines and reflect them onto things that are already small and fast could really help the 
+reader's understanding at the end of the chapter. 
+
+
+
+
+\end{document}

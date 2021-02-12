@@ -1,0 +1,140 @@
+Homework 2
+
+3.1 Consider a few examples of hose and buckets that might be considered as part of
+improving a computer switching technology. Starting from our baseline of a hose capable
+of 40 liters / minute, and a bucket size of 4 liters, consider several different scenarios for
+an “improved” technology, and their impact on the speed that bits can be switched on and
+off.
+
+
+    A Consider smaller, 1-liter buckets. How fast can bits be switched?
+        40 bits a minute
+
+
+
+    B Consider smaller hoses, 10 liters/minute. How fast can bits be switched?
+        2.5 bits a minute
+
+
+    C Consider smaller, 1-liter buckets, and smaller hoses, 10 liters/minute. How fast can
+bits be switched?
+        10 bits a min
+
+
+
+    D Consider smaller, 1-liter buckets, and faster hoses, 80 liters/minute. How fast can bits
+be switched?
+    80 bits a min
+
+
+
+3.3 Let’s take our example of a hose and buckets to an extreme. Suppose we take the
+metric example of a hose (40 liters / minute), and shrink the bucket.
+
+    A How fast can we switch between “1” and “0” (called toggle) a bucket of 1 liter? 100
+    millliters? 10 milliliters?
+
+    1 liter -> 40 liters/1 minute * 1 liter/x min = x*40 = 1 = x = 1/40 = 0.025 minutes or 1.5 scenarios
+    100 milliliters -> 100 mililiters/x liters = 1000 mililiters/1 liter => x = 1/10 => x = (1/10)/40 = 1/400 = .0025 => .0025 * 60 = .15sec
+    10 mililiters -> factor of 10 so .015 sec
+
+
+    B How about if we increased the hose’s pumping rate; how fast can we toggle a 4-liter
+    bucket if the hose is 80 liters / minute? 160 liters/minute?
+
+    80 liters? -> 1 bucket/4 liters = 80 liters/1 minute = 1/20 * minute = 3 seconds
+    160 seconds -> half the amount of time for 80 liters = 1.5 seconds
+
+
+3.4 Consider using the 4-liter volume of water that was used in a bucket to communicate
+a bit across a schoolyard. We want to transmit the signal as a rise in the water level across
+a distance of 50 meters.
+
+    A How much water is available per meter to communicate the information?
+    4 liters/ 50 meters = x liters/1 m => x*50 = 4 => 4/50 = 2/25 = .08liters
+
+
+    B If we use a trough that is 1 centimeter wide, how tall would it be? (this is the water
+level rise that would be read as a “1” at the other end.
+    4 liters = H * W * L == 4 liters = H * .01m * 50 m => 1m/1000 liters * 4 liters/(.01 * 50) = .008m
+
+    C Now, using the hose rate of 40 liters / minute, how fast can this trough be used to
+communicate a toggle “1 to 0 to 1” across the schoolyard?
+
+    4 liters/40 liters/min -> 1/10 liter per min = 6 seconds
+
+
+3.5 Using your answer from Problem 3.3, and your common sense, how much faster can
+this switching be done by increasing the pumping power of the hose? What is going to
+limit the performance?
+
+    Increasing pumping power proportionately decreases switching time, that is, a 2x increase in pumping power
+    halves the switching time. The volume of the trough limits performace. It would be best is the trough was smaller
+    in volume. 
+
+
+
+3.7 The model of a hose and bucket is pretty good analogy for how dynamic random access memory (DRAM) works. As we will see in Chapter 5, DRAM has been the main
+type of computer memory used since 1975 (approaching 50 years). However, real DRAM
+has several complications – it leaks and the filling and reading of buckets is noisy. Consider a DRAM cell with a capacitance of 1 picofarad (10−12), and a charge pump that can
+pump 100 microcoulombs/second (0.1 milli-amp), allowing the cell to be charged in 10
+nanoseconds (10x10−09) to 1 volt.
+
+    A The DRAM cells are called “dynamic” because they leak charge, so a “1” will eventually lose enough charge to be considered a “0”. If the cells leak at a rate of 0.01
+microcoulombs / second, how long will it take a full cell to leak all of its charge?
+
+        100mC/1 sec * 10x10^-9 = 1x10^-6
+        .01 mC/1 sec = 1x10^-6mC/x sec = 1x10^-4 sec
+
+                                                                                                                                                                                                                                                                                                                        
+    B In practice, DRAM values have to be refreshed (rewritten to ensure they are not lost)
+frequently. And, they must be rewrittenn long before their values have decayed to “0”s.
+Suppose we can allow the cells to lose 25% of their charge, how long can a DRAM
+cell hold the value before it needs to be refreshed?
+
+        .25 * 1x10^-6 = 2.5x10^-7
+        .01mC/1 sec = 2.5x10^-7/x => x = 2.5x10^-5 s 
+
+
+    C  As DRAM cells are scaled to smaller size (producing higher bit density per chip),
+balancing these properties is a challenge. If cells are reduced in size by 50%, and their
+capacitance decreases by the same factor, what is the problem that arises?
+
+Since capacitance is equivalent to coulombs per volt, the amount of charge that must be provided to these cells must also decrease in order to keep
+balance. This implies that if the voltage remained the same, there would be too much charge in these now dense cells which could cause memory hardware to burn up. 
+
+
+    D Given the problem you’ve just outlined (above), what new capabilities do DRAM technologists need to solve to allow DRAM scaling to higher density? (and lower cost per
+bit!)
+
+
+3.14 The End of Dennard scaling is widely dated to around 2005. Since that time, we
+have had to settle for limited versions of the scaling, with lower increases in speed and
+decreases in power. Despite that, there have been significant increases in performance (and
+increases in performance per power). Pick a line of processors such as the Qualcomm
+Snapdragon, Intel Core, or the Apple Ax (A9, A10, A11, A12, A13, A14). Find the processor data sheets or internet information that describes the performance these processors
+from 2010 to 2020.
+
+    A How have performance and power scaled of these processors scaled over time?
+
+    B  Estimate how performance and power would have changed if Dennard scaling had
+continued, and compare. How much have we lost with the end of Dennard?
+
+    C How much will we lose the next decade if these trends continue at the same rate?
+
+3.18 Just for fun (and to emphasize how exceptional the improvement of computers has
+been), consider what would have happened if the same level of size scaling and resulting
+benefit worked for internal combustion engines. Consider the 1959 Chevy Corvette, which
+had a 290-horsepower engine with a displacement of 283 cubic inches (4.64 liters) and
+achieved a 0 to 60 mph time of 6.9 seconds.
+
+    A Suppose we decide to build a smaller engine (1/1,000 in volume or 10x smaller in each
+dimension) suitable for a bicycle or small scooter, what power could it produce? and
+how fast could it accelerate the scooter from 0 to 60?
+
+
+    .29?
+
+    B Estimate the fuel efficiency of the resulting scaled Corvette? How does it compare to
+todays internal combustion engine cars?
+
