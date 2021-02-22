@@ -1,6 +1,6 @@
 # Imagineham
 
-Hi, this is just a 100% personal thing. I'm still not really sure what I am doing slowly am figuring it out! 
+Hi, I'm still not really sure what I am doing but slowly figuring it out! :D
 
 Thanks,
 Ham
