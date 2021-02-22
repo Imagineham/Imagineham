@@ -1,7 +1,7 @@
 PWD c:\Users\hamle\Documents\GitHub\Imagineham\CS\Architecture
 INPUT C:\Users\hamle\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Architecture\Homework 2.tex
-OUTPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Architecture\Homework 2.log
+INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Architecture\Homework 3.tex
+OUTPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Architecture\Homework 3.log
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
@@ -388,10 +388,74 @@ INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\generic\uniquecounter\uni
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\generic\uniquecounter\uniquecounter.sty
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\generic\uniquecounter\uniquecounter.sty
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\generic\uniquecounter\uniquecounter.sty
-INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Architecture\Homework 2.aux
-INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Architecture\Homework 2.aux
-INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Architecture\Homework 2.aux
-OUTPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Architecture\Homework 2.aux
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\listings\listings.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\listings\listings.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\listings\listings.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\listings\listings.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\listings\listings.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\listings\listings.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\listings\listings.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\listings\listings.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\listings\listings.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\listings\listings.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstmisc.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstmisc.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstmisc.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstmisc.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\listings\listings.cfg
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\listings\listings.cfg
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\listings\listings.cfg
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\listings\listings.cfg
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphicx.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphicx.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphicx.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphicx.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphicx.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphicx.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphicx.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphicx.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphicx.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphicx.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphics.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphics.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphics.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphics.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphics.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphics.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphics.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphics.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphics.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphics.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\graphics\trig.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\graphics\trig.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\graphics\trig.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\graphics\trig.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\graphics\trig.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\graphics\trig.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\graphics\trig.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\graphics\trig.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\graphics\trig.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\graphics\trig.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\graphics-def\pdftex.def
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\graphics-def\pdftex.def
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\graphics-def\pdftex.def
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\graphics-def\pdftex.def
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstlang1.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstlang1.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstlang1.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstlang1.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstmisc.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstmisc.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstmisc.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstmisc.sty
+INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Architecture\Homework 3.aux
+INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Architecture\Homework 3.aux
+INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Architecture\Homework 3.aux
+OUTPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Architecture\Homework 3.aux
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\siunitx\siunitx-abbreviations.cfg
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\siunitx\siunitx-abbreviations.cfg
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\siunitx\siunitx-abbreviations.cfg
@@ -436,18 +500,22 @@ INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\generic\gettitlestring\ge
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\generic\gettitlestring\gettitlestring.sty
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\generic\gettitlestring\gettitlestring.sty
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\generic\gettitlestring\gettitlestring.sty
-INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Architecture\Homework 2.out
-INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Architecture\Homework 2.out
-INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Architecture\Homework 2.out
-INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Architecture\Homework 2.out
-INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Architecture\Homework 2.out
-INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Architecture\Homework 2.out
-INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Architecture\Homework 2.out
-INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Architecture\Homework 2.out
-OUTPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Architecture\Homework 2.pdf
-INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Architecture\Homework 2.out
-INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Architecture\Homework 2.out
-OUTPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Architecture\Homework 2.out
+OUTPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Architecture\Homework 3.out
+OUTPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Architecture\Homework 3.pdf
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmss10.tfm
@@ -478,24 +546,36 @@ INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmtt8.tfm
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti10.tfm
-INPUT C:\Users\hamle\AppData\Local\MiKTeX\pdftex\config\pdftex.map
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti7.tfm
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti7.tfm
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbxti10.tfm
-INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Architecture\Homework 2.aux
-INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Architecture\Homework 2.out
-INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Architecture\Homework 2.out
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\base\omscmr.fd
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\base\omscmr.fd
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\base\omscmr.fd
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\base\omscmr.fd
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\base\omlcmr.fd
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\base\omlcmr.fd
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\base\omlcmr.fd
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex\latex\base\omlcmr.fd
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
+INPUT C:\Users\hamle\AppData\Local\MiKTeX\pdftex\config\pdftex.map
+INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1000.tfm
+INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Architecture\CS Pic.jpg
+INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Architecture\CS Pic.jpg
+INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Architecture\CS Pic.jpg
+INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Architecture\CS Pic.jpg
+INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Architecture\CS Pic.jpg
+INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Architecture\CS Pic.jpg
+INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Architecture\CS Pic.jpg
+INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Architecture\Homework 3.aux
+INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Architecture\Homework 3.out
+INPUT c:\Users\hamle\Documents\GitHub\Imagineham\CS\Architecture\Homework 3.out
+INPUT C:\Users\hamle\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk
+INPUT C:\Users\hamle\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbxti10.pfb
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbxti10.pfb
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi5.pfb
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi5.pfb
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi7.pfb
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi7.pfb
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
@@ -510,9 +590,5 @@ INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\c
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr7.pfb
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy5.pfb
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy5.pfb
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy7.pfb
-INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy7.pfb
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmti10.pfb
 INPUT C:\Users\hamle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmti10.pfb

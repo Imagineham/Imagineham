@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2021.1.13)  2 FEB 2021 19:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2021.1.13)  15 FEB 2021 23:51
 entering extended mode
-**"c:/Users/hamle/Documents/GitHub/Imagineham/CS/Architecture/Homework 2.tex"
-("c:/Users/hamle/Documents/GitHub/Imagineham/CS/Architecture/Homework 2.tex"
+**"c:/Users/hamle/Documents/GitHub/Imagineham/CS/Architecture/Homework 3.tex"
+("c:/Users/hamle/Documents/GitHub/Imagineham/CS/Architecture/Homework 3.tex"
 LaTeX2e <2020-10-01> patch level 2
 L3 programming layer <2020-10-27> xparse <2020-03-03> (C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
@@ -242,33 +242,74 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 286.
 )
 \Hy@SectionHShift=\skip58
+) (C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+\lst@mode=\count289
+\lst@gtempboxa=\box59
+\lst@token=\toks24
+\lst@length=\count290
+\lst@currlwidth=\dimen166
+\lst@column=\count291
+\lst@pos=\count292
+\lst@lostspace=\dimen167
+\lst@width=\dimen168
+\lst@newlines=\count293
+\lst@lineno=\count294
+\lst@maxwidth=\dimen169
+ (C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count295
+\lst@skipnumbers=\count296
+\lst@framebox=\box60
+) (C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+ (C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+ (C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+ (C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) (C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+ (C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen170
+\Gin@req@width=\dimen171
 )
    defining Unicode char U+2212 (decimal 8722)
- ("c:/Users\hamle\Documents\GitHub\Imagineham\CS\Architecture\Homework 2.aux")
-\openout1 = `"Homework 2.aux"'.
+ (C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+) (C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+) ("c:/Users\hamle\Documents\GitHub\Imagineham\CS\Architecture\Homework 3.aux")
+\openout1 = `"Homework 3.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
  (C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex/latex/siunitx\siunitx-abbreviations.cfg
 File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 ) (C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex/latex/translator\translator-basic-dictionary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 )
-Package hyperref Info: Link coloring OFF on input line 13.
+Package hyperref Info: Link coloring OFF on input line 19.
  (C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
  (C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
@@ -276,38 +317,93 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count289
+\c@section@level=\count297
 )
-LaTeX Info: Redefining \ref on input line 13.
-LaTeX Info: Redefining \pageref on input line 13.
-LaTeX Info: Redefining \nameref on input line 13.
- ("c:/Users\hamle\Documents\GitHub\Imagineham\CS\Architecture\Homework 2.out") ("c:/Users\hamle\Documents\GitHub\Imagineham\CS\Architecture\Homework 2.out")
+LaTeX Info: Redefining \ref on input line 19.
+LaTeX Info: Redefining \pageref on input line 19.
+LaTeX Info: Redefining \nameref on input line 19.
 \@outlinefile=\write3
-\openout3 = `"Homework 2.out"'.
+\openout3 = `"Homework 3.out"'.
 
+\c@lstlisting=\count298
+ (C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count299
+\scratchdimen=\dimen172
+\scratchbox=\box61
+\nofMPsegments=\count300
+\nofMParguments=\count301
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count302
+\MPscratchDim=\dimen173
+\MPnumerator=\count303
+\makeMPintoPDFobject=\count304
+\everyMPtoPDFconversion=\toks26
+) (C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+)
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 31.
+ (C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
+File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 31.
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 36.
+ (C:\Users\hamle\AppData\Local\Programs\MiKTeX\tex/latex/base\omlcmr.fd
+File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 36.
  [1
 
-{C:/Users/hamle/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [2] [3]
-Overfull \hbox (3.04575pt too wide) in paragraph at lines 135--139
-[]\OT1/cmr/m/n/10 DRAM tech-nol-o-gists need to solve the is-sue of en-ergy con-sump-tion. DRAM
+{C:/Users/hamle/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
+Overfull \hbox (0.3474pt too wide) in paragraph at lines 67--70
+ [][] \OT1/cmr/m/n/10 Both as-sign-ments 2 and 3 de-pend on the meme-ory ref-er-ence of $\OML/cmm/m/it/10 office\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 val=rho\OT1/cmr/m/n/10 ]$
  []
 
-[4] [5] [6] ("c:/Users\hamle\Documents\GitHub\Imagineham\CS\Architecture\Homework 2.aux")
-Package rerunfilecheck Info: File `"Homework 2".out' has not changed.
-(rerunfilecheck)             Checksum: 5780C86328B211272294A8FC48713EFF;315.
+[2] [3]
+<CS Pic.jpg, id=66, 3035.34pt x 4047.12pt>
+File: CS Pic.jpg Graphic file (type jpg)
+<use CS Pic.jpg>
+Package pdftex.def Info: CS Pic.jpg  used on input line 148.
+(pdftex.def)             Requested size: 345.0pt x 459.94379pt.
+ [4] [5 <c:/Users/hamle/Documents/GitHub/Imagineham/CS/Architecture/CS Pic.jpg>] [6] [7] [8] [9]
+
+c:/Users/hamle/Documents/GitHub/Imagineham/CS/Architecture/Homework 3.tex:278: Package inputenc Error: Unicode character   (U+2009)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.278 \paragraph{} $\frac{256^2}{1} = 65 
+                                           536$ or about the difference betw...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+[10] [11] ("c:/Users\hamle\Documents\GitHub\Imagineham\CS\Architecture\Homework 3.aux")
+
+Package rerunfilecheck Warning: File `"Homework 3".out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `"Homework 3".out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  1DE39CE47D532676942BB25FB96DA6BE;1436.
  ) 
 Here is how much of TeX's memory you used:
- 7456 strings out of 479832
- 148666 string characters out of 2871058
- 431916 words of memory out of 3000000
- 24303 multiletter control sequences out of 15000+200000
- 544388 words of font info for 63 fonts, out of 3000000 for 9000
+ 10071 strings out of 479832
+ 183872 string characters out of 2871058
+ 659757 words of memory out of 3000000
+ 26777 multiletter control sequences out of 15000+200000
+ 543973 words of font info for 62 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,8n,73p,340b,778s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on "c:/Users\hamle\Documents\GitHub\Imagineham\CS\Architecture\Homework 2.pdf" (6 pages, 202322 bytes).
+ 68i,7n,73p,341b,1322s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\hamle\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/hamle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on "c:/Users\hamle\Documents\GitHub\Imagineham\CS\Architecture\Homework 3.pdf" (11 pages, 669601 bytes).
 PDF statistics:
- 135 PDF objects out of 1000 (max. 8388607)
- 19 named destinations out of 1000 (max. 500000)
- 65 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 226 PDF objects out of 1000 (max. 8388607)
+ 112 named destinations out of 1000 (max. 500000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
