@@ -1,0 +1,55 @@
+<style>
+  h1 {
+    animation: pulse 5s steps(2, start) infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      background-color: red;
+      opacity: .1
+    }
+    
+    65% {
+      background-color: blue;
+    }
+    
+    100% {
+      background-color: red;
+      opacity: .9%
+    }
+  }
+  
+  @keyframes colors {
+    0% {
+      margin: 50px;
+      background-color: black
+    }
+    
+    50% {
+      background-color: gray;
+    }
+
+    100% {
+      margin: 230px;
+    }
+  }
+    
+  body {
+    animation-name: colors;
+    animation-duration: 1.5s;
+    animation-timing-function: steps(9, start);
+    animation-delay: 0s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running;
+  }
+  
+  
+    
+</style>
+<h1 >Super Rad Net Art</h1>
+<h2>by ham</h2>
+<body>
+  <button>Kandy</button>
+</body>
