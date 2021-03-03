@@ -1,7 +1,7 @@
 import math
 
 #Defining variables
-SIZE = 3 #size of given matrix
+SIZE = 5 #size of given matrix
 k = 2 #num submatrices
 n = 0
 index = int(SIZE/k)
@@ -20,6 +20,7 @@ def create_2dmatrix(SIZE):
     columns = []
     
     for i in range(SIZE):
+        columns = []
         for j in range(SIZE):
             columns.append(j)
         rows.append(columns)
@@ -28,7 +29,8 @@ def create_2dmatrix(SIZE):
 
 #creating copy matrix
 matrix1 = create_2dmatrix(SIZE)
-matrix2 = [[11, 12, 5, 2], [15, 6, 10, 4], [10, 8, 12, 5], [12,15,8,6]]
+matrix2 = [[1, 2, 3, 0, 4], [2, 1, 3, 0, 4], [2, 3, 1, 0, 4], [3, 2, 1, 0, 4], [0, 0, 0, 0, 0]]
+matrix3 = [[1, 1, 1, 1], [1, 1, 1, 1], [1, 2, 1, 1], [1, 2, 2, 2]]
 SIZE = len(matrix2)
 
 #printing copy matrix to check
@@ -41,18 +43,76 @@ print(matrix1)
 if (SIZE % k) == 0:
     index = int(SIZE/k)
 else: 
-    index = math.ceil(SIZE/k)
+    index = math.ceil(float(SIZE)/k)
 
 def create_submatrices():
     l = 0 #loop counter don't know why it has to be local
+    m = 0 #row counter
+    temp = []
     while l < index:
-        Ret.insert(l, matrix2[l][l*k : (l+1) * k]) #copy data
+        temp = []
+        for m in range(SIZE):
+            temp.append(matrix2[m][l*k:(l+1)*k]) #copy data
+            m += 1
+        Ret.append(temp)
         l += 1 
 
 create_submatrices()
 
 print("Printing Return")
-for x in Ret:
-    print(x)
+print(Ret)
 
 #matrix transpose and multiply
+def multiply_rows():
+    i = j = k = l = m = sums = 0 #counters
+
+    #first transpose given matrix
+    temp = []
+    tMatrix = []
+    for i in range(SIZE):
+        temp = []
+        for j in range(SIZE):
+            temp.append(matrix2[j][i])
+        tMatrix.append(temp)
+    print("Printing tMatrix:")
+    print(tMatrix)
+
+    #then matrix multiply
+    rows = []
+    columns = []
+    for k in range(SIZE):
+        columns = [] #clear columns
+        for l in range(SIZE):
+            for m in range(SIZE):
+                sums += matrix2[k][m] * tMatrix[m][l]
+            columns.append(sums) 
+            sums = 0   
+        rows.append(columns)
+    return rows
+
+
+MM = multiply_rows()
+print("printing matrix_multiply:")
+print(MM)
+
+#sum submatrices
+def sum_submatrices():
+    i = j = sums = 0
+    SIZE = len(matrix2)
+    rows = []
+    columns = []
+
+    if not(len(matrix2) == len(matrix3)):
+        print("Error: Matrices are not the same size, cannot sum")
+    else: 
+        for i in range(SIZE):
+            columns = []
+            for j in range(SIZE):
+                sums = matrix2[i][j] + matrix3[i][j]
+                columns.append(sums)
+            rows.append(columns)
+        return rows
+
+SS = sum_submatrices()
+print("Printing Sum Submatrices:")
+print(SS)
